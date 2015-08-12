@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: ShadowCore API
 
 language_tabs:
   - shell
