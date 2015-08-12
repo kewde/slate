@@ -295,7 +295,8 @@ html, body {
   .lang-selector {
     position: fixed;
     z-index: 50;
-    background-color: $lang-select-active-bg;
+    background-color: #242729;
+    padding-left: 20px;
   }
 }
 
@@ -311,6 +312,8 @@ html, body {
     padding: 0 10px;
     line-height: 30px;
     outline: 0;
+    margin: 10px;
+    border-radius: 5px;
 
     &:active, &:focus {
       background-color: $lang-select-pressed-bg;
@@ -318,7 +321,7 @@ html, body {
     }
 
     &.active {
-      background-color: $lang-select-active-bg;
+      background-color: $shadow-red;
       color: $lang-select-active-text;
     }
   }
