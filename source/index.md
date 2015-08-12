@@ -4,6 +4,8 @@ title: ShadowCore API
 language_tabs:
   - shell
   - json
+  - java
+  - javascript
 
 toc_footers:
   - <a href='http://aboutshadow.com/'>Shadow public website</a>
