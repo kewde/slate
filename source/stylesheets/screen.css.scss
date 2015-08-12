@@ -86,16 +86,19 @@ html, body {
     display: block;
   }
 
-  element.style {
+  &>.main-logo {
+    display: block;
+  }
+
+  &>.main-logo img {
     margin-left: auto;
     margin-right: auto;
     display: block;
     margin-top: 10px;
   }
 
-  &>.main-logo img {
+  &>.search {
     position: relative;
-  }
 
     input {
       background: $nav-bg;
