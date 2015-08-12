@@ -21,7 +21,7 @@ search: true
 
 Skip skip60 when he comes so see you
 
-Sure testing kewde
+Sure testing kewde - testing bash script update
 
 > yep
 
