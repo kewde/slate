@@ -133,27 +133,52 @@ SLACK: http://shadowproject.herokuapp.com
 
 # Installing and running a client
 
-> To authorize, use this code:
+## Platforms
 
-```ruby
-require 'kittn'
+### Linux
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+The Linux Wallet comes in two variations :
+- QT Wallet
+ - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
+- Daemon
+ - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
 
-```python
-import kittn
+#### Shadowcoind from Source
 
-api = kittn.authorize('meowmeowmeow')
-```
+If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+
+> Update and Install dependencies:
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+sudo apt-get update && apt-get upgrade
+sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Download the source code and compile shadowcoind
+```shell
+git clone https://github.com/ShadowProject/shadow
+cd shadowcoin/src
+make -f makefile.unix
+strip shadowcoind
+```
+
+> Run the daemon
+```shell
+shadowcoind -daemon
+```
+
+On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
+
+```shell
+nano ~/.shadowcoin/shadowcoin.conf
+```
+
+Add the following to your config file, changing the username and password to something secure:
+>daemon=1
+>rpcuser=<secure username>
+>rpcpassword=<secure password>
+
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
