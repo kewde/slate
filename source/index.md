@@ -167,16 +167,16 @@ strip shadowcoind
 shadowcoind -daemon
 ```
 
-On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
+> On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
 
 ```shell
 nano ~/.shadowcoin/shadowcoin.conf
 ```
 
-Add the following to your config file, changing the username and password to something secure:
->daemon=1
->rpcuser=<secure username>
->rpcpassword=<secure password>
+> Add the following to your config file, changing the username and password to something secure:
+> daemon=1
+> rpcuser=<secure username>
+> rpcpassword=<secure password>
 
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
