@@ -27,14 +27,111 @@ E­-cash systems, or virtual currencies, have become a very common way to transa
 
 We believe privacy is a human right ­ as enshrined in article 12 of the Universal Declaration of Human Rights of the United Nations. Transactions of value are an essential part of our daily lives. As such we strive to provide you with tools to transact in confidence. We are building anonymous systems and defending our privacy with cryptography, with anonymous mail forwarding systems, with digital signatures, and with electronic money. Creating a decentralized anonymous communication, commerce and currency platform available for all desktop and mobile operating systems.
 
-## Shadow compared too ...
+## Shadow next to ...
 
 ### Bitcoin
 
+Shadow functions on the same core principles from which Bitcoin was founded. There is no central authority or bank mechanism that controls the flow of transactions. 
 
-> yep
+### Zerocoin
+Shadow does not require the initial trusted parameter setup which is present in the Zerocoin and Zerocash scheme.
 
-# Authentication
+### Monero
+
+### Dash
+
+## Users
+
+Many have referred to Shadow as the “anti-Google” and hope that the project will become the solution for anyone seeking online anonymity, including private communication, shopping, browsing and publishing.
+Shadow’s team sees potential for its services to be useful to the wider online community, by making secure and user friendly software that is easy to use and easily accessible. The recent release of ShadowCore is a foundational step towards that end goal. Potential users could include journalists looking for a neutral place to gather and discuss information outside of public networks, possible whistleblowers looking for an unmonitored area to collect and store sensitive materials, people who want to buy and sell goods or services without worrying about local restrictions or transaction fees, or simply anyone who – on general principles – isn’t interested in having their records monitored or captured by anyone.
+
+Shadow’s financial unit, ShadowCash, also goes above and beyond other digital currencies to make the process invisible to outside eyes, but still nearly seamless for users, who can conduct their business anywhere in the world, on desktops or mobile devices.
+
+## Contribute
+
+Shadow is an Open Source project which is created almost entirely by volunteers. There are lots of ways you can get involved and help the project grow and improve. Here are some ways for you to get started.
+
+### Code
+
+Shadow is controlled by all Shadow users around the world. If you are a developer, you can use your super-powers to do good and contribute. The Shadow project is hosted over on GitHub. This is where developers work hard on the next version(s) of the software. To get involved with developing Shadow, check out our detailed contributing guidelines. We credit all contributors to the Shadow project in every major and minor release. We hold public development meetings and chat in our Slack team. We also maintain a public roadmap and dev blog to give you an idea of what's being worked on right now, and what's coming next. Are you someone who might be interested? Do not hesitate and contact us directly.
+
+### Donate
+
+We are a non-profit and Open Source software project and are trying to build a private economy. We appreciate all the help we can get in making this a reality. Both addresses are managed by Rynomster (lead developer). If applicable, please specify whether you want to remain anonymous. Many thanks to all our sponsors!
+ 
+Official BTC donation address: 155cKQ5pk9kCQoXigxQapnLNyBK3hMrd2V
+Official SDC development donation address: SdcdevXEaZaE9nDKjh6aH7kd3NcLX5rwAY
+
+### Report
+
+If you think you've found a bug or a problem with Shadow, please let us know! First, search our issue tracker to search to see if someone has already reported the problem. If they haven't, click here to open a new issue, and fill out the template with as much information as possible. The more you can tell us about the problem and how it occurred, the more likely we are to fix it. Please check out our bug and bounty program for our guidelines and more details. 
+
+Please do not report security vulnerabilities publicly. The details for responsible disclosure of security issues can be found in our bug and bounty program.
+
+#### Bugs & Bounty program
+
+Official bug donation Address: SdcbugSrxsYSBzxB2cVfiAYdqwjftLBaF1
+According to Linus’ Law, “given enough eyeballs, all bugs are shallow”. That’s one of the reasons why Shadow’s source code is publicly available; but merely making the source code available doesn’t accomplish anything if people don’t read it!
+For this reason, Shadow has a series of bug bounties. Similar to the bounties offered by Mozilla and Google, Shadow bug bounties provide an opportunity for people who find bugs to be compensated. Unlike those programs, however, Shadow’s bounties are not limited to security vulnerabilities.
+Depending on the type of bug and when it is reported, different bounties will be awarded. Bounties are paid out in SDC, at the 3-day average of each to a fixed US Dollar value.
+
+#### Things that do not qualify under the bug bounty 
+
+- Bugs found on third-party/community sites, software or services, which is not due to an improper configuration issue specific to us. Please submit any potential issues to the maintainers of that site or providers of that service.
+- Vulnerabilities which are too broad or not documented properly (i.e. do not include a specific example relevant to a - Shadow-controlled site or application).
+- Bugs or issues with a third-party site, software, or service that we use, which is not due to an improper configuration issue specific to us. Please submit any potential issues to the maintainers of that site or providers of that service.
+- Bugs and errors found in software/code that is still undergoing alpha or beta testing.
+- Usability issues
+- Anything requiring social engineering
+- DOS/DDOS attacks
+- Missing HSTS (HttpOnly flags), Secure flag, Browser Cache vulnerabilities
+- CSRF that doesn’t affect the victim
+- Referrer leakage to pages an attacker cannot control.
+- The presence of unnecessary files, e.g. for backups, when these files do not expose any sensitive information.
+- Anything that is the result of an automated Nessus/PCI scans (too general)
+- DNS issues (e.g. lack of an SPF record)
+- SSL certificate issues
+- Bugs that have received mainstream tech media or community attention before the date of your disclosure.
+
+#### Bug Bounties and Rewards
+
+$1500 Deanonymize ShadowChat or ShadowSend (proof that a protocol is not anonymous)
+$750 A flaw in the protocol that allows for theft or loss of funds
+$500 A bug in the reference client that leads to consensus issues
+$250 ~ 1 Btc A bug which causes data corruption or loss
+$100 A bug which causes the application to crash
+$50 Other non-harmless bugs
+$10 ‘Harmless’ bugs, e.g. cosmetic errors
+
+#### How to report a bug
+
+Security-related issues
+Contact the developers privately by sending an e-mail to bounties@shadow.cash with the details of the issue. Do not post the issue on github or anywhere else until the issue has been resolved.
+Code issues
+We would strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix (along with your SDC address to claim the bounty). For more information, see this link.
+
+## Community
+
+community 
+Shadow has a very active community. Aboutshadow.com is dedicated to help Shadow’s community develop in a sustainable way. The website is registered and managed by community members, with the input of Shadow developers. Aboutshadow.com is not a foundation. Foundations imply centralization or a controlling body. All Shadow holders are equal and all have a say in the direction the project is heading. Just like nobody owns the email technology, nobody owns the Shadow network. As such, aboutshadow.com does not speak with authority in the name of the Shadow project.
+Community channels
+
+Below you will find a list of places where you can find other Shadow users, community members and news.
+IRC: freenode.net #shadowcash
+Forum: http://www.talk.shadowproject.io
+Slack: http://shadowproject.herokuapp.com/
+Reddit: https://www.reddit.com/r/ShadowCash
+Twitter: http://www.twitter.com/allaboutshadow
+
+## Support
+
+For support please visit one of the links below:
+
+Forum: http://www.talk.shadowproject.io
+IRC: freenode.net #shadowcash
+SLACK: http://shadowproject.herokuapp.com
+
+# Installing and running a client
 
 > To authorize, use this code:
 
