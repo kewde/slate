@@ -133,9 +133,7 @@ SLACK: http://shadowproject.herokuapp.com
 
 # Installing and running a client
 
-## Platforms
-
-### Linux
+## Linux
 
 The Linux Wallet comes in two variations :
 - QT Wallet
@@ -143,7 +141,7 @@ The Linux Wallet comes in two variations :
 - Daemon
  - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
 
-#### Shadowcoind from Source
+### Shadowcoind from Source
 
 If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
