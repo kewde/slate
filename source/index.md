@@ -178,7 +178,7 @@ nano ~/.shadowcoin/shadowcoin.conf
 > rpcuser=<secure username>
 > rpcpassword=<secure password>
 
-### other
+## other
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
