@@ -19,9 +19,18 @@ search: true
 
 # Introduction
 
-Skip skip60 when he comes so see you
+On the 19th of July 2014, Shadow emerged as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency. Back then, in traditional financial terms, many cryptocurrencies represented trackable and linkable check or card options while we wanted to create a digital currency that worked more like cash. Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing  non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
-Sure testing kewde - testing bash script update
+## Mission Statement
+
+E­-cash systems, or virtual currencies, have become a very common way to transact due to the many benefits they hold over traditional methods of exchange. One of the largest problems for virtual currencies is preventing double­ spending, where a currency holder sends the same coins to multiple recipients. Bitcoin solves this problem using the blockchain, a public record of all transactions in the system. By viewing the blockchain, all participants in the currency can see the current state of the system at the same time,thus the double ­spending problem is solved. However, adding the blockchain causes a severe reduction of the anonymity and privacy of the participants in the currency. As the blockchain is public, anyone can see the transactions and total holdings of participants, unless suitable precautions are taken. 
+
+We believe privacy is a human right ­ as enshrined in article 12 of the Universal Declaration of Human Rights of the United Nations. Transactions of value are an essential part of our daily lives. As such we strive to provide you with tools to transact in confidence. We are building anonymous systems and defending our privacy with cryptography, with anonymous mail forwarding systems, with digital signatures, and with electronic money. Creating a decentralized anonymous communication, commerce and currency platform available for all desktop and mobile operating systems.
+
+## Shadow compared too ...
+
+### Bitcoin
+
 
 > yep
 
