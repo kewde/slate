@@ -148,12 +148,12 @@ If you wish you can also compile directly from source, below are the instruction
 > Update and Install dependencies:
 
 ```shell
-# With shell, you can just pass the correct header with each request
 sudo apt-get update && apt-get upgrade
 sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
 ```
 
 > Download the source code and compile shadowcoind
+
 ```shell
 git clone https://github.com/ShadowProject/shadow
 cd shadowcoin/src
@@ -162,6 +162,7 @@ strip shadowcoind
 ```
 
 > Run the daemon
+
 ```shell
 shadowcoind -daemon
 ```
