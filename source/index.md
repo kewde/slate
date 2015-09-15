@@ -137,17 +137,20 @@ https://github.com/ShadowProject/bootstrap/
 Unzip the "bootstrap.dat.zip" file
 Place the bootstrap.dat file in one of the below locations depending on the OS
 
->Windows
+> Windows
+
 ```shell
 %appdata%\ShadowCoin
 ```
 
->OSX
+> OSX
+
 ```shell
 ~/Library/Application Support/ShadowCoin/
 ```
 
 > Linux
+
 ```shell
 ~/.shadowcoin/
 ```
