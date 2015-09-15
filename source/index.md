@@ -17,15 +17,15 @@ includes:
 search: true
 ---
 
-# Introduction
+# About Shadow
 
-On the 19th of July 2014, Shadow emerged as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency. Back then, in traditional financial terms, many cryptocurrencies represented trackable and linkable check or card options while we wanted to create a digital currency that worked more like cash. Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing  non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
+Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. At the time, most cryptocurrencies had traits analogous to traditional bank accounts with transactional protocols similar to credit cards. The anonymity of cash-like system had yet to be realized within the cryptocurrency space. The Shadow Project development team tasked themselves to create just that. Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing  non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
 ## Mission Statement
 
-E­-cash systems, or virtual currencies, have become a very common way to transact due to the many benefits they hold over traditional methods of exchange. One of the largest problems for virtual currencies is preventing double­ spending, where a currency holder sends the same coins to multiple recipients. Bitcoin solves this problem using the blockchain, a public record of all transactions in the system. By viewing the blockchain, all participants in the currency can see the current state of the system at the same time,thus the double ­spending problem is solved. However, adding the blockchain causes a severe reduction of the anonymity and privacy of the participants in the currency. As the blockchain is public, anyone can see the transactions and total holdings of participants, unless suitable precautions are taken. 
+Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. Prior to Bitcoin, the largest problem for these virtual currencies was  the prevention of double spending attacks. In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). Bitcoin was able to solve this major issue by integrating a public ledger of all previous transactions known as a block chain. Each member of Bitcoin’s network has the ability to analyze every transaction ever executed, allowing them to see if coins had been previously spent before accepting any new transactions. Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
 
-We believe privacy is a human right ­ as enshrined in article 12 of the Universal Declaration of Human Rights of the United Nations. Transactions of value are an essential part of our daily lives. As such we strive to provide you with tools to transact in confidence. We are building anonymous systems and defending our privacy with cryptography, with anonymous mail forwarding systems, with digital signatures, and with electronic money. Creating a decentralized anonymous communication, commerce and currency platform available for all desktop and mobile operating systems.
+On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
 ## Shadow next to ...
 
@@ -40,42 +40,140 @@ Shadow does not require the initial trusted parameter setup which is present in 
 
 ### Dash
 
-## Users
+# Community
 
-Many have referred to Shadow as the “anti-Google” and hope that the project will become the solution for anyone seeking online anonymity, including private communication, shopping, browsing and publishing.
-Shadow’s team sees potential for its services to be useful to the wider online community, by making secure and user friendly software that is easy to use and easily accessible. The recent release of ShadowCore is a foundational step towards that end goal. Potential users could include journalists looking for a neutral place to gather and discuss information outside of public networks, possible whistleblowers looking for an unmonitored area to collect and store sensitive materials, people who want to buy and sell goods or services without worrying about local restrictions or transaction fees, or simply anyone who – on general principles – isn’t interested in having their records monitored or captured by anyone.
+Shadow has a very active community. 
+Aboutshadow.com is dedicated to help Shadow’s community develop in a sustainable way. The website is registered and managed by community members, with the input of Shadow developers. Aboutshadow.com is not a foundation. Foundations imply centralization or a controlling body. All Shadow holders are equal and all have a say in the direction the project is heading. Just like nobody owns the email technology, nobody owns the Shadow network. As such, aboutshadow.com does not speak with authority in the name of the Shadow project.
 
-Shadow’s financial unit, ShadowCash, also goes above and beyond other digital currencies to make the process invisible to outside eyes, but still nearly seamless for users, who can conduct their business anywhere in the world, on desktops or mobile devices.
+## Social Media
 
-## Contribute
+Below you will find a list of places where you can find other Shadow users, community members and news.
+IRC: freenode.net #shadowcash
+Forum: http://www.talk.shadowproject.io
+Slack: http://shadowproject.herokuapp.com/
+Reddit: https://www.reddit.com/r/ShadowCash
+Twitter: http://www.twitter.com/allaboutshadow
+
+# ShadowCash
+
+## Specification
+
+- Block Time: 60 seconds
+- Difficulty Re-target: every block
+- Nominal Stake Interest: 2% annually
+- Min Transaction Fee: 0.0001 SDC
+- Confirmations: 10 - Maturity: 500
+- Min Stake Age: 8 hours - no max age
+- P2P Port: 51737
+- RPC Port: 51736
+
+## Accept
+
+To get started with accepting ShadowCash is easy, simply download the latest Shadow client and you are ready to go. There are no third party payment processors or middlemen and more importantly the transactions and funds appear in your account in seconds.
+
+## Acquire
+
+Currently, you can only buy ShadowCash(SDC) once you have Bitcoin(BTC), then you can trade BTC for SDC on premium crypto-to-crypto exchanges.
+
+ShadowCash is available at these exchanges:
+- [BITTREX](https://bittrex.com/Market/Index?MarketName=BTC-SDC)
+- [POLONIEX](https://poloniex.com/exchange#btc_sdc)
+
+You can also pay with ShadowCash(SDC) anywhere Bitcoin(BTC) is accepted instantly with:
+- [SHAPESHIFT](https://shapeshift.io/)
+- [COINGATEWAY](https://coingateway.net/)
+
+## Mining
+
+### Proof of Work (PoW) - Complete
+- Algo: Scrypt
+- Max Height: 31000 (after this network will not accept PoW blocks)
+- SDC Circulation: ~6,400,000 SDC after two weeks of PoW
+
+### Proof of Stake (PoS) - Ongoing
+- Algo: Sha256 (formerly Scrypt)
+- Nominal Stake Interest: 2% annually
+
+### Multipool
+PoW mining has ended, but you can still use your mining rigs to earn ShadowCash by using the [SDC Multipool](https://www.shadowpool.info/). Point your rigs and enter your SDC payout address to begin!
+
+# ShadowCore
+
+## Introduction
+
+ShadowCore is a decentralized anonymous communication, commerce and currency platform available for all desktop and mobile operating systems. Transactions are lightning fast, cannot be frozen and cannot be traced when using ShadowSend. Users earn 2% interest on wealth per annum for securing the network through PoS.
+
+## Features
+
+## Source code
+
+ShadowCash source code is all open-source and available at our [GitHub repository](https://github.com/SDCDev/shadowcoin)
+
+## Download
+
+### Desktop Wallet
+- Latest [Windows](http://shadow.cash/downloads/shadow_1.3.2.4_win32.zip) wallet download
+- Latest [Linux](http://shadow.cash/downloads/shadow_1.3.2.4_linux64_static.zip) wallet download
+- Latest [OSX](http://shadow.cash/downloads/shadow_1.3.2.4_macosx.dmg) wallet download
+
+### Mobile Wallet
+- Latest Android wallet download - being upgraded!
+- Latest iOS wallet download - being upgraded!
+
+### Bootstrap & Useful Paths
+
+So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts a process known as "syncing". The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
+
+1. looking to help further strengthen the network by providing a full peer 
+2. Have ShadowCash (SDC) and wish to participate in staking or 
+3. plan to run services on the Shadow network and require a full node.
+
+If neither of the above apply you can set the Shadow wallet to "thinmode" which provides lightening fast synchronization to the ShadowCore P2P network.
+If you decide that a fullnode (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method. Close the Shadow Wallet and Download the latest Bootstrap file from:
+https://github.com/ShadowProject/bootstrap/
+
+Unzip the "bootstrap.dat.zip" file
+Place the bootstrap.dat file in one of the below locations depending on the OS
+Windows
+> %appdata%\ShadowCoin
+ 
+OSX
+> ~/Library/Application Support/ShadowCoin/
+ 
+Linux
+> ~/.shadowcoin/
+
+Start the ShadowCash Wallet again (The client might be unresponsive but don't be alarmed - it's just loading all the blockchain data)
+
+# Contribute
 
 Shadow is an Open Source project which is created almost entirely by volunteers. There are lots of ways you can get involved and help the project grow and improve. Here are some ways for you to get started.
 
-### Code
+## Code
 
 Shadow is controlled by all Shadow users around the world. If you are a developer, you can use your super-powers to do good and contribute. The Shadow project is hosted over on GitHub. This is where developers work hard on the next version(s) of the software. To get involved with developing Shadow, check out our detailed contributing guidelines. We credit all contributors to the Shadow project in every major and minor release. We hold public development meetings and chat in our Slack team. We also maintain a public roadmap and dev blog to give you an idea of what's being worked on right now, and what's coming next. Are you someone who might be interested? Do not hesitate and contact us directly.
 
-### Donate
+## Donate
 
 We are a non-profit and Open Source software project and are trying to build a private economy. We appreciate all the help we can get in making this a reality. Both addresses are managed by Rynomster (lead developer). If applicable, please specify whether you want to remain anonymous. Many thanks to all our sponsors!
  
 Official BTC donation address: 155cKQ5pk9kCQoXigxQapnLNyBK3hMrd2V
 Official SDC development donation address: SdcdevXEaZaE9nDKjh6aH7kd3NcLX5rwAY
 
-### Report
+## Report
 
 If you think you've found a bug or a problem with Shadow, please let us know! First, search our issue tracker to search to see if someone has already reported the problem. If they haven't, click here to open a new issue, and fill out the template with as much information as possible. The more you can tell us about the problem and how it occurred, the more likely we are to fix it. Please check out our bug and bounty program for our guidelines and more details. 
 
 Please do not report security vulnerabilities publicly. The details for responsible disclosure of security issues can be found in our bug and bounty program.
 
-#### Bugs & Bounty program
+### Bugs & Bounty program
 
 Official bug donation Address: SdcbugSrxsYSBzxB2cVfiAYdqwjftLBaF1
 According to Linus’ Law, “given enough eyeballs, all bugs are shallow”. That’s one of the reasons why Shadow’s source code is publicly available; but merely making the source code available doesn’t accomplish anything if people don’t read it!
 For this reason, Shadow has a series of bug bounties. Similar to the bounties offered by Mozilla and Google, Shadow bug bounties provide an opportunity for people who find bugs to be compensated. Unlike those programs, however, Shadow’s bounties are not limited to security vulnerabilities.
 Depending on the type of bug and when it is reported, different bounties will be awarded. Bounties are paid out in SDC, at the 3-day average of each to a fixed US Dollar value.
 
-#### Things that do not qualify under the bug bounty 
+### Things that do not qualify under the bug bounty 
 
 - Bugs found on third-party/community sites, software or services, which is not due to an improper configuration issue specific to us. Please submit any potential issues to the maintainers of that site or providers of that service.
 - Vulnerabilities which are too broad or not documented properly (i.e. do not include a specific example relevant to a - Shadow-controlled site or application).
@@ -93,7 +191,7 @@ Depending on the type of bug and when it is reported, different bounties will be
 - SSL certificate issues
 - Bugs that have received mainstream tech media or community attention before the date of your disclosure.
 
-#### Bug Bounties and Rewards
+### Bug Bounties and Rewards
 
 $1500 Deanonymize ShadowChat or ShadowSend (proof that a protocol is not anonymous)
 $750 A flaw in the protocol that allows for theft or loss of funds
@@ -103,33 +201,12 @@ $100 A bug which causes the application to crash
 $50 Other non-harmless bugs
 $10 ‘Harmless’ bugs, e.g. cosmetic errors
 
-#### How to report a bug
+### How to report a bug
 
 Security-related issues
 Contact the developers privately by sending an e-mail to bounties@shadow.cash with the details of the issue. Do not post the issue on github or anywhere else until the issue has been resolved.
 Code issues
 We would strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix (along with your SDC address to claim the bounty). For more information, see this link.
-
-## Community
-
-community 
-Shadow has a very active community. Aboutshadow.com is dedicated to help Shadow’s community develop in a sustainable way. The website is registered and managed by community members, with the input of Shadow developers. Aboutshadow.com is not a foundation. Foundations imply centralization or a controlling body. All Shadow holders are equal and all have a say in the direction the project is heading. Just like nobody owns the email technology, nobody owns the Shadow network. As such, aboutshadow.com does not speak with authority in the name of the Shadow project.
-Community channels
-
-Below you will find a list of places where you can find other Shadow users, community members and news.
-IRC: freenode.net #shadowcash
-Forum: http://www.talk.shadowproject.io
-Slack: http://shadowproject.herokuapp.com/
-Reddit: https://www.reddit.com/r/ShadowCash
-Twitter: http://www.twitter.com/allaboutshadow
-
-## Support
-
-For support please visit one of the links below:
-
-Forum: http://www.talk.shadowproject.io
-IRC: freenode.net #shadowcash
-SLACK: http://shadowproject.herokuapp.com
 
 # Installing and running a client
 
