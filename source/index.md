@@ -48,11 +48,11 @@ Aboutshadow.com is dedicated to help Shadow’s community develop in a sustainab
 ## Social Media
 
 Below you will find a list of places where you can find other Shadow users, community members and news.
-IRC: freenode.net #shadowcash
-Forum: http://www.talk.shadowproject.io
-Slack: http://shadowproject.herokuapp.com/
-Reddit: https://www.reddit.com/r/ShadowCash
-Twitter: http://www.twitter.com/allaboutshadow
+- IRC: freenode.net #shadowcash
+- Forum: http://www.talk.shadowproject.io
+- Slack: http://shadowproject.herokuapp.com/
+- Reddit: https://www.reddit.com/r/ShadowCash
+- Twitter: http://www.twitter.com/allaboutshadow
 
 # ShadowCash
 
@@ -76,12 +76,14 @@ To get started with accepting ShadowCash is easy, simply download the latest Sha
 Currently, you can only buy ShadowCash(SDC) once you have Bitcoin(BTC), then you can trade BTC for SDC on premium crypto-to-crypto exchanges.
 
 ShadowCash is available at these exchanges:
+
 - [BITTREX](https://bittrex.com/Market/Index?MarketName=BTC-SDC)
 - [POLONIEX](https://poloniex.com/exchange#btc_sdc)
 
 You can also pay with ShadowCash(SDC) anywhere Bitcoin(BTC) is accepted instantly with:
+
 - [SHAPESHIFT](https://shapeshift.io/)
-- [COINGATEWAY](https://coingateway.net/)
+-  [COINGATEWAY](https://coingateway.net/)
 
 ## Mining
 
@@ -134,14 +136,21 @@ https://github.com/ShadowProject/bootstrap/
 
 Unzip the "bootstrap.dat.zip" file
 Place the bootstrap.dat file in one of the below locations depending on the OS
-Windows
-> %appdata%\ShadowCoin
- 
-OSX
-> ~/Library/Application Support/ShadowCoin/
- 
-Linux
-> ~/.shadowcoin/
+
+>Windows
+```shell
+%appdata%\ShadowCoin
+```
+
+>OSX
+```shell
+~/Library/Application Support/ShadowCoin/
+```
+
+> Linux
+```shell
+~/.shadowcoin/
+```
 
 Start the ShadowCash Wallet again (The client might be unresponsive but don't be alarmed - it's just loading all the blockchain data)
 
