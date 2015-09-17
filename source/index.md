@@ -105,7 +105,22 @@ PoW mining has ended, but you can still use your mining rigs to earn ShadowCash 
 
 ShadowCore is a decentralized anonymous communication, commerce and currency platform available for all desktop and mobile operating systems. Transactions are lightning fast, cannot be frozen and cannot be traced when using ShadowSend. Users earn 2% interest on wealth per annum for securing the network through PoS.
 
-## Features
+## HTML cryptobrowser
+
+ShadowCore is an HTML Cryptobrowser and a secure platform through which the cryptocurrency, ShadowCash, can be transferred. One of the significant advantages of ShadowCore is its deep integration with the rest of Shadow's features as well as offering native TOR support for IP obfuscation.
+
+## Hierarchical Deterministic (HD)
+
+ShadowCore supports the [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allowing users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy. 
+
+Synonyms
+- HD protocol
+- HD wallet
+
+Links
+- [HD Protocol](https://bitcoin.org/en/developer-guide#term-hd-protocol) — Bitcoin.org Developer Guide
+- [BIP32: hierarchical deterministic wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) — Bitcoin Improvement Proposals
+- [Deterministic wallet](https://en.bitcoin.it/wiki/Deterministic_Wallet) — Bitcoin Wiki
 
 ## Source code
 
