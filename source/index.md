@@ -435,6 +435,539 @@ Address and compact signature are not included when message is sent anonymously 
 
 Whitepaper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf)
 
+
+# ShadowMarket
+
+## Introduction
+## Roadmap
+## Q&A
+## Buy
+## Sell
+## Trade
+## Whitepaper
+
+# ShadowGo
+
+## Android
+## iOS
+
+# Other
+
+## Backup & restore wallet
+## Connecting to the network
+## Wallet options
+## Support
+
+For support please visit one of the links below:
+
+Forum: http://www.talk.shadowproject.io
+IRC: freenode.net #shadowcash
+SLACK: http://shadowproject.herokuapp.com
+
+# Developers
+
+## Setting up the build environment and building
+
+Windows
+OSX
+Linux
+Rasbperry Pi
+Docker
+
+## Installing and running a node
+
+Windows
+osx
+linux
+coreos/docker
+
+## Setting up and running a node on digitalocean using coreos/docker
+
+## Setting up and running a node on scaleway
+
+## Testnet
+
+There are 2 ways of starting the daemon in testnet mode.
+
+### 1 editing the shadowcoin.conf
+Find the path to the files. (Windows: %appdata%/ShadowCoin/)
+
+Create or add to the shadowcoin.conf file the following:
+testnet=1
+addnode=vps1.shadow.cash
+addnode=vps2.shadow.cash
+
+The addnode will help with extra connections because there are not many people running full testnet nodes.
+
+### 2 start executable with testnet parameter
+
+Start the ShadowCoin executable with the "-testnet" flag.
+Windows:
+Open up a command prompt, change directory to the installation folder of Shadow and run the following command:
+shadow.exe -testnet
+
+## Blockchain / Blocks / Transactions
+## Data structures
+## Spending
+## Simple Raw Transaction
+## Complex Raw Transaction
+## Signing
+## Multisig
+
+# JSON-RPC API Reference
+
+## addmultisigaddress
+```shell
+addmultisigaddress <nrequired> <'["key","key"]'> [account]
+```
+
+## addnode
+```shell
+addnode <node> <add|remove|onetry>
+```
+
+## addredeemscript
+
+```shell
+addredeemscript <redeemScript> [account]
+```
+
+## anoninfo
+
+```shell
+anoninfo [recalculate]
+```
+
+## anonoutputs
+
+```shell
+anonoutputs [systemTotals] [show_immature_outputs]
+```
+
+## backupwallet <destination>
+
+```shell
+backupwallet <destination>
+```
+
+## checkwallet
+
+## clearwallettransactions 
+
+## createrawtransaction
+
+```shell
+createrawtransaction [{"txid":txid,"vout":n},...] {address:amount,...}
+```
+
+## decoderawtransaction
+
+```shell
+decoderawtransaction <hex string>
+```
+
+## decodescript
+
+```shell
+decodescript <hex string>
+```
+
+## dumpprivkey
+
+```shell
+dumpprivkey <shadowcashaddress>
+```
+
+## dumpwallet
+
+```shell
+dumpwallet <filename>
+```
+
+## encryptwallet
+
+```shell
+encryptwallet <passphrase>
+```
+
+## estimateanonfee
+
+> <amount>is a real and is rounded to the nearest 0.000001
+Used to estimate the anon fee with a given amount and ring size.
+
+```shell
+estimateanonfee <amount> <ring_size> [narration]
+```
+
+## getaccount
+
+```shell
+getaccount <shadowcoinaddress>
+```
+
+## getaccountaddress
+
+```shell
+getaccountaddress <account>
+```
+
+## getaddednodeinfo
+
+```shell
+getaddednodeinfo <dns> [node]
+```
+
+## getaddressesbyaccount
+
+```shell
+getaddressesbyaccount <account>
+```
+
+## getbalance
+
+```shell
+getbalance [account] [minconf=1]
+```
+
+## getbestblockhash
+
+## getblock
+
+```shell
+getblock <hash> [txinfo]
+```
+
+## getblockbynumber
+
+```shell
+getblockbynumber <number> [txinfo]
+```
+
+## getblockcount
+
+## getblockhash
+
+```shell
+getblockhash <index>
+```
+
+## getblocktemplate [params]
+
+```shell
+getblocktemplate [params]
+```
+
+## getcheckpoint
+
+## getconnectioncount
+
+## getdifficulty
+
+## getinfo
+
+## getmininginfo
+
+## getnetworkinfo
+
+## getnewaddress
+
+```shell
+getnewaddress [account]
+```
+
+## getnewpubkey
+
+```shell
+getnewpubkey [account]
+```
+
+## getnewstealthaddress [label]
+
+```shell
+getnewstealthaddress [label]
+```
+
+## getpeerinfo
+
+## getrawmempool
+
+## getrawtransaction
+
+```shell
+getrawtransaction <txid> [verbose=0]
+```
+
+## getreceivedbyaccount
+
+```shell
+getreceivedbyaccount <account> [minconf=1]
+```
+
+## getreceivedbyaddress
+
+```shell
+getreceivedbyaddress <shadowcashaddress> [minconf=1]
+```
+
+## getstakinginfo
+
+## getsubsidy
+
+```shell
+getsubsidy [nTarget]
+```
+
+## gettransaction <txid>
+
+```shell
+gettransaction <txid>
+```
+
+## getwork
+
+```shell
+getwork [data]
+```
+
+## getworkex
+
+```shell
+getworkex [data, coinbase]
+```
+
+help [command]
+
+importprivkey <shadowcoinprivkey> [label]
+
+importstealthaddress <scan_secret> <spend_secret> [label]
+
+importwallet <filename>
+
+keypoolrefill [new-size]
+
+listaccounts [minconf=1]
+Deprecated.
+
+listaddressgroupings
+Lists groups of addresses which have had their common ownership made public by common use as inputs or as the resulting change in past transactions
+
+listreceivedbyaccount [minconf=1] [includeempty=false]
+
+listreceivedbyaddress [minconf=1] [includeempty=false]
+
+listsinceblock [blockhash] [target-confirmations]
+
+liststealthaddresses [show_secrets=0]
+List owned stealth addresses.
+
+When used with show_secrets=1 it will return a list of all stealth addresses, the labels, the scan secrets and spend secrets.
+
+listtransactions [account] [count=10] [from=0] [show_coinstake=1]
+Returns up to [count] most recent transactions skipping the first [from] transactions for account [account].
+If you want to proces Stealth transactions (SDT) then you want to use this function.
+There a bit of a trick necessary to get the stealth transactions, easier explained in an example:
+Stealth address = "smYmoN9xyenTSow9RP4ecf172sdKTeN9k4ZVCiUhFY6MTQRqSS2LRSZSZECwnZSb1a7EaCNc4aPrmrkexBXEs4qeJTZ6m9NjJBgnQE"
+=> Account name = "ao smYmoN9xyenTSow9..."
+
+When stealth addresses are generated their account name is "ao first_16_chars...", the 3 dots at the end are important!
+
+
+listunspent [minconf=1] [maxconf=9999999] 
+Returns array of unspent transaction outputs with between minconf and maxconf (inclusive) confirmations.
+Optionally filtered to only include txouts paid to specified addresses.
+Results are an array of Objects, each of which has:
+{txid, vout, scriptPubKey, amount, confirmations}
+
+makekeypair [prefix]
+
+move <fromaccount> <toaccount> <amount> [minconf=1] [comment]
+
+nextorphan [connecthash]
+
+reloadanondata 
+
+repairwallet
+Repair wallet if checkwallet reports any problem
+
+resendtx
+
+reservebalance [<reserve> [amount]]
+
+rewindchain <number>
+
+scanforalltxns [fromHeight]
+
+scanforstealthtxns [fromHeight]
+
+sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]
+
+sendanontoanon <stealth_address> <amount> <ring_size> [narration] [comment] [comment-to]
+
+sendanontosdc <stealth_address> <amount> <ring_size> [narration] [comment] [comment-to]
+
+sendfrom <fromaccount> <toshadowcoinaddress> <amount> [minconf=1] [comment] [comment-to] [narration] 
+
+sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]
+
+sendrawtransaction <hex string>
+
+sendsdctoanon <stealth_address> <amount> [narration] [comment] [comment-to]
+
+sendtoaddress <shadowcoinaddress> <amount> [comment] [comment-to] [narration]
+
+sendtostealthaddress <stealth_address> <amount> [comment] [comment-to] [narration]
+
+setaccount <shadowcoinaddress> <account>
+
+setbestblockbyheight <height>
+
+settxfee <amount>
+
+signmessage <shadowcoinaddress> <message>
+
+signrawtransaction <hex string> [{"txid":txid,"vout":n,"scriptPubKey":hex},...] [<privatekey1>,...] [sighashtype="ALL"]
+
+smsgaddkey <address> <pubkey>
+
+smsgbuckets [stats|dump]
+Display some statistics.
+
+smsgdisable 
+Disable secure messaging
+
+smsgenable 
+Enable secure messaging
+
+smsggetpubkey <address>
+Returns the public key for a given address.
+
+Example:
+smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
+
+Output:
+{
+"result" : "Success.",
+"address in wallet" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
+"compressed public key" : "26S8iEiv2754RskjkWqRZkbZ22iNRYPgK7sUPyRPueXni"
+}
+ 
+
+smsginbox [all|unread|clear]
+Decrypt and display all received messages.
+"all" will show all messages, "unread" will only show the unread messages.
+Warning: clear will delete all messages.
+
+Example:
+smsginbox all
+
+Output:
+{
+"message" : {
+"received" : "2015-09-13 16:19:53 Romance",
+"sent" : "2015-09-13 16:19:51 Romance",
+"from" : "anon",
+"to" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
+"text" : "ShadowCash is awesome"
+},
+"message" : {
+"received" : "2015-09-13 16:18:36 Romance",
+"sent" : "2015-09-13 16:18:35 Romance ",
+"from" : "anon",
+"to" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
+"text" : "This secure messagings is brilliant!"
+},
+"result" : "2 messages shown."
+}
+
+
+smsglocalkeys [whitelist|all|wallet|recv <+/-> <address>|anon <+/-> <address>]
+
+smsgoptions [list|set <optname> <value>]
+List and manage the secure message options.
+
+Example:
+smsgoptions list
+
+Output:
+{
+"option" : "newAddressRecv = true",
+"option" : "newAddressAnon = true",
+"result" : "Success."
+}
+
+Example 2:
+smsgoptions set newAddressRecv false
+
+Output:
+{
+"option" : "newAddressRecv = false",
+"option" : "newAddressAnon = true",
+"result" : "Success."
+}
+
+smsgoutbox [all|clear]
+Decrypt and display all sent messages.
+Warning: clear will delete all sent messages.
+Will also show all messages sent with smsganonsend.
+
+Example:
+smsgoutbox
+
+Output:
+{
+"message" : {
+"sent" : "2015-09-13 16:19:51 Romance",
+"from" : "anon",
+"to" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
+"text" : "ShadowCash is awesome"
+},
+"message" : {
+"sent" : "2015-09-13 16:18:35 Romance",
+"from" : "anon",
+"to" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
+"text" : "This secure messaging is brilliant!"
+},
+"result" : "2 sent messages shown."
+}
+
+
+smsgscanbuckets 
+Force rescan of all messages in the bucket store.
+
+smsgscanchain 
+Look for public keys in the block chain.
+
+smsgsend <addrFrom> <addrTo> <message>
+
+smsgsendanon <addrTo> <message>
+Send and anonymous message to an address.
+
+Example:
+smsgsendanon tFyq452LPtDotWat8PFwEV5oPoWDqagLNv "This secure messagings is brilliant!"
+
+Output:
+{
+"result" : "Sent."
+}
+
+stop
+Stop the shadowcoin server
+
+submitblock <hex data> [optional-params-obj]
+
+thinforcestate <state>
+
+thinscanmerkleblocks <height>
+
+txnreport [collate_amounts] [show_key_images]
+
+validateaddress <shadowcoinaddress>
+
+validatepubkey <shadowcoinpubkey>
+
+verifymessage <shadowcoinaddress> <signature> <message>
+
+
 # Contribute
 
 Shadow is an Open Source project which is created almost entirely by volunteers. There are lots of ways you can get involved and help the project grow and improve. Here are some ways for you to get started.
