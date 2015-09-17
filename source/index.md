@@ -121,7 +121,7 @@ Links
 - [HD Protocol](https://bitcoin.org/en/developer-guide#term-hd-protocol) — Bitcoin.org Developer Guide
 - [BIP32: hierarchical deterministic wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) — Bitcoin Improvement Proposals
 - [Deterministic wallet](https://en.bitcoin.it/wiki/Deterministic_Wallet) — Bitcoin Wiki
-
+ 
 ## Source code
 
 ShadowCash source code is all open-source and available at our [GitHub repository](https://github.com/SDCDev/shadowcoin)
@@ -277,22 +277,163 @@ The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you 
 The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
 </aside>
 
-## other
+## ShadowLite
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+ShadowLite is the brand new component of the Shadow platform that brings lightning-fast syncing with the Shadow blockchain.
+We've taken a completely different approach to wallet design based on the principles of the "Simplified Payment Verification" or “SPV” system outlined in section 8 of [Satoshi’s Whitepaper](https://bitcoin.org/bitcoin.pdf). Instead of releasing a separate client, we’ve integrated optional lite functionality within the wallet. This allows for startup configuration to determine which mode you are running (thin or full).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+ShadowLite mobile users have access to all existing functionality with a reduced bandwidth, storage and memory footprint.
 
-`Authorization: meowmeowmeow`
+### Instructions
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+#### Enable Lite Mode
 
-```shell
-test
-```
+For those of you who wish to use the lite wallet, just add the following to your shadowcoin.conf configuration file:
+[code]thinmode=1[/code]
+or alternatively, you can startup the client with the [code]-thinmode[/code] parameter.
 
+# ShadowSend ~ Anon Sending
+
+ShadowSend v2 was released in Dec 2014 introducing an anonymity protocol which leverages zero-knowledge proofs, dual-key stealth addresses and ring signatures to provide near-instant, untraceable, unlinkable and trustless transactions.
+
+## Introduction
+
+ShadowSend’s anonymous cryptographic transaction protocol using traceable ring signatures[5], which utilise a non­interactive zero knowledge proof[6]. Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises: dual­key stealth addresses, traceable ring signatures and non­interactive zero knowledge proofs. We explain prove how Shadow our scheme introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­ spend prevention. We will also present performance data of our scheme which includes proof sizes, signature generation times and verification times. Finally, we will present planned future improvements to the current scheme.
+
+A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
+
+## NIZK (Non-Interactive Zero Knowledge) proofs
+
+Shadow uses a verification concept called Zero-Knowledge. Typically, when a user visits a site, there’s an instantaneous security check, depending on the type of site and what information it’s designed to safeguard. Then, the user’s browser looks for a valid security certificate and then conducts a digital ‘handshake,’ sometimes with a string of numbers, for both ends to verify the data. Mainstream encryption methods such as SSL can create a longer process on both ends of the transaction. However, with Zero-Knowledge, instead of a script that checks the properties and history of a particular coin and verifies that it is indeed unique and unspent, a script could simply verify that the security process was properly followed to create the coin, so therefore the coin is legitimate. The designation of the transcription method will remain with that particular coin through its entire history, whether or not it is exchanged to another user. This process will also speed up the transaction process and offers privacy guarantees to buyers and sellers.
+
+## Dual-key stealth addresses
+
+Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency.
+It is used to anonymize the recipients of a transaction.
+
+It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
+
+It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
+All transactions have to be made with the SpendKey, only available after decrypting your wallet.
+The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
+
+<aside class="notice">TO COMPLETE</aside>
+
+## Ring signatures
+
+<aside class="notice">TO COMPLETE</aside>
+
+## ShadowTokens
+
+In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which will destroy SDC (ShadowCash), and will output a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. Shadow tokens take the form of outputs on the ShadowCash chain. Shadow tokens are spendable only by providing a traceable ring signature to prove ownership of the token.
+
+The ring signature consists of the public key of the token being spent, plus the
+public keys from 3 to 200 other tokens of the same value as the token being spent. Thenatureof ringsignaturesmakesitimpossibletodiscoverwhichofthemember coins in the ring signature is being spent, and transactions are no longer traceable.
+
+It is not possible to determine which tokens have been spent, so all tokens remain intheblockchainasspendableoutputsavailableasmembersof ringsignaturesfor other token spends.
+
+To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow tokens for each decimal place of the total value. The tokens are further broken up to values of 1, 3, 4 and 5. For example 1.7 sdc would become 3 tokens of values 1.0, 0.3 and 0.4.
+
+### Double Spend Prevention
+
+The ring signature tags (keyImage) of the spent Shadow tokens are embedded in the blockchain to prevent double spends. Each tag is unique to the Shadow token, regardless of the other members of the ring signature.
+
+## Spending Shadow tokens
+
+There are two ways in which Shadow tokens can be spent: they can be sent as Shadow tokens or redeemed as SDC.
+
+1. When sent as Shadow tokens, new tokens are minted for the recipient to the value of the input Shadow minus the transaction fee.
+2. When redeemed as SDC, new SDC is created to the value of the input Shadow minus the transaction fee.
+
+In both cases the input tokens become unspendable. The transaction fee for spending Shadow tokens is 100x greater than the fee for standard transactions. This is to cover the cost of the extra activity required by the network to transmit, verify and store shadow transactions, which are larger and require more processing than standard transactions.
+
+In order to spend Shadow, we use ring signatures to sign the transaction[5][6]. Our scheme consists of three functions, generateRingSignature, generateKeyImage, verifyRingSignature.
+
+For efficiency’s sake, when spending Shadow, we get a list of all anonymous outputs in the system, then we remove coins that don't have enough same value outputs in the system, then we choose the smallest coin or least number of smallest coins that can cover the amount + transaction fee.
+
+Each Shadow coin has its own private key, so when spending Shadow, each coin or anonymous input, will need to have its own ring signature generated, and will then have to be verified.
+
+## Whitepaper
+
+ShadowSend v2 whitepaper: [http://shadow.cash/downloads/shadowcash-anon.pdf](http://shadow.cash/downloads/shadowcash-anon.pdf)
+
+# ShadowChat
+
+Communication is an essential component of doing business. Modern technology gives us cheap, reliable and effortless methods to communicate with others regardless of physical distance. However this technology does little to safeguard the content of our messages from the scrutiny of interested observers. We live in an age of constant and ubiquitous surveillance, where it becomes more difficult by the day to retain our privacy. Privacy is paramount when conducting business, the consequences of invasions of privacy can be devastating to both businesses and individuals, whether the attacker is a rival firm, a malicious individual or an overbearing government.
+
+## Introduction
+
+ShadowCoin has implemented a p2p Encrypted Instant Messaging system utilising state-of-the-art technology to keep your communications private. All messages are encrypted by the proven AES-256-CBC algorithm, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilising sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
+To eliminate the risk and hassle of sharing passwords, we utilise the proven and trusted method of Elliptic Curve Diffie-Hellman (ECDH) key exchange.
+The Elliptic Curve Digital Signature Algorithm (ECDSA) is used to give you confidence that the messages you receive come from where they claim to.
+Messages are distributed over the pre-existing ShadowCoin p2p network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
+
+## Key Sharing
+
+The Elliptic Curve Diffie-Hellman (ECDH) key exchange method allows a secret key for encryption to be shared between the sender and recipient using the data embedded in the message along with the private keys of ShadowCoin addresses held by the sender and recipient.
+In order to send a ShadowCoin Encrypted message, you must possess the public key to a private key of the intended recipient. The public keys embedded in the ShadowCoin transaction blockchain when an amount is spent. If you are sending to an address that has not spent a transaction in the blockchain the public key to that address must be provided manually.
+
+ShadowCoin uses curve secp256k1 for all elliptic curve functions. This is the same curve used by bitcoin along with the vast majority of altcoins. With such widespread use underpinning systems of immense value it is extremely unlikely that curve secp256k1 is not secure.
+
+Messages are signed by the keys they were sent with, this allows you to be confident of the origin of the messages you receive and also allows the public key of the sender to be extracted from the message, providing you all the information needed to send a reply.
+
+## Encryption
+
+Detailed Procedure:
+• Get public key K from destination address
+◦ Find in database created from scanning for public keys in the blockchain and user additions.
+• Generate 16 random bytes using a secure random number generator. Call them IV. Generate a new random EC key pair with private key called r and public key called R.
+• Generate shared secret key P using public key K and private key r. ◦ Elliptic Curve Diffie-Hellman
+• Use the shared secret key P and calculate the SHA512 hash H.
+◦ ECDH_compute_key of OpenSSL
+◦ Call the first 32 bytes of H key_e and the last 32 bytes key_m.
+• Calculate a 32 byte MAC with HMACSHA256, using key_m as salt and (timestamp + destination + cipher text).
+◦ Message authentication code used
+◦ By also checking time-stamp and destination, recipients can be certain that these fields have not been tampered with.
+• Generate a compact signature from the message data and sender's address.
+◦ Only if not sending anonymously
+◦ Recipient can verify that the message came from the sender
+◦ Also allows the public key to be reconstructed (useful to reply)
+• Include address and compact signature in the payload to be encrypted.
+• Compress the plain-text message with lz4 if the message is larger than 128 bytes.
+• Encrypt the payload data with AES-256-CBC, using IV as initialization vector, key_e as
+encryption key.
+
+## Message Propagation
+
+Encrypted Messages are duplicated on every participating node in the ShadowCoin network – this prevents adversaries form uncovering the recipient of an encrypted message by using network traffic analysis.
+
+The messages are stored on each node for a maximum period of 48 hours, after which the message is deleted. If the recipient is absent from the network for 48 hours or more the possibility exists that they may not receive messages sent to them. It is recommended to connect to the network each day in order to prevent such an occurrence.
+
+Stored messages are grouped by time in divisions of 1 hour. The system operates on the grouped buckets of messages to save bandwidth.
+
+![Synchronization of buckets between peer nodes](https://i.gyazo.com/597ddae84fb5ae156f4de1556fe674f8.png)
+
+## Decryption
+
+For each incoming message a node will attempt to decode the message with every owned address contained in the nodes white-list of addresses to receive messages on.
+To speed up the process and allow for any payload format the Message authentication code (MAC) is calculated for the generated shared secret key, if it does not match the MAC provided in the message, decryption will fail and the function ends.
+
+Detailed Procedure:
+• Get IV and R from the message block
+• Get the private key k of the recipient used to decrypt.
+• Generate shared secret key P using with private key k and public key R.
+◦ Elliptic Curve Diffie-Hellman
+• Use the shared secret key P to generate the SHA512 hash H.
+◦ Call the first 32 bytes of H key_e and the last 32 bytes key_m.
+• Calculate MAC' with HMACSHA256, using key_m as salt and hash of (time-stamp +
+destination + cipher text).
+• Compare MAC with MAC'.
+◦ Return if not equal, decryption will fail.
+• Decrypt the encrypted payload with AES-256-CBC, using IV as initialization vector, key_e
+as decryption key.
+• Decompress message portion with lz4 if message is larger than 128 bytes.
+• If address and compact signature were included then verify the message
+Address and compact signature are not included when message is sent anonymously Strip the sender's public key and add it to the public key database.
+
+## Whitepaper
+
+Whitepaper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf)
 
 # Contribute
 
