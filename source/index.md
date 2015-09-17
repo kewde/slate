@@ -172,6 +172,128 @@ Place the bootstrap.dat file in one of the below locations depending on the OS
 
 Start the ShadowCash Wallet again (The client might be unresponsive but don't be alarmed - it's just loading all the blockchain data)
 
+# Installing and running a client
+
+## Linux
+
+The Linux Wallet comes in two variations :
+- QT Wallet
+ - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
+- Daemon
+ - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
+
+### Shadowcoind from Source
+
+If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+
+> Update and Install dependencies:
+
+```shell
+sudo apt-get update && apt-get upgrade
+sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
+```
+
+> Download the source code and compile shadowcoind
+
+```shell
+git clone https://github.com/ShadowProject/shadow
+cd shadowcoin/src
+make -f makefile.unix
+strip shadowcoind
+```
+
+> Run the daemon
+
+```shell
+shadowcoind -daemon
+```
+
+> On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
+
+```shell
+nano ~/.shadowcoin/shadowcoin.conf
+```
+
+> Add the following to your config file, changing the username and password to something secure:
+> daemon=1
+
+> rpcuser=<secure username>
+> rpcpassword=<secure password>
+
+> You can copy the username and password provided in the earlier error message as the username and password is randomly generated and secure
+
+> You can now start the shadowcoind daemon once more
+
+```shell
+shadowcoind
+```
+
+> List all commands for shadowcoind
+
+```shell
+shadowcoind help
+#the above command will list all available functions for the shadowcoind daemon.
+```
+
+> Stopping shadowcoind
+
+```shell
+shadowcoind stop
+```
+
+## Shadowcoin-QT from Source
+
+> Update and Install dependencies
+
+```shell
+sudo apt-get update && apt-get upgrade
+sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
+```
+
+> Download the source code and compile shadow QT
+
+```shell
+git clone https://github.com/ShadowProject/shadow
+cd shadow
+qmake
+make
+```
+
+> Run the executable found within the shadowcoin folder with : ./shadow
+
+<aside class="warning">
+Warning : never use root to start the QT or daemon!
+</aside>
+
+## Mac Os
+
+<aside class="notice">
+The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet.
+</aside>
+
+## Windows
+
+<aside class="notice">
+The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
+</aside>
+
+## other
+
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+
+Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+
+`Authorization: meowmeowmeow`
+
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
+
+```shell
+test
+```
+
+
 # Contribute
 
 Shadow is an Open Source project which is created almost entirely by volunteers. There are lots of ways you can get involved and help the project grow and improve. Here are some ways for you to get started.
@@ -235,68 +357,6 @@ Contact the developers privately by sending an e-mail to bounties@shadow.cash wi
 Code issues
 We would strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix (along with your SDC address to claim the bounty). For more information, see this link.
 
-# Installing and running a client
-
-## Linux
-
-The Linux Wallet comes in two variations :
-- QT Wallet
- - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
-- Daemon
- - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
-
-### Shadowcoind from Source
-
-If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
-
-> Update and Install dependencies:
-
-```shell
-sudo apt-get update && apt-get upgrade
-sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
-```
-
-> Download the source code and compile shadowcoind
-
-```shell
-git clone https://github.com/ShadowProject/shadow
-cd shadowcoin/src
-make -f makefile.unix
-strip shadowcoind
-```
-
-> Run the daemon
-
-```shell
-shadowcoind -daemon
-```
-
-> On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
-
-```shell
-nano ~/.shadowcoin/shadowcoin.conf
-```
-
-> Add the following to your config file, changing the username and password to something secure:
-> daemon=1
-> rpcuser=<secure username>
-> rpcpassword=<secure password>
-
-## other
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-```shell
-test
-```
 
 # Kittens
 
