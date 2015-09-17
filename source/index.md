@@ -592,7 +592,7 @@ encryptwallet <passphrase>
 
 ## estimateanonfee
 
-> <amount>is a real and is rounded to the nearest 0.000001
+<amount> is a real and is rounded to the nearest 0.000001
 Used to estimate the anon fee with a given amount and ring size.
 
 ```shell
@@ -681,7 +681,7 @@ getnewaddress [account]
 getnewpubkey [account]
 ```
 
-## getnewstealthaddress [label]
+## getnewstealthaddress
 
 ```shell
 getnewstealthaddress [label]
@@ -735,36 +735,80 @@ getwork [data]
 getworkex [data, coinbase]
 ```
 
+## help
+
+```shell
 help [command]
+```
 
+## importprivkey
+
+```shell
 importprivkey <shadowcoinprivkey> [label]
+```
 
+## importstealthaddress
+
+```shell
 importstealthaddress <scan_secret> <spend_secret> [label]
+```
 
+## importwallet
+
+```shell
 importwallet <filename>
+```
 
+## keypoolrefill
+
+```shell
 keypoolrefill [new-size]
+```
 
-listaccounts [minconf=1]
-Deprecated.
+## listaccounts
+<aside class="warning">Deprecated.</aside>
 
-listaddressgroupings
+## listaddressgroupings
+
 Lists groups of addresses which have had their common ownership made public by common use as inputs or as the resulting change in past transactions
 
+## listreceivedbyaccount
+
+```shell
 listreceivedbyaccount [minconf=1] [includeempty=false]
+```
 
+## listreceivedbyaddress
+
+```shell
 listreceivedbyaddress [minconf=1] [includeempty=false]
+```
 
+## listsinceblock
+
+```shell
 listsinceblock [blockhash] [target-confirmations]
+```
 
+## liststealthaddresses
+
+```shell
 liststealthaddresses [show_secrets=0]
+```
+
 List owned stealth addresses.
 
 When used with show_secrets=1 it will return a list of all stealth addresses, the labels, the scan secrets and spend secrets.
 
+## listtransactions
+
+```shell
 listtransactions [account] [count=10] [from=0] [show_coinstake=1]
+```
+
 Returns up to [count] most recent transactions skipping the first [from] transactions for account [account].
 If you want to proces Stealth transactions (SDT) then you want to use this function.
+
 There a bit of a trick necessary to get the stealth transactions, easier explained in an example:
 Stealth address = "smYmoN9xyenTSow9RP4ecf172sdKTeN9k4ZVCiUhFY6MTQRqSS2LRSZSZECwnZSb1a7EaCNc4aPrmrkexBXEs4qeJTZ6m9NjJBgnQE"
 => Account name = "ao smYmoN9xyenTSow9..."
@@ -772,95 +816,216 @@ Stealth address = "smYmoN9xyenTSow9RP4ecf172sdKTeN9k4ZVCiUhFY6MTQRqSS2LRSZSZECwn
 When stealth addresses are generated their account name is "ao first_16_chars...", the 3 dots at the end are important!
 
 
-listunspent [minconf=1] [maxconf=9999999] 
+## listunspent
+
+```shell
+listunspent [minconf=1] [maxconf=9999999]
+```
+
 Returns array of unspent transaction outputs with between minconf and maxconf (inclusive) confirmations.
 Optionally filtered to only include txouts paid to specified addresses.
 Results are an array of Objects, each of which has:
 {txid, vout, scriptPubKey, amount, confirmations}
 
+## makekeypair
+
+```shell
 makekeypair [prefix]
+```
 
+## move
+
+```shell
 move <fromaccount> <toaccount> <amount> [minconf=1] [comment]
+```
 
+## nextorphan
+
+```shell
 nextorphan [connecthash]
+```
 
-reloadanondata 
+## reloadanondata 
 
-repairwallet
+## repairwallet
 Repair wallet if checkwallet reports any problem
 
-resendtx
+## resendtx
 
+## reservebalance
+
+```shell
 reservebalance [<reserve> [amount]]
+```
 
+## rewindchain
+
+```shell
 rewindchain <number>
+```
 
+## scanforalltxns
+
+```shell
 scanforalltxns [fromHeight]
+```
 
+## scanforstealthtxns
+
+```shell
 scanforstealthtxns [fromHeight]
+```
 
+## sendalert
+
+```shell
 sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]
+```
 
+## sendanontoanon
+
+```shell
 sendanontoanon <stealth_address> <amount> <ring_size> [narration] [comment] [comment-to]
+```
 
+## sendanontosdc
+
+```shell
 sendanontosdc <stealth_address> <amount> <ring_size> [narration] [comment] [comment-to]
+```
 
-sendfrom <fromaccount> <toshadowcoinaddress> <amount> [minconf=1] [comment] [comment-to] [narration] 
+## sendfrom 
 
+```shell
+sendfrom <fromaccount> <toshadowcoinaddress> <amount> [minconf=1] [comment] [comment-to] [narration]
+```
+
+## sendmany
+
+```shell
 sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]
+```
 
+## sendrawtransaction
+
+```shell
 sendrawtransaction <hex string>
+```
 
+## sendsdctoanon
+
+```shell
 sendsdctoanon <stealth_address> <amount> [narration] [comment] [comment-to]
+```
 
+## sendtoaddress
+
+```shell
 sendtoaddress <shadowcoinaddress> <amount> [comment] [comment-to] [narration]
+```
 
+## sendtostealthaddress
+
+```shell
 sendtostealthaddress <stealth_address> <amount> [comment] [comment-to] [narration]
+```
 
+## setaccount
+
+```shell
 setaccount <shadowcoinaddress> <account>
+```
 
+## setbestblockbyheight <height>
+
+```shell
 setbestblockbyheight <height>
+```
 
+## settxfee
+
+```shell
 settxfee <amount>
+```
 
-signmessage <shadowcoinaddress> <message>
+## signmessage
 
+```shell
+signmessage <shadowcashaddress> <message>
+```
+
+## signrawtransaction
+
+```shell
 signrawtransaction <hex string> [{"txid":txid,"vout":n,"scriptPubKey":hex},...] [<privatekey1>,...] [sighashtype="ALL"]
+```
 
+## smsgaddkey
+
+```shell
 smsgaddkey <address> <pubkey>
+```
 
+## smsgbuckets [stats|dump]
+
+```shell
 smsgbuckets [stats|dump]
+```
+
 Display some statistics.
 
-smsgdisable 
+## smsgdisable 
+
 Disable secure messaging
 
-smsgenable 
+## smsgenable 
+
 Enable secure messaging
 
+## smsggetpubkey
+
+```shell
 smsggetpubkey <address>
+```
+
 Returns the public key for a given address.
 
-Example:
-smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
+> Example:
 
-Output:
+```shell
+smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
+```
+
+> Output:
+
+```json
 {
 "result" : "Success.",
 "address in wallet" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
 "compressed public key" : "26S8iEiv2754RskjkWqRZkbZ22iNRYPgK7sUPyRPueXni"
 }
- 
+```
 
+## smsginbox
+
+```shell
 smsginbox [all|unread|clear]
+```
+
 Decrypt and display all received messages.
 "all" will show all messages, "unread" will only show the unread messages.
-Warning: clear will delete all messages.
 
-Example:
+<aside class="warning">Warning: clear will delete all messages.</aside>
+
+> Example:
+
+```shell
 smsginbox all
+```
 
-Output:
+> Output:
+
+```json
 {
 "message" : {
 "received" : "2015-09-13 16:19:53 Romance",
@@ -878,42 +1043,74 @@ Output:
 },
 "result" : "2 messages shown."
 }
+```
 
+## smsglocalkeys
 
+```shell
 smsglocalkeys [whitelist|all|wallet|recv <+/-> <address>|anon <+/-> <address>]
+```
 
+## smsgoptions
+
+```shell
 smsgoptions [list|set <optname> <value>]
+```
+
 List and manage the secure message options.
 
-Example:
-smsgoptions list
+> Example:
 
-Output:
+```shell
+smsgoptions list
+```
+
+> Output:
+
+```json
 {
 "option" : "newAddressRecv = true",
 "option" : "newAddressAnon = true",
 "result" : "Success."
 }
+```
 
-Example 2:
+> Example 2:
+
+```shell
 smsgoptions set newAddressRecv false
+```
 
-Output:
+> Output:
+
+```json
 {
 "option" : "newAddressRecv = false",
 "option" : "newAddressAnon = true",
 "result" : "Success."
 }
+```
 
+## smsgoutbox
+
+```shell
 smsgoutbox [all|clear]
+```
+
 Decrypt and display all sent messages.
-Warning: clear will delete all sent messages.
+<aside class="warning">Warning: clear will delete all sent messages.</aside>
+
 Will also show all messages sent with smsganonsend.
 
-Example:
-smsgoutbox
+> Example:
 
-Output:
+```shell
+smsgoutbox
+```
+
+> Output:
+
+```json
 {
 "message" : {
 "sent" : "2015-09-13 16:19:51 Romance",
@@ -929,43 +1126,89 @@ Output:
 },
 "result" : "2 sent messages shown."
 }
+```
 
+## smsgscanbuckets
 
-smsgscanbuckets 
 Force rescan of all messages in the bucket store.
 
-smsgscanchain 
+## smsgscanchain 
+
 Look for public keys in the block chain.
 
-smsgsend <addrFrom> <addrTo> <message>
+## smsgsend <addrFrom> <addrTo> <message>
 
+```shell
+smsgsend <addrFrom> <addrTo> <message>
+```
+
+## smsgsendanon
+
+```shell
 smsgsendanon <addrTo> <message>
+```
+
 Send and anonymous message to an address.
 
-Example:
-smsgsendanon tFyq452LPtDotWat8PFwEV5oPoWDqagLNv "This secure messagings is brilliant!"
+> Example:
 
-Output:
+```shell
+smsgsendanon tFyq452LPtDotWat8PFwEV5oPoWDqagLNv "This secure messagings is brilliant!"
+```
+
+# Output:
+
+```json
 {
 "result" : "Sent."
 }
+```
 
-stop
+## stop
+
 Stop the shadowcoin server
 
+## submitblock
+
+```shell
 submitblock <hex data> [optional-params-obj]
+```
 
+## thinforcestate
+
+```shell
 thinforcestate <state>
+```
 
+## thinscanmerkleblocks
+
+```shell
 thinscanmerkleblocks <height>
+```
 
+## txnreport
+
+```shell
 txnreport [collate_amounts] [show_key_images]
+```
 
-validateaddress <shadowcoinaddress>
+## validateaddress
 
-validatepubkey <shadowcoinpubkey>
+```shell
+validateaddress <shadowcashaddress>
+```
 
-verifymessage <shadowcoinaddress> <signature> <message>
+## validatepubkey
+
+```shell
+validatepubkey <shadowcashpubkey>
+```
+
+## verifymessage
+
+```shell
+verifymessage <shadowcashaddress> <signature> <message>
+```
 
 
 # Contribute
