@@ -52,10 +52,10 @@ Shadow has a very active community.
 Below you will find a list of places where you can find other Shadow users, community members and news.
 
 - IRC: freenode.net #shadowcash
-- Forum: http://www.talk.shadowproject.io
-- Slack: http://shadowproject.herokuapp.com/
-- Reddit: https://www.reddit.com/r/ShadowCash
-- Twitter: http://www.twitter.com/allaboutshadow
+- Forum: [talk.shadowproject.io](http://www.talk.shadowproject.io)
+- Slack: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
+- Reddit: [reddit.com/r/ShadowCash](https://www.reddit.com/r/ShadowCash)
+- Twitter: [twitter.com/allaboutshadow](http://www.twitter.com/allaboutshadow)
 
 # ShadowCash
 
@@ -116,12 +116,12 @@ ShadowCore is an HTML Cryptobrowser and a secure platform through which the cryp
 
 ShadowCore supports the [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allowing users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy. 
 
-Synonyms
+#### Synonyms
 
 - HD protocol
 - HD wallet
 
-Links
+### Links
 
 - [HD Protocol](https://bitcoin.org/en/developer-guide#term-hd-protocol) — Bitcoin.org Developer Guide
 - [BIP32: hierarchical deterministic wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) — Bitcoin Improvement Proposals
@@ -178,6 +178,8 @@ If you decide that a fullnode (default) is for you then the full sync can take a
 
 # Installing and running a client
 
+## Linux
+
 > Update and Install dependencies:
 
 ```shell
@@ -232,8 +234,6 @@ shadowcoind help
 ```shell
 shadowcoind stop
 ```
-
-## Linux
 
 The Linux Wallet comes in two variations:
 
@@ -294,9 +294,11 @@ ShadowLite mobile users have access to all existing functionality with a reduced
 
 #### Enable Lite Mode
 
-For those of you who wish to use the lite wallet, just add the following to your ```shadowcoin.conf``` configuration file:
+```shell
+thinmode=1
+```
 
-    thinmode=1
+For those of you who wish to use the lite wallet, just add the following to your ```shadowcoin.conf``` configuration file:
 
 or alternatively, you can startup the client with the ```-thinmode``` parameter.
 
