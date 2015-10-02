@@ -19,11 +19,13 @@ search: true
 
 # About Shadow
 
-Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. At the time, most cryptocurrencies had traits analogous to traditional bank accounts with transactional protocols similar to credit cards. The anonymity of cash-like system had yet to be realized within the cryptocurrency space. The Shadow Project development team tasked themselves to create just that. Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing  non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
+Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. At the time, most cryptocurrencies had traits analogous to traditional bank accounts with transactional protocols similar to credit cards. The anonymity of cash-like system had yet to be realized within the cryptocurrency space. The Shadow Project development team tasked themselves to create just that.
+
+Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
 ## Mission Statement
 
-Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. Prior to Bitcoin, the largest problem for these virtual currencies was  the prevention of double spending attacks. In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). Bitcoin was able to solve this major issue by integrating a public ledger of all previous transactions known as a block chain. Each member of Bitcoin’s network has the ability to analyze every transaction ever executed, allowing them to see if coins had been previously spent before accepting any new transactions. Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
+Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. Prior to Bitcoin, the largest problem for these virtual currencies was the prevention of double spending attacks. In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). Bitcoin was able to solve this major issue by integrating a public ledger of all previous transactions known as a block chain. Each member of Bitcoin’s network has the ability to analyze every transaction ever executed, allowing them to see if coins had been previously spent before accepting any new transactions. Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
 
 On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
@@ -43,11 +45,12 @@ Shadow does not require the initial trusted parameter setup which is present in 
 # Community
 
 Shadow has a very active community. 
-Aboutshadow.com is dedicated to help Shadow’s community develop in a sustainable way. The website is registered and managed by community members, with the input of Shadow developers. Aboutshadow.com is not a foundation. Foundations imply centralization or a controlling body. All Shadow holders are equal and all have a say in the direction the project is heading. Just like nobody owns the email technology, nobody owns the Shadow network. As such, aboutshadow.com does not speak with authority in the name of the Shadow project.
+[Aboutshadow.com](http://aboutshadow.com) is dedicated to help Shadow’s community develop in a sustainable way. The website is registered and managed by community members, with the input of Shadow developers. Aboutshadow.com is not a foundation. Foundations imply centralization or a controlling body. All Shadow holders are equal and all have a say in the direction the project is heading. Just like nobody owns the email technology, nobody owns the Shadow network. As such, aboutshadow.com does not speak with authority in the name of the Shadow project.
 
 ## Social Media
 
 Below you will find a list of places where you can find other Shadow users, community members and news.
+
 - IRC: freenode.net #shadowcash
 - Forum: http://www.talk.shadowproject.io
 - Slack: http://shadowproject.herokuapp.com/
@@ -58,12 +61,12 @@ Below you will find a list of places where you can find other Shadow users, comm
 
 ## Specification
 
-- Block Time: 60 seconds
-- Difficulty Re-target: every block
-- Nominal Stake Interest: 2% annually
-- Min Transaction Fee: 0.0001 SDC
-- Confirmations: 10 - Maturity: 500
-- Min Stake Age: 8 hours - no max age
+- Block Time: **60 seconds**
+- Difficulty Re-target: **every block**
+- Nominal Stake Interest: **2% annually**
+- Min Transaction Fee: **0.0001 SDC**
+- Confirmations: **10** - Maturity: 500
+- Min Stake Age: **8 hours** - no max age
 - P2P Port: 51737
 - RPC Port: 51736
 
@@ -73,17 +76,17 @@ To get started with accepting ShadowCash is easy, simply download the latest Sha
 
 ## Acquire
 
-Currently, you can only buy ShadowCash(SDC) once you have Bitcoin(BTC), then you can trade BTC for SDC on premium crypto-to-crypto exchanges.
+Currently, you can only buy ShadowCash (SDC) once you have Bitcoin (BTC), then you can trade BTC for SDC on premium crypto-to-crypto exchanges.
 
 ShadowCash is available at these exchanges:
 
 - [BITTREX](https://bittrex.com/Market/Index?MarketName=BTC-SDC)
 - [POLONIEX](https://poloniex.com/exchange#btc_sdc)
 
-You can also pay with ShadowCash(SDC) anywhere Bitcoin(BTC) is accepted instantly with:
+You can also pay with ShadowCash (SDC) anywhere Bitcoin (BTC) is accepted instantly with:
 
 - [SHAPESHIFT](https://shapeshift.io/)
--  [COINGATEWAY](https://coingateway.net/)
+- [COINGATEWAY](https://coingateway.net/)
 
 ## Mining
 
@@ -114,10 +117,12 @@ ShadowCore is an HTML Cryptobrowser and a secure platform through which the cryp
 ShadowCore supports the [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allowing users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy. 
 
 Synonyms
+
 - HD protocol
 - HD wallet
 
 Links
+
 - [HD Protocol](https://bitcoin.org/en/developer-guide#term-hd-protocol) — Bitcoin.org Developer Guide
 - [BIP32: hierarchical deterministic wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) — Bitcoin Improvement Proposals
 - [Deterministic wallet](https://en.bitcoin.it/wiki/Deterministic_Wallet) — Bitcoin Wiki
@@ -129,28 +134,15 @@ ShadowCash source code is all open-source and available at our [GitHub repositor
 ## Download
 
 ### Desktop Wallet
-- Latest [Windows](http://shadow.cash/downloads/shadow_1.3.2.4_win32.zip) wallet download
-- Latest [Linux](http://shadow.cash/downloads/shadow_1.3.2.4_linux64_static.zip) wallet download
-- Latest [OSX](http://shadow.cash/downloads/shadow_1.3.2.4_macosx.dmg) wallet download
+- Latest [Windows](http://shadow.cash/downloads/shadow_1.3.3.3_win32.zip) wallet download
+- Latest [Linux](http://shadow.cash/downloads/shadow_1.3.3.3_linux64_static.zip) wallet download
+- Latest [OSX](http://shadow.cash/downloads/shadow_1.3.3.3_macosx.dmg) wallet download
 
 ### Mobile Wallet
 - Latest Android wallet download - being upgraded!
 - Latest iOS wallet download - being upgraded!
 
 ### Bootstrap & Useful Paths
-
-So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts a process known as "syncing". The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
-
-1. looking to help further strengthen the network by providing a full peer 
-2. Have ShadowCash (SDC) and wish to participate in staking or 
-3. plan to run services on the Shadow network and require a full node.
-
-If neither of the above apply you can set the Shadow wallet to "thinmode" which provides lightening fast synchronization to the ShadowCore P2P network.
-If you decide that a fullnode (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method. Close the Shadow Wallet and Download the latest Bootstrap file from:
-https://github.com/ShadowProject/bootstrap/
-
-Unzip the "bootstrap.dat.zip" file
-Place the bootstrap.dat file in one of the below locations depending on the OS
 
 > Windows
 
@@ -170,21 +162,21 @@ Place the bootstrap.dat file in one of the below locations depending on the OS
 ~/.shadowcoin/
 ```
 
-Start the ShadowCash Wallet again (The client might be unresponsive but don't be alarmed - it's just loading all the blockchain data)
+So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts a process known as "syncing". The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
+
+1. looking to help further strengthen the network by providing a full peer 
+2. have ShadowCash (SDC) and wish to participate in staking or 
+3. plan to run services on the Shadow network and require a full node.
+
+If neither of the above apply you can set the Shadow wallet to "thinmode" which provides lightening fast synchronization to the ShadowCore P2P network.
+If you decide that a fullnode (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method.
+
+1. Close the Shadow Wallet and **download the latest Bootstrap** file from: [github.com/ShadowProject/bootstrap/](https://github.com/ShadowProject/bootstrap/)
+2. Unzip the ```bootstrap.dat.zip``` file
+3. Place the ```bootstrap.dat``` file in one of the below locations depending on the OS
+4. Start the ShadowCash Wallet again (The client might be unresponsive but don't be alarmed - it's just loading all the blockchain data)
 
 # Installing and running a client
-
-## Linux
-
-The Linux Wallet comes in two variations :
-- QT Wallet
- - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
-- Daemon
- - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
-
-### Shadowcoind from Source
-
-If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
 > Update and Install dependencies:
 
@@ -241,6 +233,19 @@ shadowcoind help
 shadowcoind stop
 ```
 
+## Linux
+
+The Linux Wallet comes in two variations:
+
+- **QT Wallet**
+  - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
+- **Daemon**
+  - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
+
+### Shadowcoind from Source
+
+If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+
 ## Shadowcoin-QT from Source
 
 > Update and Install dependencies
@@ -280,6 +285,7 @@ The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all 
 ## ShadowLite
 
 ShadowLite is the brand new component of the Shadow platform that brings lightning-fast syncing with the Shadow blockchain.
+
 We've taken a completely different approach to wallet design based on the principles of the "Simplified Payment Verification" or “SPV” system outlined in section 8 of [Satoshi’s Whitepaper](https://bitcoin.org/bitcoin.pdf). Instead of releasing a separate client, we’ve integrated optional lite functionality within the wallet. This allows for startup configuration to determine which mode you are running (thin or full).
 
 ShadowLite mobile users have access to all existing functionality with a reduced bandwidth, storage and memory footprint.
@@ -288,9 +294,11 @@ ShadowLite mobile users have access to all existing functionality with a reduced
 
 #### Enable Lite Mode
 
-For those of you who wish to use the lite wallet, just add the following to your shadowcoin.conf configuration file:
-[code]thinmode=1[/code]
-or alternatively, you can startup the client with the [code]-thinmode[/code] parameter.
+For those of you who wish to use the lite wallet, just add the following to your ```shadowcoin.conf``` configuration file:
+
+    thinmode=1
+
+or alternatively, you can startup the client with the ```-thinmode``` parameter.
 
 # ShadowSend ~ Anon Sending
 
@@ -298,7 +306,7 @@ ShadowSend v2 was released in Dec 2014 introducing an anonymity protocol which l
 
 ## Introduction
 
-ShadowSend’s anonymous cryptographic transaction protocol using traceable ring signatures[5], which utilise a non­interactive zero knowledge proof[6]. Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises: dual­key stealth addresses, traceable ring signatures and non­interactive zero knowledge proofs. We explain prove how Shadow our scheme introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­ spend prevention. We will also present performance data of our scheme which includes proof sizes, signature generation times and verification times. Finally, we will present planned future improvements to the current scheme.
+ShadowSend’s anonymous cryptographic transaction protocol using traceable ring signatures, which utilise a non­interactive zero knowledge proof. Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises: dual­key stealth addresses, traceable ring signatures and non­interactive zero knowledge proofs. We explain prove how Shadow our scheme introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­ spend prevention. We will also present performance data of our scheme which includes proof sizes, signature generation times and verification times. Finally, we will present planned future improvements to the current scheme.
 
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
@@ -327,10 +335,9 @@ The dual-key is actually more of a security practice, because if it weren't impl
 
 In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which will destroy SDC (ShadowCash), and will output a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. Shadow tokens take the form of outputs on the ShadowCash chain. Shadow tokens are spendable only by providing a traceable ring signature to prove ownership of the token.
 
-The ring signature consists of the public key of the token being spent, plus the
-public keys from 3 to 200 other tokens of the same value as the token being spent. Thenatureof ringsignaturesmakesitimpossibletodiscoverwhichofthemember coins in the ring signature is being spent, and transactions are no longer traceable.
+The ring signature consists of the public key of the token being spent, plus the public keys from 3 to 200 other tokens of the same value as the token being spent. The nature of ring signatures makes it impossible to discover which of the member coins in the ring signature is being spent, and transactions are no longer traceable.
 
-It is not possible to determine which tokens have been spent, so all tokens remain intheblockchainasspendableoutputsavailableasmembersof ringsignaturesfor other token spends.
+It is not possible to determine which tokens have been spent, so all tokens remain in the blockchain as spendable outputs available as members of ring signatures for other token spends.
 
 To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow tokens for each decimal place of the total value. The tokens are further broken up to values of 1, 3, 4 and 5. For example 1.7 sdc would become 3 tokens of values 1.0, 0.3 and 0.4.
 
@@ -347,7 +354,7 @@ There are two ways in which Shadow tokens can be spent: they can be sent as Shad
 
 In both cases the input tokens become unspendable. The transaction fee for spending Shadow tokens is 100x greater than the fee for standard transactions. This is to cover the cost of the extra activity required by the network to transmit, verify and store shadow transactions, which are larger and require more processing than standard transactions.
 
-In order to spend Shadow, we use ring signatures to sign the transaction[5][6]. Our scheme consists of three functions, generateRingSignature, generateKeyImage, verifyRingSignature.
+In order to spend Shadow, we use ring signatures to sign the transaction. Our scheme consists of three functions, ```generateRingSignature```, ```generateKeyImage```, ```verifyRingSignature```.
 
 For efficiency’s sake, when spending Shadow, we get a list of all anonymous outputs in the system, then we remove coins that don't have enough same value outputs in the system, then we choose the smallest coin or least number of smallest coins that can cover the amount + transaction fee.
 
@@ -359,11 +366,14 @@ ShadowSend v2 whitepaper: [http://shadow.cash/downloads/shadowcash-anon.pdf](htt
 
 # ShadowChat
 
-Communication is an essential component of doing business. Modern technology gives us cheap, reliable and effortless methods to communicate with others regardless of physical distance. However this technology does little to safeguard the content of our messages from the scrutiny of interested observers. We live in an age of constant and ubiquitous surveillance, where it becomes more difficult by the day to retain our privacy. Privacy is paramount when conducting business, the consequences of invasions of privacy can be devastating to both businesses and individuals, whether the attacker is a rival firm, a malicious individual or an overbearing government.
+Communication is an essential component of doing business. Modern technology gives us cheap, reliable and effortless methods to communicate with others regardless of physical distance.
+
+However this technology does little to safeguard the content of our messages from the scrutiny of interested observers. We live in an age of constant and ubiquitous surveillance, where it becomes more difficult by the day to retain our privacy. Privacy is paramount when conducting business, the consequences of invasions of privacy can be devastating to both businesses and individuals, whether the attacker is a rival firm, a malicious individual or an overbearing government.
 
 ## Introduction
 
 ShadowCoin has implemented a p2p Encrypted Instant Messaging system utilising state-of-the-art technology to keep your communications private. All messages are encrypted by the proven AES-256-CBC algorithm, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilising sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
+
 To eliminate the risk and hassle of sharing passwords, we utilise the proven and trusted method of Elliptic Curve Diffie-Hellman (ECDH) key exchange.
 The Elliptic Curve Digital Signature Algorithm (ECDSA) is used to give you confidence that the messages you receive come from where they claim to.
 Messages are distributed over the pre-existing ShadowCoin p2p network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
@@ -371,6 +381,7 @@ Messages are distributed over the pre-existing ShadowCoin p2p network, and a cop
 ## Key Sharing
 
 The Elliptic Curve Diffie-Hellman (ECDH) key exchange method allows a secret key for encryption to be shared between the sender and recipient using the data embedded in the message along with the private keys of ShadowCoin addresses held by the sender and recipient.
+
 In order to send a ShadowCoin Encrypted message, you must possess the public key to a private key of the intended recipient. The public keys embedded in the ShadowCoin transaction blockchain when an amount is spent. If you are sending to an address that has not spent a transaction in the blockchain the public key to that address must be provided manually.
 
 ShadowCoin uses curve secp256k1 for all elliptic curve functions. This is the same curve used by bitcoin along with the vast majority of altcoins. With such widespread use underpinning systems of immense value it is extremely unlikely that curve secp256k1 is not secure.
@@ -379,29 +390,30 @@ Messages are signed by the keys they were sent with, this allows you to be confi
 
 ## Encryption
 
-Detailed Procedure:
-• Get public key K from destination address
-◦ Find in database created from scanning for public keys in the blockchain and user additions.
-• Generate 16 random bytes using a secure random number generator. Call them IV. Generate a new random EC key pair with private key called r and public key called R.
-• Generate shared secret key P using public key K and private key r. ◦ Elliptic Curve Diffie-Hellman
-• Use the shared secret key P and calculate the SHA512 hash H.
-◦ ECDH_compute_key of OpenSSL
-◦ Call the first 32 bytes of H key_e and the last 32 bytes key_m.
-• Calculate a 32 byte MAC with HMACSHA256, using key_m as salt and (timestamp + destination + cipher text).
-◦ Message authentication code used
-◦ By also checking time-stamp and destination, recipients can be certain that these fields have not been tampered with.
-• Generate a compact signature from the message data and sender's address.
-◦ Only if not sending anonymously
-◦ Recipient can verify that the message came from the sender
-◦ Also allows the public key to be reconstructed (useful to reply)
-• Include address and compact signature in the payload to be encrypted.
-• Compress the plain-text message with lz4 if the message is larger than 128 bytes.
-• Encrypt the payload data with AES-256-CBC, using IV as initialization vector, key_e as
-encryption key.
+**Detailed Procedure**
+
+- Get public key *K* from destination address
+  - Find in database created from scanning for public keys in the blockchain and user additions.
+- Generate 16 random bytes using a secure random number generator. Call them *IV*. Generate a new random EC key pair with private key called *r* and public key called *R*.
+- Generate shared secret key *P* using public key *K* and private key *r*.
+  - Elliptic Curve Diffie-Hellman
+- Use the shared secret key *P* and calculate the SHA512 hash *H*.
+  - ECDH_compute_key of OpenSSL
+  - Call the first 32 bytes of *H key_e* and the last 32 bytes *key_m*.
+- Calculate a 32 byte MAC with HMACSHA256, using *key_m* as salt and (timestamp + destination + cipher text).
+  - Message authentication code used
+  - By also checking time-stamp and destination, recipients can be certain that these fields have not been tampered with.
+- Generate a compact signature from the message data and sender's address.
+  - Only if not sending anonymously
+  - Recipient can verify that the message came from the sender
+  - Also allows the public key to be reconstructed (useful to reply)
+- Include address and compact signature in the payload to be encrypted.
+- Compress the plain-text message with lz4 if the message is larger than 128 bytes.
+- Encrypt the payload data with AES-256-CBC, using *IV* as initialization vector, *key_e* as encryption key.
 
 ## Message Propagation
 
-Encrypted Messages are duplicated on every participating node in the ShadowCoin network – this prevents adversaries form uncovering the recipient of an encrypted message by using network traffic analysis.
+Encrypted Messages are duplicated on every participating node in the ShadowCash network – this prevents adversaries form uncovering the recipient of an encrypted message by using network traffic analysis.
 
 The messages are stored on each node for a maximum period of 48 hours, after which the message is deleted. If the recipient is absent from the network for 48 hours or more the possibility exists that they may not receive messages sent to them. It is recommended to connect to the network each day in order to prevent such an occurrence.
 
@@ -412,24 +424,24 @@ Stored messages are grouped by time in divisions of 1 hour. The system operates 
 ## Decryption
 
 For each incoming message a node will attempt to decode the message with every owned address contained in the nodes white-list of addresses to receive messages on.
+
 To speed up the process and allow for any payload format the Message authentication code (MAC) is calculated for the generated shared secret key, if it does not match the MAC provided in the message, decryption will fail and the function ends.
 
-Detailed Procedure:
-• Get IV and R from the message block
-• Get the private key k of the recipient used to decrypt.
-• Generate shared secret key P using with private key k and public key R.
-◦ Elliptic Curve Diffie-Hellman
-• Use the shared secret key P to generate the SHA512 hash H.
-◦ Call the first 32 bytes of H key_e and the last 32 bytes key_m.
-• Calculate MAC' with HMACSHA256, using key_m as salt and hash of (time-stamp +
-destination + cipher text).
-• Compare MAC with MAC'.
-◦ Return if not equal, decryption will fail.
-• Decrypt the encrypted payload with AES-256-CBC, using IV as initialization vector, key_e
-as decryption key.
-• Decompress message portion with lz4 if message is larger than 128 bytes.
-• If address and compact signature were included then verify the message
-Address and compact signature are not included when message is sent anonymously Strip the sender's public key and add it to the public key database.
+**Detailed Procedure**
+
+- Get *IV* and *R* from the message block
+- Get the private key *k* of the recipient used to decrypt.
+- Generate shared secret key *P* using with private key *k* and public key *R*.
+  - Elliptic Curve Diffie-Hellman
+- Use the shared secret key *P* to generate the SHA512 hash *H*.
+  - Call the first 32 bytes of *H key_e* and the last 32 bytes *key_m*.
+- Calculate MAC' with HMACSHA256, using *key_m* as salt and hash of (time-stamp + destination + cipher text).
+- Compare MAC with MAC'.
+  - Return if not equal, decryption will fail.
+- Decrypt the encrypted payload with AES-256-CBC, using *IV* as initialization vector, *key_e* as decryption key.
+- Decompress message portion with lz4 if message is larger than 128 bytes.
+- If address and compact signature were included then verify the message
+Address and compact signature are not included when message is sent anonymously strip the sender's public key and add it to the public key database.
 
 ## Whitepaper
 
@@ -460,9 +472,9 @@ Whitepaper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www.
 
 For support please visit one of the links below:
 
-Forum: http://www.talk.shadowproject.io
-IRC: freenode.net #shadowcash
-SLACK: http://shadowproject.herokuapp.com
+- Forum: [talk.shadowproject.io](https://talk.shadowproject.io/)
+- IRC: freenode.net #shadowcash
+- SLACK: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
 
 # Developers
 
@@ -504,7 +516,7 @@ The addnode will help with extra connections because there are not many people r
 Start the ShadowCoin executable with the "-testnet" flag.
 Windows:
 Open up a command prompt, change directory to the installation folder of Shadow and run the following command:
-shadow.exe -testnet
+```shadow.exe -testnet```
 
 ## Blockchain / Blocks / Transactions
 ## Data structures
@@ -592,12 +604,12 @@ encryptwallet <passphrase>
 
 ## estimateanonfee
 
-<amount> is a real and is rounded to the nearest 0.000001
-Used to estimate the anon fee with a given amount and ring size.
-
 ```shell
 estimateanonfee <amount> <ring_size> [narration]
 ```
+
+<amount> is a real and is rounded to the nearest 0.000001
+Used to estimate the anon fee with a given amount and ring size.
 
 ## getaccount
 
@@ -1217,14 +1229,14 @@ Shadow is an Open Source project which is created almost entirely by volunteers.
 
 ## Code
 
-Shadow is controlled by all Shadow users around the world. If you are a developer, you can use your super-powers to do good and contribute. The Shadow project is hosted over on GitHub. This is where developers work hard on the next version(s) of the software. To get involved with developing Shadow, check out our detailed contributing guidelines. We credit all contributors to the Shadow project in every major and minor release. We hold public development meetings and chat in our Slack team. We also maintain a public roadmap and dev blog to give you an idea of what's being worked on right now, and what's coming next. Are you someone who might be interested? Do not hesitate and contact us directly.
+Shadow is controlled by all Shadow users around the world. If you are a developer, you can use your super-powers to do good and contribute. [The Shadow project is hosted over on GitHub](https://github.com/ShadowProject/shadow). This is where developers work hard on the next version(s) of the software. To get involved with developing Shadow, check out our detailed contributing guidelines. We credit all contributors to the Shadow project in every major and minor release. We hold public development meetings and chat in our Slack team. We also maintain a public roadmap and dev blog to give you an idea of what's being worked on right now, and what's coming next. Are you someone who might be interested? Do not hesitate and contact us directly.
 
 ## Donate
 
 We are a non-profit and Open Source software project and are trying to build a private economy. We appreciate all the help we can get in making this a reality. Both addresses are managed by Rynomster (lead developer). If applicable, please specify whether you want to remain anonymous. Many thanks to all our sponsors!
  
-Official BTC donation address: 155cKQ5pk9kCQoXigxQapnLNyBK3hMrd2V
-Official SDC development donation address: SdcdevXEaZaE9nDKjh6aH7kd3NcLX5rwAY
+- Official **BTC donation** address: ```155cKQ5pk9kCQoXigxQapnLNyBK3hMrd2V```
+- Official **SDC development** donation address: ```SdcdevXEaZaE9nDKjh6aH7kd3NcLX5rwAY```
 
 ## Report
 
@@ -1234,9 +1246,12 @@ Please do not report security vulnerabilities publicly. The details for responsi
 
 ### Bugs & Bounty program
 
-Official bug donation Address: SdcbugSrxsYSBzxB2cVfiAYdqwjftLBaF1
+Official bug donation Address: ```SdcbugSrxsYSBzxB2cVfiAYdqwjftLBaF1```
+
 According to Linus’ Law, “given enough eyeballs, all bugs are shallow”. That’s one of the reasons why Shadow’s source code is publicly available; but merely making the source code available doesn’t accomplish anything if people don’t read it!
+
 For this reason, Shadow has a series of bug bounties. Similar to the bounties offered by Mozilla and Google, Shadow bug bounties provide an opportunity for people who find bugs to be compensated. Unlike those programs, however, Shadow’s bounties are not limited to security vulnerabilities.
+
 Depending on the type of bug and when it is reported, different bounties will be awarded. Bounties are paid out in SDC, at the 3-day average of each to a fixed US Dollar value.
 
 ### Things that do not qualify under the bug bounty 
@@ -1259,20 +1274,26 @@ Depending on the type of bug and when it is reported, different bounties will be
 
 ### Bug Bounties and Rewards
 
-$1500 Deanonymize ShadowChat or ShadowSend (proof that a protocol is not anonymous)
-$750 A flaw in the protocol that allows for theft or loss of funds
-$500 A bug in the reference client that leads to consensus issues
-$250 ~ 1 Btc A bug which causes data corruption or loss
-$100 A bug which causes the application to crash
-$50 Other non-harmless bugs
-$10 ‘Harmless’ bugs, e.g. cosmetic errors
+- **$1500** Deanonymize ShadowChat or ShadowSend (proof that a protocol is not anonymous)
+- **$750** A flaw in the protocol that allows for theft or loss of funds
+- **$500** A bug in the reference client that leads to consensus issues
+- **$250** ~ 1 BTC A bug which causes data corruption or loss
+- **$100** A bug which causes the application to crash
+- **$50** Other non-harmless bugs
+- **$10** ‘Harmless’ bugs, e.g. cosmetic errors
 
 ### How to report a bug
 
-Security-related issues
-Contact the developers privately by sending an e-mail to bounties@shadow.cash with the details of the issue. Do not post the issue on github or anywhere else until the issue has been resolved.
-Code issues
+#### Security-related issues
+
+Contact the developers privately by sending an e-mail to [bounties@shadow.cash](mailto:bounties@shadow.cash) with the details of the issue. Do not post the issue on github or anywhere else until the issue has been resolved.
+
+#### Code issues
+
 We would strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix (along with your SDC address to claim the bounty). For more information, see this link.
+
+
+----
 
 
 # Kittens
