@@ -19,13 +19,26 @@ search: true
 
 # About Shadow
 
-Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. At the time, most cryptocurrencies had traits analogous to traditional bank accounts with transactional protocols similar to credit cards. The anonymity of cash-like system had yet to be realized within the cryptocurrency space. The Shadow Project development team tasked themselves to create just that.
+<iframe  title="ShadowCash" width="480" height="390" src="https://www.youtube.com/v/jPcwAToJYtY?html5=1" frameborder="0" allowfullscreen></iframe>
 
-Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
+## History
+Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. 
+At the time, most cryptocurrencies had traits analogous to traditional bank accounts with transactional protocols similar to credit cards. 
+The anonymity of cash-like system had yet to be realized within the cryptocurrency space. The Shadow Project development team tasked themselves to create just that.
+
+Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. 
+After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. 
+Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
 ## Mission Statement
 
-Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. Prior to Bitcoin, the largest problem for these virtual currencies was the prevention of double spending attacks. In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). Bitcoin was able to solve this major issue by integrating a public ledger of all previous transactions known as a block chain. Each member of Bitcoin’s network has the ability to analyze every transaction ever executed, allowing them to see if coins had been previously spent before accepting any new transactions. Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
+Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. 
+Prior to Bitcoin, the largest problem for these virtual currencies was the prevention of double spending attacks. 
+In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). 
+Bitcoin was able to solve this major issue by integrating a public ledger of all previous transactions known as a block chain. 
+Each member of Bitcoin’s network has the ability to analyze every transaction ever executed, allowing them to see if coins had been previously spent before accepting any new transactions. 
+Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. 
+The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
 
 On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
@@ -33,7 +46,7 @@ On December 10, 1948, the General Assembly of the United Nations adopted and pro
 
 ### Bitcoin
 
-Shadow functions on the same core principles from which Bitcoin was founded. There is no central authority or bank mechanism that controls the flow of transactions. 
+ShadowCash was built on the same base as Bitcoin and operates on the same core principles. There is no central authority or bank mechanism that controls the flow of transactions. Crucial changes to bitcoin can be implemented into ShadowCash with easily.
 
 ### Zerocoin
 Shadow does not require the initial trusted parameter setup which is present in the Zerocoin and Zerocash scheme.
@@ -44,7 +57,9 @@ Shadow does not require the initial trusted parameter setup which is present in 
 
 # Community
 
-Shadow has a very active community. 
+Shadow has an awesome community, ranging from privacy activists to technical and financial experts. 
+The biggest part of the community resides in #general on Slack, great times assured.
+
 [Aboutshadow.com](http://aboutshadow.com) is dedicated to help Shadow’s community develop in a sustainable way. The website is registered and managed by community members, with the input of Shadow developers. Aboutshadow.com is not a foundation. Foundations imply centralization or a controlling body. All Shadow holders are equal and all have a say in the direction the project is heading. Just like nobody owns the email technology, nobody owns the Shadow network. As such, aboutshadow.com does not speak with authority in the name of the Shadow project.
 
 ## Social Media
@@ -52,10 +67,12 @@ Shadow has a very active community.
 Below you will find a list of places where you can find other Shadow users, community members and news.
 
 - IRC: freenode.net #shadowcash
+- Blog: [blog.shadowproject.io](http://www.blog.shadowproject.io)
 - Forum: [talk.shadowproject.io](http://www.talk.shadowproject.io)
 - Slack: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
 - Reddit: [reddit.com/r/ShadowCash](https://www.reddit.com/r/ShadowCash)
 - Twitter: [twitter.com/allaboutshadow](http://www.twitter.com/allaboutshadow)
+- 
 
 # ShadowCash
 
@@ -115,6 +132,8 @@ ShadowCore is an HTML Cryptobrowser and a secure platform through which the cryp
 ## Hierarchical Deterministic (HD)
 
 ShadowCore supports the [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allowing users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy. 
+
+To create a better user experience ShadowCore implemented [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), allowing users to create a wallet based on a mnenomic sentence consisting of 24 words with the ability to secure that with a password. 
 
 #### Synonyms
 
@@ -302,13 +321,15 @@ For those of you who wish to use the lite wallet, just add the following to your
 
 or alternatively, you can startup the client with the ```-thinmode``` parameter.
 
-# ShadowSend ~ Anon Sending
+# ShadowSend v2.0
 
 ShadowSend v2 was released in Dec 2014 introducing an anonymity protocol which leverages zero-knowledge proofs, dual-key stealth addresses and ring signatures to provide near-instant, untraceable, unlinkable and trustless transactions.
 
 ## Introduction
 
-ShadowSend’s anonymous cryptographic transaction protocol using traceable ring signatures, which utilise a non­interactive zero knowledge proof. Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises: dual­key stealth addresses, traceable ring signatures and non­interactive zero knowledge proofs. We explain prove how Shadow our scheme introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­ spend prevention. We will also present performance data of our scheme which includes proof sizes, signature generation times and verification times. Finally, we will present planned future improvements to the current scheme.
+ShadowSend’s anonymous cryptographic transaction protocol uses dual-key stealth addresses, traceable Ring signatures layered with non­interactive zero knowledge proofs. 
+Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises the above mentioned cryptographic principles. We explain how Shadow introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­spend prevention.
+We will also present performance data of our scheme which includes proof sizes, signature generation times and verification times. 
 
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
@@ -330,6 +351,9 @@ The dual-key is actually more of a security practice, because if it weren't impl
 <aside class="notice">TO COMPLETE</aside>
 
 ## Ring signatures
+<aside class="warning">Hardfork occuring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
+
+http://www.texpaste.com/n/xaypn9ni
 
 <aside class="notice">TO COMPLETE</aside>
 
