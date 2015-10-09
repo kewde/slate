@@ -391,8 +391,12 @@ When the wallet is decrypted:
 publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 ```
 
-Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency.
-It is used to anonymize the recipients of a transaction.
+Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency, used to **anonymize the recipients** of a transaction.
+
+Stealth addresses are roughly twice as long as a normal address and they also operate in a completly different way.
+Once Alice has posted her Stealth address, she will be able to receive unconditional unlinkable payments.
+**That means that each payment to Alice's Stealth address will generate a new normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
+
 
 It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
 
