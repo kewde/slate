@@ -1239,7 +1239,7 @@ Send and anonymous message to an address.
 smsgsendanon tFyq452LPtDotWat8PFwEV5oPoWDqagLNv "This secure messagings is brilliant!"
 ```
 
-# Output:
+> Output:
 
 ```json
 {
