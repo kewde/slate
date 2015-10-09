@@ -461,19 +461,21 @@ However this technology does little to safeguard the content of our messages fro
 
 ## Introduction
 
-ShadowCoin has implemented a p2p Encrypted Instant Messaging system utilising state-of-the-art technology to keep your communications private. All messages are encrypted by the proven AES-256-CBC algorithm, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilising sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
+ShadowCash has implemented a P2P (peer-to-peer) Instant Messaging system utilising state-of-the-art encryption technology to keep your communications private. All messages are encrypted by the proven **AES-256-CBC algorithm**, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilising sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
 
-To eliminate the risk and hassle of sharing passwords, we utilise the proven and trusted method of Elliptic Curve Diffie-Hellman (ECDH) key exchange.
-The Elliptic Curve Digital Signature Algorithm (ECDSA) is used to give you confidence that the messages you receive come from where they claim to.
+To eliminate the risk and hassle of sharing passwords, we utilise the proven and trusted method of **Elliptic Curve Diffie-Hellman (ECDH) key exchange**.
+The Elliptic Curve Digital Signature Algorithm (ECDSA) is used to give you confidence that the messages you received came from the original recipient and remained untouched in propagation.
 Messages are distributed over the pre-existing ShadowCoin p2p network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
 
 ## Key Sharing
 
-The Elliptic Curve Diffie-Hellman (ECDH) key exchange method allows a secret key for encryption to be shared between the sender and recipient using the data embedded in the message along with the private keys of ShadowCoin addresses held by the sender and recipient.
+The Elliptic Curve Diffie-Hellman (ECDH) key exchange method allows a secret key for encryption to be shared between the sender and recipient using the data embedded in the message along with the private keys of ShadowCash addresses held by the sender and recipient.
 
-In order to send a ShadowCoin Encrypted message, you must possess the public key to a private key of the intended recipient. The public keys embedded in the ShadowCoin transaction blockchain when an amount is spent. If you are sending to an address that has not spent a transaction in the blockchain the public key to that address must be provided manually.
+This allows for distributing messages, of whom nobody knows the recipient of.
 
-ShadowCoin uses curve secp256k1 for all elliptic curve functions. This is the same curve used by bitcoin along with the vast majority of altcoins. With such widespread use underpinning systems of immense value it is extremely unlikely that curve secp256k1 is not secure.
+In order to send a encrypted message, you must possess the public key of the intended recipient. The public keys embedded in the ShadowCash transaction blockchain when any amount is spent. If you are sending to an address that has not spent a transaction in the blockchain the public key to that address must be provided manually.
+
+ShadowCash uses curve secp256k1 for all elliptic curve functions. This is the same curve used by bitcoin along with the vast majority of altcoins. With such widespread use underpinning systems of immense value it is extremely unlikely that curve secp256k1 is not secure.
 
 Messages are signed by the keys they were sent with, this allows you to be confident of the origin of the messages you receive and also allows the public key of the sender to be extracted from the message, providing you all the information needed to send a reply.
 
@@ -514,7 +516,7 @@ Stored messages are grouped by time in divisions of 1 hour. The system operates 
 
 For each incoming message a node will attempt to decode the message with every owned address contained in the nodes white-list of addresses to receive messages on.
 
-To speed up the process and allow for any payload format the Message authentication code (MAC) is calculated for the generated shared secret key, if it does not match the MAC provided in the message, decryption will fail and the function ends.
+To speed up the process and allow for any payload format to be used, the Message Authentication Code (MAC) is calculated for the generated shared secret key, if it does not match the MAC provided in the message, decryption will fail and the function ends.
 
 **Detailed Procedure**
 
