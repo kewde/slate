@@ -327,15 +327,11 @@ ShadowSend v2 was released in Dec 2014 introducing an anonymity protocol which l
 
 ## Introduction
 
-ShadowSend’s anonymous cryptographic transaction protocol uses dual-key stealth addresses, traceable Ring signatures layered with non­interactive zero knowledge proofs. 
+ShadowSend’s anonymous cryptographic transaction protocol uses dual-key stealth addresses, traceable ring signatures layered with non­interactive zero knowledge proofs. 
 Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises the above mentioned cryptographic principles. We explain how Shadow introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­spend prevention.
 We will also present performance data of our scheme which includes proof sizes, signature generation times and verification times. 
 
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
-
-## NIZK (Non-Interactive Zero Knowledge) proofs
-
-Shadow uses a verification concept called Zero-Knowledge. Typically, when a user visits a site, there’s an instantaneous security check, depending on the type of site and what information it’s designed to safeguard. Then, the user’s browser looks for a valid security certificate and then conducts a digital ‘handshake,’ sometimes with a string of numbers, for both ends to verify the data. Mainstream encryption methods such as SSL can create a longer process on both ends of the transaction. However, with Zero-Knowledge, instead of a script that checks the properties and history of a particular coin and verifies that it is indeed unique and unspent, a script could simply verify that the security process was properly followed to create the coin, so therefore the coin is legitimate. The designation of the transcription method will remain with that particular coin through its entire history, whether or not it is exchanged to another user. This process will also speed up the transaction process and offers privacy guarantees to buyers and sellers.
 
 ## Dual-key stealth addresses
 
@@ -349,6 +345,7 @@ All transactions have to be made with the SpendKey, only available after decrypt
 The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
 
 <aside class="notice">TO COMPLETE</aside>
+
 
 ## Ring signatures
 <aside class="warning">Hardfork occuring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
