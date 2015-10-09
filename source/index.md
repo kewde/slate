@@ -116,12 +116,16 @@ You can also pay with ShadowCash (SDC) anywhere Bitcoin (BTC) is accepted instan
 ## Mining
 
 ### Proof of Work (PoW) - Complete
+Specification | Value
+--- | ---
 Algo | Scrypt
 Max Height | 31000 (after this network will not accept PoW blocks)
 SDC Circulation |  ~6,400,000 SDC 
 Length | two weeks of PoW
 
 ### Proof of Stake (PoS) - Ongoing
+Specification | Value
+--- | ---
 Algo | Sha256 (formerly Scrypt)
 Nominal Stake Interest | 2% annually
 
