@@ -23,17 +23,11 @@ search: true
 
 ## History
 Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. 
-
 At the time, most cryptocurrencies had traits analogous to traditional bank accounts with transactional protocols similar to credit cards. 
-
 The anonymity of cash-like system had yet to be realized within the cryptocurrency space. The Shadow Project development team tasked themselves to create just that.
-
 Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. 
-
 After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. 
-
 ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. 
-
 Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
 ## Mission Statement
