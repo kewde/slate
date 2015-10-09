@@ -395,6 +395,7 @@ Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocur
 
 Stealth addresses are roughly twice as long as a normal address and they also operate in a completly different way.
 Once Alice has posted her Stealth address, she will be able to receive unconditional unlinkable payments.
+
 **That means that each payment to Alice's Stealth address will generate a new normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
 
 
