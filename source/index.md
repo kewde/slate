@@ -353,7 +353,7 @@ It uses a system of dual-keys to allow the wallet software to scan for stealth p
 All transactions have to be made with the SpendKey, only available after decrypting your wallet.
 The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
 
-´´´mathematics
+```mathematics
 
 Alice (receiver)
 publicSpendKeyAlice = public spend key
@@ -394,7 +394,7 @@ publicKeyToPay = publicSpendKeyAlice + SharedSecret * G
 
 When the wallet is decrypted:
 publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
-´´´
+```
 
 <aside class="notice">TO COMPLETE</aside>
 
