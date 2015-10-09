@@ -19,7 +19,7 @@ search: true
 ---
 
 # About Shadow
-<center><iframe  title="ShadowCash" width="720" height="480" src="https://www.youtube.com/v/jPcwAToJYtY?html5=1" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe  title="ShadowCash" width="854" height="480" src="https://www.youtube.com/v/jPcwAToJYtY?html5=1" frameborder="0" allowfullscreen></iframe></center>
 
 ## History
 Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. 
