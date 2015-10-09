@@ -551,7 +551,7 @@ html, body {
 
     @extend %right-col;
 
-    &>p { margin: 0; }
+    &>p { margin: 0; padding-right: 3%; }
 
     a {
       color: #fff;
