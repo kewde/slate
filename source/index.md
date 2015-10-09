@@ -23,11 +23,17 @@ search: true
 
 ## History
 Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. 
+
 At the time, most cryptocurrencies had traits analogous to traditional bank accounts with transactional protocols similar to credit cards. 
+
 The anonymity of cash-like system had yet to be realized within the cryptocurrency space. The Shadow Project development team tasked themselves to create just that.
 
 Inspired by the Cypherpunk anonymity movement, the Shadow Project developers began fusing several online technologies and services while simultaneously integrating security improvements based on zero knowledge cryptography. 
-After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. 
+
+After its first birthday, Shadow had evolved from a simple idea into one of the most advanced cryptocurrency projects to date. 
+
+ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. 
+
 Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
 ## Mission Statement
@@ -77,14 +83,17 @@ Below you will find a list of places where you can find other Shadow users, comm
 
 ## Specification
 
-- Block Time: **60 seconds**
-- Difficulty Re-target: **every block**
-- Nominal Stake Interest: **2% annually**
-- Min Transaction Fee: **0.0001 SDC**
-- Confirmations: **10** - Maturity: 500
-- Min Stake Age: **8 hours** - no max age
-- P2P Port: 51737
-- RPC Port: 51736
+Specification | Value
+--- | ---
+Block Time | **60 seconds**
+Difficulty Re-target | **every block**
+Nominal Stake Interest | **2% annually**
+Min Transaction Fee | **0.0001 SDC**
+Confirmations | **10** 
+Maturity | 500
+Min Stake Age | **8 hours** (no max age)
+P2P Port | 51737
+RPC Port | 51736
 
 ## Accept
 
@@ -107,13 +116,14 @@ You can also pay with ShadowCash (SDC) anywhere Bitcoin (BTC) is accepted instan
 ## Mining
 
 ### Proof of Work (PoW) - Complete
-- Algo: Scrypt
-- Max Height: 31000 (after this network will not accept PoW blocks)
-- SDC Circulation: ~6,400,000 SDC after two weeks of PoW
+Algo | Scrypt
+Max Height | 31000 (after this network will not accept PoW blocks)
+SDC Circulation |  ~6,400,000 SDC 
+Length | two weeks of PoW
 
 ### Proof of Stake (PoS) - Ongoing
-- Algo: Sha256 (formerly Scrypt)
-- Nominal Stake Interest: 2% annually
+Algo | Sha256 (formerly Scrypt)
+Nominal Stake Interest | 2% annually
 
 ### Multipool
 PoW mining has ended, but you can still use your mining rigs to earn ShadowCash by using the [SDC Multipool](https://www.shadowpool.info/). Point your rigs and enter your SDC payout address to begin!
