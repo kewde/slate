@@ -73,7 +73,6 @@ Below you will find a list of places where you can find other Shadow users, comm
 - Slack: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
 - Reddit: [reddit.com/r/ShadowCash](https://www.reddit.com/r/ShadowCash)
 - Twitter: [twitter.com/allaboutshadow](http://www.twitter.com/allaboutshadow)
-- 
 
 # ShadowCash
 
