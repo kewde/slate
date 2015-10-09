@@ -82,12 +82,17 @@ Specification | Value
 Block Time | **60 seconds**
 Difficulty Re-target | **every block**
 Nominal Stake Interest | **2% annually**
-Min Transaction Fee | **0.0001 SDC**
-Confirmations | **10** 
-Maturity | 500
 Min Stake Age | **8 hours** (no max age)
 P2P Port | 51737
 RPC Port | 51736
+
+### Transactions
+
+| Specification   | Value          |
+| --------------- | -------------- |
+| Min Fee         | **0.0001 SDC** |
+| Confirmations   | **10**         |
+| Maturity        | **500**        |
 
 ## Accept
 
@@ -503,7 +508,7 @@ The messages are stored on each node for a maximum period of 48 hours, after whi
 
 Stored messages are grouped by time in divisions of 1 hour. The system operates on the grouped buckets of messages to save bandwidth.
 
-![Synchronization of buckets between peer nodes](https://i.gyazo.com/597ddae84fb5ae156f4de1556fe674f8.png)
+![Synchronization of buckets between peer nodes](images/shadowchat-message_propagation.png)
 
 ## Decryption
 
