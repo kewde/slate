@@ -340,17 +340,6 @@ To increase the pool of outputs available for ring signatures, the SDC value is 
 
 ## Dual-key stealth addresses
 
-Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency.
-It is used to anonymize the recipients of a transaction.
-
-It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
-
-The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
-
-It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
-All transactions have to be made with the SpendKey, only available after decrypting your wallet.
-The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
-
 ```mathematics
 
 Alice (receiver)
@@ -394,7 +383,17 @@ When the wallet is decrypted:
 publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 ```
 
-<aside class="notice">TO COMPLETE</aside>
+Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency.
+It is used to anonymize the recipients of a transaction.
+
+It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
+
+The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
+
+It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
+All transactions have to be made with the SpendKey, only available after decrypting your wallet.
+The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
+
 
 
 ## Ring signatures
