@@ -2,6 +2,7 @@
 title: ShadowCore API
 
 language_tabs:
+  - mathematics
   - shell
   - json
   - java
@@ -323,8 +324,6 @@ or alternatively, you can startup the client with the ```-thinmode``` parameter.
 
 # ShadowSend v2.0
 
-ShadowSend v2 was released in Dec 2014 introducing an anonymity protocol which leverages zero-knowledge proofs, dual-key stealth addresses and ring signatures to provide near-instant, untraceable, unlinkable and trustless transactions.
-
 ## Introduction
 
 ShadowSend’s anonymous cryptographic transaction protocol uses dual-key stealth addresses, traceable ring signatures layered with non­interactive zero knowledge proofs. 
@@ -333,6 +332,14 @@ We will also present performance data of our scheme which includes proof sizes, 
 
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
+## ShadowTokens (SDT)
+
+In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which will destroy SDC (ShadowCash), and will output a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. 
+Shadow Tokens take the form of outputs on the ShadowCash blockchain and each one if them has its own private and public keypair. 
+Shadow tokens are spendable only by providing a traceable ring signature to prove ownership of the token.
+
+To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up to values of 1, 3, 4 and 5. For example 1.7 sdc would become 3 tokens of values 1.0, 0.3 and 0.4.
+
 ## Dual-key stealth addresses
 
 Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency.
@@ -340,9 +347,54 @@ It is used to anonymize the recipients of a transaction.
 
 It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
 
+The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
+
 It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
 All transactions have to be made with the SpendKey, only available after decrypting your wallet.
 The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
+
+´´´mathematics
+
+Alice (receiver)
+publicSpendKeyAlice = public spend key
+privateSpendKeyAlice = private spend key
+
+publicScanKeyAlice = EC point, 33 bytes
+privateScanKeyAlice = interger, 32 bytes
+
+This is where it gets a bit more complicated, but no magic, just math!
+G = Generator, the primitive root
+
+To continue on, we have to understand how the public addresses are generated.
+A public key is the private key multiplied by the primitive root G.
+
+publicSpendKeyAlice = privateSpendKeyAlice * G
+publicScanKeyAlice = privateScanKeyAlice * G
+
+Bob (sender)
+e = ephem secret
+publicEphemKey = e * G
+Knows the public scan key of Alice (publicScanKeyAlice)!
+
+Ephem is short for ephemeral, which means “short lived”. The ephem secret and public key are only used once and change on every stealth transaction. 
+
+Bob now publishes the public ephem key (publicEphemKey) to the receiver Alice.
+
+Because of the diffie-hellman algorithm ONLY THE RECEIVER AND SENDER can deduct the shared secret from the public ephem key.
+
+SharedSecret = SHA256(ephem secret * publicScanKeyAlice) (Formula for Sender)
+SharedSecret = SHA256(privateScanKeyAlice * publicEphemKey) (Formula for Receiver)
+
+Bob can now generate the public key to where it should send the coins.
+publicKeyToPay = publicSpendKeyAlice + SharedSecret * G
+
+Alice has two different ways of find out the the public key where the coins will go to.
+When the wallet isn't decrypted:
+publicKeyToPay = publicSpendKeyAlice + SharedSecret * G
+
+When the wallet is decrypted:
+publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
+´´´
 
 <aside class="notice">TO COMPLETE</aside>
 
@@ -350,23 +402,22 @@ The dual-key is actually more of a security practice, because if it weren't impl
 ## Ring signatures
 <aside class="warning">Hardfork occuring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
 
+The ring signatures are a crucial part to anonymize the sender of a transaction.
+
+Ring signature consists of the public key of the token being spent, plus the public keys from 3 to 200 other tokens of the same value as the token being spent. The nature of ring signatures makes it impossible to discover member of the coins in the ring signature is being spent, and transactions are no longer traceable.
+
+It is not possible to determine which tokens have been spent, so all tokens remain in the blockchain as spendable outputs available as members of ring signatures for other token spends.
+
+
 http://www.texpaste.com/n/xaypn9ni
 
 <aside class="notice">TO COMPLETE</aside>
 
-## ShadowTokens
-
-In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which will destroy SDC (ShadowCash), and will output a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. Shadow tokens take the form of outputs on the ShadowCash chain. Shadow tokens are spendable only by providing a traceable ring signature to prove ownership of the token.
-
-The ring signature consists of the public key of the token being spent, plus the public keys from 3 to 200 other tokens of the same value as the token being spent. The nature of ring signatures makes it impossible to discover which of the member coins in the ring signature is being spent, and transactions are no longer traceable.
-
-It is not possible to determine which tokens have been spent, so all tokens remain in the blockchain as spendable outputs available as members of ring signatures for other token spends.
-
-To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow tokens for each decimal place of the total value. The tokens are further broken up to values of 1, 3, 4 and 5. For example 1.7 sdc would become 3 tokens of values 1.0, 0.3 and 0.4.
-
 ### Double Spend Prevention
 
 The ring signature tags (keyImage) of the spent Shadow tokens are embedded in the blockchain to prevent double spends. Each tag is unique to the Shadow token, regardless of the other members of the ring signature.
+
+When a new transaction contains a keyImage that has already been used, and thus is present in the blockchain, the new transaction will be rejected by the network.
 
 ## Spending Shadow tokens
 
