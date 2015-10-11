@@ -339,17 +339,17 @@ or alternatively, you can startup the client with the ```-thinmode``` parameter.
 
 ShadowSend’s anonymous cryptographic transaction protocol uses dual-key stealth addresses, traceable ring signatures layered with non­interactive zero knowledge proofs. 
 Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises the above mentioned cryptographic principles. We explain how Shadow introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­spend prevention.
-We will also present performance data of our scheme which includes proof sizes, signature generation times and verification times. 
+We also presented performance data of our scheme including proof sizes, signature generation times and verification times in our whitepaper. 
 
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
 ## ShadowTokens (SDT)
 
-In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which will destroy SDC (ShadowCash), and will output a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. 
-Shadow Tokens take the form of outputs on the ShadowCash blockchain and each one if them has its own private and public keypair. 
+In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which destroys SDC (ShadowCash), and outputs a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. 
+Shadow Tokens take form of outputs on the ShadowCash blockchain and each one of them has its own private/public keypair. 
 Shadow tokens are spendable only by providing a traceable ring signature to prove ownership of the token.
 
-To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up to values of 1, 3, 4 and 5. For example 1.7 sdc would become 3 tokens of values 1.0, 0.3 and 0.4.
+To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up into values of 1, 3, 4 and 5. For example 1.7 sdc would become 3 tokens of values 1.0, 0.3 and 0.4.
 
 ## Dual-key stealth addresses
 
@@ -360,7 +360,7 @@ publicSpendKeyAlice = public spend key
 privateSpendKeyAlice = private spend key
 
 publicScanKeyAlice = EC point, 33 bytes
-privateScanKeyAlice = interger, 32 bytes
+privateScanKeyAlice = integer, 32 bytes
 
 This is where it gets a bit more complicated, but no magic, just math!
 G = Generator, the primitive root
@@ -398,10 +398,10 @@ publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 
 Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency, used to **anonymize the recipients** of a transaction.
 
-Stealth addresses are roughly twice as long as a normal address and they also operate in a completly different way.
-Once Alice has posted her Stealth address, she will be able to receive unconditional unlinkable payments.
+Stealth addresses are roughly twice as long as a normal address and they operate in a completly different way.
+Once Alice has posted her Stealth address, she will be able to receive infinite unlinkable payments.
 
-**That means that each payment to Alice's Stealth address will generate a new normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
+**That means that each payment to Alice's Stealth address will generate a new unused address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
 
 
 It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
