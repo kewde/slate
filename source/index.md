@@ -354,7 +354,7 @@ To increase the pool of outputs available for ring signatures, the SDC value is 
 ## Dual-key stealth addresses
 
 ### Address encoding and decoding
-// ```mathematics
+ ```mathematics
 stealth_address
 {
     encoded 1Ht5EmHdUNVvRyMdJCwTZdBowDnbNJu8kaaZbkn4D4p7HTrppupQzETxVMdguNviAyEFj7e7mqKkqTncNeLdAv81Mm8jf9bzn7hBP
