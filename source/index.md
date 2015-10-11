@@ -353,6 +353,24 @@ To increase the pool of outputs available for ring signatures, the SDC value is 
 
 ## Dual-key stealth addresses
 
+### Address encoding and decoding
+// ```mathematics
+stealth_address
+{
+    encoded 1Ht5EmHdUNVvRyMdJCwTZdBowDnbNJu8kaaZbkn4D4p7HTrppupQzETxVMdguNviAyEFj7e7mqKkqTncNeLdAv81Mm8jf9bzn7hBP
+    filter ""
+    scan_public_key 031bab84e687e36514eeaf5a017c30d32c1f59dd4ea6629da7970ca374513dd006
+    signatures 2
+    spend
+    {
+        public_key 031bab84e687e36514eeaf5a017c30d32c1f59dd4ea6629da7970ca374513dd006
+        public_key 024c6988f8e64242a1b8f33513f5f27b9e135ad0a11433fc590816ff92a353a969
+    }
+    version 0
+}
+```
+
+### Transaction
 ```mathematics
 
 Alice (receiver)
