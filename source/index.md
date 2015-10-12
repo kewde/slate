@@ -317,7 +317,7 @@ The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all 
 
 ShadowLite is the brand new component of the Shadow platform that brings lightning-fast syncing with the Shadow blockchain.
 
-We've taken a completely different approach to wallet design based on the principles of the "Simplified Payment Verification" or “SPV” system outlined in section 8 of [Satoshi’s Whitepaper](https://bitcoin.org/bitcoin.pdf). Instead of releasing a separate client, we’ve integrated optional lite functionality within the wallet. This allows for startup configuration to determine which mode you are running (thin or full).
+We've taken a completely different approach to wallet design based on the principles of the "Simplified Payment Verification" or “SPV” system outlined in section 8 of [Satoshi’s white paper](https://bitcoin.org/bitcoin.pdf). Instead of releasing a separate client, we’ve integrated optional lite functionality within the wallet. This allows for startup configuration to determine which mode you are running (thin or full).
 
 ShadowLite mobile users have access to all existing functionality with a reduced bandwidth, storage and memory footprint.
 
@@ -338,8 +338,8 @@ or alternatively, you can startup the client with the ```-thinmode``` parameter.
 ## Introduction
 
 ShadowSend’s anonymous cryptographic transaction protocol uses dual-key stealth addresses, traceable ring signatures layered with non­interactive zero knowledge proofs. 
-Below you will find a presentation of the anonymous cryptographic transaction protocol which utilises the above mentioned cryptographic principles. We explain how Shadow introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­spend prevention.
-We also presented performance data of our scheme including proof sizes, signature generation times and verification times in our whitepaper. 
+Below you will find a presentation of the anonymous cryptographic transaction protocol which utilizes the above mentioned cryptographic principles. We explain how Shadow introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double­spend prevention.
+We also presented performance data of our scheme including proof sizes, signature generation times and verification times in our white paper. 
 
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
@@ -349,7 +349,7 @@ In order to transact anonymously, we have introduced an anonymous token, which w
 Shadow Tokens take form of outputs on the ShadowCash blockchain and each one of them has its own private/public keypair. 
 Shadow tokens are spendable only by providing a traceable ring signature to prove ownership of the token.
 
-To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up into values of 1, 3, 4 and 5. For example 1.7 sdc would become 3 tokens of values 1.0, 0.3 and 0.4.
+To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up into values of 1, 3, 4 and 5. For example 1.7 SDC would become 3 tokens of values 1.0, 0.3 and 0.4.
 
 ## Dual-key stealth addresses
 
@@ -371,12 +371,21 @@ stealth_address
 ```
 
 Stealth addresses are generated in a different way than normal bitcoin addresses, but they do follow roughly the same guidelines of structure.
+A dual-key stealth address contains a lot more information than a Bitcoin address, because dual-key Stealth addresses requires the sender of a transaction to know the public scan key and the public spend key to perform it.
+All data required to perform such transaction is thereby contained and derivable from the Stealth address.
 
-Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | # of signatures | Length of prefix | prefix
+Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | # of signatures | Length of prefix | Prefix
 --- | --- |--- | --- |--- | --- |--- | --- 
 0x2a or 0x2b| 1 | 33 bytes | integer | 33 bytes | integer | integer | length of prefix  / 8
-Real or testnet | 
 
+**Version:** 
+**Options:**
+**Public scan key:**
+**Amount of public spend keys:**
+**Public spend keys:**
+**Amount of signatures:**
+**Length of prefix:**
+**Prefix:**
 
 ### Transaction
 ```mathematics
@@ -424,7 +433,7 @@ publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 
 Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency, used to **anonymize the recipients** of a transaction.
 
-Stealth addresses are roughly twice as long as a normal address and they operate in a completly different way.
+Stealth addresses are roughly twice as long as a normal address and they operate in a completely  different way.
 Once Alice has posted her Stealth address, she will be able to receive infinite unlinkable payments.
 
 **That means that each payment to Alice's Stealth address will generate a new unused address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
@@ -441,7 +450,7 @@ The dual-key is actually more of a security practice, because if it weren't impl
 
 
 ## Ring signatures
-<aside class="warning">Hardfork occuring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
+<aside class="warning">Hardfork occurring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
 
 The ring signatures are a crucial part to anonymize the sender of a transaction.
 
@@ -475,23 +484,23 @@ For efficiency’s sake, when spending Shadow, we get a list of all anonymous ou
 
 Each Shadow coin has its own private key, so when spending Shadow, each coin or anonymous input, will need to have its own ring signature generated, and will then have to be verified.
 
-## Whitepaper
+## White paper
 
-ShadowSend v2 whitepaper: [http://shadow.cash/downloads/shadowcash-anon.pdf](http://shadow.cash/downloads/shadowcash-anon.pdf)
+ShadowSend v2 white paper: [http://shadow.cash/downloads/shadowcash-anon.pdf](http://shadow.cash/downloads/shadowcash-anon.pdf)
 
 # ShadowChat
 
 Communication is an essential component of doing business. Modern technology gives us cheap, reliable and effortless methods to communicate with others regardless of physical distance.
 
-However this technology does little to safeguard the content of our messages from the scrutiny of interested observers. We live in an age of constant and ubiquitous surveillance, where it becomes more difficult by the day to retain our privacy. Privacy is paramount when conducting business, the consequences of invasions of privacy can be devastating to both businesses and individuals, whether the attacker is a rival firm, a malicious individual or an overbearing government.
+However, this technology does little to safeguard the content of our messages from the scrutiny of interested observers. We live in an age of constant and ubiquitous surveillance, where it becomes more difficult by the day to retain our privacy. Privacy is paramount when conducting business, the consequences of invasions of privacy can be devastating to both businesses and individuals, whether the attacker is a rival firm, a malicious individual or an overbearing government.
 
 ## Introduction
 
-ShadowCash has implemented a P2P (peer-to-peer) Instant Messaging system utilising state-of-the-art encryption technology to keep your communications private. All messages are encrypted by the proven **AES-256-CBC algorithm**, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilising sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
+ShadowCash has implemented a P2P (peer-to-peer) Instant Messaging system utilizing  state-of-the-art encryption technology to keep your communications private. All messages are encrypted by the proven **AES-256-CBC algorithm**, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilizing  sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
 
-To eliminate the risk and hassle of sharing passwords, we utilise the proven and trusted method of **Elliptic Curve Diffie-Hellman (ECDH) key exchange**.
+To eliminate the risk and hassle of sharing passwords, we utilize the proven and trusted method of **Elliptic Curve Diffie-Hellman (ECDH) key exchange**.
 The Elliptic Curve Digital Signature Algorithm (ECDSA) is used to give you confidence that the messages you received came from the original recipient and remained untouched in propagation.
-Messages are distributed over the pre-existing ShadowCoin p2p network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
+Messages are distributed over the preexisting ShadowCoin p2p network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
 
 ## Key Sharing
 
@@ -499,7 +508,7 @@ The Elliptic Curve Diffie-Hellman (ECDH) key exchange method allows a secret key
 
 This allows for distributing messages, of whom nobody knows the recipient of.
 
-In order to send a encrypted message, you must possess the public key of the intended recipient. The public keys embedded in the ShadowCash transaction blockchain when any amount is spent. If you are sending to an address that has not spent a transaction in the blockchain the public key to that address must be provided manually.
+In order to send an encrypted message, you must possess the public key of the intended recipient. The public keys embedded in the ShadowCash transaction blockchain when any amount is spent. If you are sending to an address that has not spent a transaction in the blockchain, the public key to that address must be provided manually.
 
 ShadowCash uses curve secp256k1 for all elliptic curve functions. This is the same curve used by bitcoin along with the vast majority of altcoins. With such widespread use underpinning systems of immense value it is extremely unlikely that curve secp256k1 is not secure.
 
@@ -560,9 +569,9 @@ To speed up the process and allow for any payload format to be used, the Message
 - If address and compact signature were included then verify the message
 Address and compact signature are not included when message is sent anonymously strip the sender's public key and add it to the public key database.
 
-## Whitepaper
+## White paper
 
-Whitepaper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf)
+White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf)
 
 
 # ShadowMarket
@@ -573,7 +582,7 @@ Whitepaper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www.
 ## Buy
 ## Sell
 ## Trade
-## Whitepaper
+## White paper
 
 # ShadowGo
 
