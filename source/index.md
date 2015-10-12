@@ -370,6 +370,14 @@ stealth_address
 }
 ```
 
+Stealth addresses are generated in a different way than normal bitcoin addresses, but they do follow roughly the same guidelines of structure.
+
+Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | # of signatures | Length of prefix | prefix
+--- | --- |--- | --- |--- | --- |--- | --- 
+0x2a or 0x2b| 1 | 33 bytes | integer | 33 bytes | integer | integer | length of prefix  / 8
+Real or testnet | 
+
+
 ### Transaction
 ```mathematics
 
