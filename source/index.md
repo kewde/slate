@@ -386,7 +386,6 @@ Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | #
 Parameter | value
 --- | ---
 **Version:**  | The hexadecimal representation (= 0x28) of '40' is used for the current release on the mainnet. The version field to keep track of updates of the protocol.
-
 **Options:** | Field is always set to 0.
 **Public scan key:** | This fields holds the public scan key, 33 bytes of data.
 **Amount of public spend keys:** | The current protocol uses one public spend key for each Stealth address.
