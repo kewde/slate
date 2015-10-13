@@ -380,7 +380,7 @@ A dual-key stealth address contains a lot more information than a Bitcoin addres
 All data required to perform such transaction is thereby contained and derivable from the Stealth address.
 
 Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | # of signatures | Length of prefix | Prefix | Checksum
---- | --- |--- | --- |--- | --- |--- | --- 
+--- | --- |--- | --- |--- | --- |--- | --- | ---
 0x28 | 0  (?)| 33 bytes | 1 | 33 bytes | 0 | 0 | (not used) |  4 bytes
 
 **Version:** 
