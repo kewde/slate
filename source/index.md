@@ -3,9 +3,9 @@ title: ShadowCore API
 
 language_tabs:
   - mathematics
+  - C++
   - shell
   - json
-  - java
   - javascript
 
 toc_footers:
@@ -19,7 +19,7 @@ search: true
 ---
 
 # About Shadow
-<center><div class="video-container"><iframe width="854" height="480" src="https://www.youtube.com/embed/i-xnh7NFCA8" frameborder="0" allowfullscreen></iframe></div></center>
+<center><iframe width="854" height="480" src="https://www.youtube.com/embed/i-xnh7NFCA8" frameborder="0" allowfullscreen></iframe></center>
 
 ## History
 Born on July 19, 2014, Shadow quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code. 
@@ -354,20 +354,25 @@ To increase the pool of outputs available for ring signatures, the SDC value is 
 ## Dual-key stealth addresses
 
 ### Address encoding and decoding
- ```mathematics
+ ```C++
 stealth_address
+std::string CEKAStealthKey::ToStealthAddress() const
 {
-    encoded 1Ht5EmHdUNVvRyMdJCwTZdBowDnbNJu8kaaZbkn4D4p7HTrppupQzETxVMdguNviAyEFj7e7mqKkqTncNeLdAv81Mm8jf9bzn7hBP
-    filter ""
-    scan_public_key 031bab84e687e36514eeaf5a017c30d32c1f59dd4ea6629da7970ca374513dd006
-    signatures 2
-    spend
-    {
-        public_key 031bab84e687e36514eeaf5a017c30d32c1f59dd4ea6629da7970ca374513dd006
-        public_key 024c6988f8e64242a1b8f33513f5f27b9e135ad0a11433fc590816ff92a353a969
-    }
-    version 0
-}
+    // - return base58 encoded public stealth address
+    
+    std::vector<uint8_t> raw;
+    raw = Params().Base58Prefix(CChainParams::STEALTH_ADDRESS);
+    
+    raw.push_back(nFlags);
+    raw.insert(raw.end(), pkScan.begin(), pkScan.end());
+    raw.push_back(1); // number of spend pubkeys
+    raw.insert(raw.end(), pkSpend.begin(), pkSpend.end());
+    raw.push_back(0); // number of signatures
+    raw.push_back(0); // ?
+    AppendChecksum(raw);
+    
+    return EncodeBase58(raw);
+}; //extkey.cpp
 ```
 
 Stealth addresses are generated in a different way than normal bitcoin addresses, but they do follow roughly the same guidelines of structure.
@@ -379,12 +384,19 @@ Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | #
 0x2a or 0x2b| 1 | 33 bytes | integer | 33 bytes | integer | integer | length of prefix  / 8
 
 **Version:** 
+
 **Options:**
+
 **Public scan key:**
+
 **Amount of public spend keys:**
+
 **Public spend keys:**
+
 **Amount of signatures:**
+
 **Length of prefix:**
+
 **Prefix:**
 
 ### Transaction
