@@ -352,10 +352,15 @@ Shadow tokens are spendable only by providing a traceable ring signature to prov
 To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up into values of 1, 3, 4 and 5. For example 1.7 SDC would become 3 tokens of values 1.0, 0.3 and 0.4.
 
 ## Dual-key stealth addresses
+### Introduction and History
+"True knowledge exists in knowing that you know nothing." ~ Socrates
+
+
+
 
 ### Address encoding and decoding
  ```C++
-stealth_address
+//formatting function of stealth address
 std::string CEKAStealthKey::ToStealthAddress() const
 {
     // - return base58 encoded public stealth address
@@ -375,26 +380,28 @@ std::string CEKAStealthKey::ToStealthAddress() const
 }; //extkey.cpp
 ```
 
-Stealth addresses are generated in a different way than normal bitcoin addresses, but they do follow roughly the same guidelines of structure.
-A dual-key stealth address contains a lot more information than a Bitcoin address, because dual-key Stealth addresses requires the sender of a transaction to know the public scan key and the public spend key to perform it.
-All data required to perform such transaction is thereby contained and derivable from the Stealth address.
+Stealth addresses are generated in a different way than normal bitcoin addresses, but they have a similair structure.
+A dual-key stealth address contains a lot more information than a normal Bitcoin address, because it requires the sender of a transaction to know the public scan key and the public spend key which is not stored on the blockchain.
+All data required to perform such transaction is contained and derivable from the Stealth address itself.
+ 
+Just like a Bitcoin address, all data below is **Base-58** encoded, which also explains the familiar looking form.
+
 
 Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | # of signatures | Length of prefix | Prefix | Checksum
 --- | --- |--- | --- |--- | --- |--- | --- | ---
-0x28 | 0  (?)| 33 bytes | 1 | 33 bytes | 0 | 0 | (not used) |  4 bytes
+0x28 | 0  | 33 bytes | 1 | 33 bytes | 0 | 0 | (not used) |  4 bytes
 
 Parameter | value
 --- | ---
 **Version:**  | The hexadecimal representation (= 0x28) of '40' is used for the current release on the mainnet. The version field to keep track of updates of the protocol.
 **Options:** | Field is always set to 0.
 **Public scan key:** | This fields holds the public scan key, 33 bytes of data.
-**Amount of public spend keys:** | The current protocol uses one public spend key for each Stealth address.
+**Amount of public spend keys:** | The current protocol uses one public spend key for each Stealth address. The ability to specify multiple spend keys remains in the protocol because it is useful for the implementation of multi-signature addresses.
 **Public spend keys:** | This fields holds the public spend key, 33 bytes of data.
 **Amount of signatures:** | Field is always set to 0.
 **Length of prefix:** | Field is always set to 0.
-**Prefix:** | No prefix is used, since length is equal to zero.
-**Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)).
-The same checksum function used in normal Bitcoin addresses.
+**Prefix:** | No prefix is used, since length is equal to zero. Other coins do make use of this field, more information can be found [here](https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth#Computing_prefixes)
+**Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)). The same checksum function used in normal Bitcoin addresses.
 
 ### Transaction
 ```mathematics
@@ -451,10 +458,14 @@ Once Alice has posted her Stealth address, she will be able to receive infinite 
 It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
 
 The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
+It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
+Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new private key.
 
 It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
 All transactions have to be made with the SpendKey, only available after decrypting your wallet.
 The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
+
+
 
 
 
