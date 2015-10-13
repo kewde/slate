@@ -383,32 +383,18 @@ Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | #
 --- | --- |--- | --- |--- | --- |--- | --- | ---
 0x28 | 0  (?)| 33 bytes | 1 | 33 bytes | 0 | 0 | (not used) |  4 bytes
 
-**Version:** 
-The hexadecimal representation (= 0x28) of '40' is used for the current release on the mainnet. The version field to keep track of updates of the protocol.
+Parameter | value
+--- | ---
+**Version:**  | The hexadecimal representation (= 0x28) of '40' is used for the current release on the mainnet. The version field to keep track of updates of the protocol.
 
-**Options:**
-Field is always set to 0.
-
-**Public scan key:**
-This fields holds the public scan key, 33 bytes of data.
-
-**Amount of public spend keys:**
-The current protocol uses one public spend key for each Stealth address.
-
-**Public spend keys:**
-This fields holds the public spend key, 33 bytes of data.
-
-**Amount of signatures:**
-Field is always set to 0.
-
-**Length of prefix:**
-Field is always set to 0.
-
-**Prefix:**
-No prefix is used, since length is equal to zero.
-
-**Checksum:**
-Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)).
+**Options:** | Field is always set to 0.
+**Public scan key:** | This fields holds the public scan key, 33 bytes of data.
+**Amount of public spend keys:** | The current protocol uses one public spend key for each Stealth address.
+**Public spend keys:** | This fields holds the public spend key, 33 bytes of data.
+**Amount of signatures:** | Field is always set to 0.
+**Length of prefix:** | Field is always set to 0.
+**Prefix:** | No prefix is used, since length is equal to zero.
+**Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)).
 The same checksum function used in normal Bitcoin addresses.
 
 ### Transaction
