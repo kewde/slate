@@ -363,9 +363,9 @@ std::string CEKAStealthKey::ToStealthAddress() const
     std::vector<uint8_t> raw;
     raw = Params().Base58Prefix(CChainParams::STEALTH_ADDRESS);
     
-    raw.push_back(nFlags);
+    raw.push_back(nFlags); 
     raw.insert(raw.end(), pkScan.begin(), pkScan.end());
-    raw.push_back(1); // number of spend pubkeys
+    raw.push_back(1); // number of spend pubkeys is 1
     raw.insert(raw.end(), pkSpend.begin(), pkSpend.end());
     raw.push_back(0); // number of signatures
     raw.push_back(0); // ?
@@ -379,25 +379,37 @@ Stealth addresses are generated in a different way than normal bitcoin addresses
 A dual-key stealth address contains a lot more information than a Bitcoin address, because dual-key Stealth addresses requires the sender of a transaction to know the public scan key and the public spend key to perform it.
 All data required to perform such transaction is thereby contained and derivable from the Stealth address.
 
-Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | # of signatures | Length of prefix | Prefix
+Version | Options | Public Scan Key | # Public Spend Keys | Public Spend Key | # of signatures | Length of prefix | Prefix | Checksum
 --- | --- |--- | --- |--- | --- |--- | --- 
-0x2a or 0x2b| 1 | 33 bytes | integer | 33 bytes | integer | integer | length of prefix  / 8
+0x28 | 0  (?)| 33 bytes | 1 | 33 bytes | 0 | 0 | (not used) |  4 bytes
 
 **Version:** 
+The hexadecimal representation (= 0x28) of '40' is used for the current release on the mainnet. The version field to keep track of updates of the protocol.
 
 **Options:**
+Field is always set to 0.
 
 **Public scan key:**
+This fields holds the public scan key, 33 bytes of data.
 
 **Amount of public spend keys:**
+The current protocol uses one public spend key for each Stealth address.
 
 **Public spend keys:**
+This fields holds the public spend key, 33 bytes of data.
 
 **Amount of signatures:**
+Field is always set to 0.
 
 **Length of prefix:**
+Field is always set to 0.
 
 **Prefix:**
+No prefix is used, since length is equal to zero.
+
+**Checksum:**
+Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)).
+The same checksum function used in normal Bitcoin addresses.
 
 ### Transaction
 ```mathematics
