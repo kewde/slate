@@ -351,13 +351,13 @@ Shadow tokens are spendable only by providing a traceable ring signature to prov
 
 To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up into values of 1, 3, 4 and 5. For example 1.7 SDC would become 3 tokens of values 1.0, 0.3 and 0.4.
 
-## Dual-key stealth addresses
-### Introduction and History
+## Dual-key stealth addresses ##
+### Introduction and History ###
 Dual-key Stealth addresses is one of the cornerstones of most anonymous cryptocurrencies currently available. The usage allows the recipient to remain anonymous, even after sharing his stealth address publicly.
 
 Once the Stealth address has been reveiled to the payer(s), it will be able to receive infinite unlinkable payments. **That means that each payment to a Stealth address will computes a new unused normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
 
-> No man will make a great leader who wants to do it all himself or get all the credit for doing it. ~Andrew Carnegie
+*No man will make a great leader who wants to do it all himself or get all the credit for doing it.* ~Andrew Carnegie
 
 We would also like to take time to thank the original visionary of stealth addresses: **Peter Todd**, a Bitcoin core developer. You can find a link to his white paper in the references.
 He has done amazing work on Bitcoin and should not be forgotten.
