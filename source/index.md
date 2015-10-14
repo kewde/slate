@@ -353,8 +353,14 @@ To increase the pool of outputs available for ring signatures, the SDC value is 
 
 ## Dual-key stealth addresses
 ### Introduction and History
-"True knowledge exists in knowing that you know nothing." ~ Socrates
+Dual-key Stealth addresses is one of the cornerstones of most anonymous cryptocurrencies currently available. The usage allows the recipient to remain anonymous, even after sharing his stealth address publicly.
 
+Once the Stealth address has been reveiled to the payer(s), it will be able to receive infinite unlinkable payments. **That means that each payment to a Stealth address will computes a new unused normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
+
+> No man will make a great leader who wants to do it all himself or get all the credit for doing it. ~Andrew Carnegie
+
+We would also like to take time to thank the original visionary of stealth addresses: **Peter Todd**, a Bitcoin core developer. You can find a link to his white paper in the references.
+He has done amazing work on Bitcoin and should not be forgotten.
 
 
 
@@ -401,7 +407,7 @@ Parameter | value
 **Amount of signatures:** | Field is always set to 0.
 **Length of prefix:** | Field is always set to 0.
 **Prefix:** | No prefix is used, since length is equal to zero. Other coins do make use of this field, more information can be found [here](https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth#Computing_prefixes)
-**Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)). The same checksum function used in normal Bitcoin addresses.
+**Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)). The same checksum function used in Bitcoin addresses.
 
 ### Transaction
 ```mathematics
@@ -447,27 +453,19 @@ When the wallet is decrypted:
 publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 ```
 
-Dual-key Stealth addresses is one of the cornerstones of any anonymous cryptocurrency, used to **anonymize the recipients** of a transaction.
-
-Stealth addresses are roughly twice as long as a normal address and they operate in a completely  different way.
-Once Alice has posted her Stealth address, she will be able to receive infinite unlinkable payments.
-
-**That means that each payment to Alice's Stealth address will generate a new unused address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
-
-
-It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
+The Stealth transaction uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
 
 The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
 It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
-Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new private key.
+Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new keypair.
 
 It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
 All transactions have to be made with the SpendKey, only available after decrypting your wallet.
 The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
 
 
-
-
+### References
+[1] Peter Todd, *[Bitcoin-development] Stealth Addresses, 2014*,  Available at  http://sourceforge.net/p/bitcoin/mailman/message/31813471/
 
 ## Ring signatures
 <aside class="warning">Hardfork occurring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
@@ -506,7 +504,8 @@ Each Shadow coin has its own private key, so when spending Shadow, each coin or 
 
 ## White paper
 
-ShadowSend v2 white paper: [http://shadow.cash/downloads/shadowcash-anon.pdf](http://shadow.cash/downloads/shadowcash-anon.pdf)
+Our white paper on ShadowSend 2 can be found [here](http://shadow.cash/downloads/shadowcash-anon.pdf](http://shadow.cash/downloads/shadowcash-anon.pdf).
+
 
 # ShadowChat
 
