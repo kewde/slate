@@ -343,6 +343,8 @@ We also presented performance data of our scheme including proof sizes, signatur
 
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
+<central><iframe src="//www.slideshare.net/slideshow/embed_code/43827434" width="960" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe></center>
+
 ## ShadowTokens (SDT)
 
 In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which destroys SDC (ShadowCash), and outputs a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. 
