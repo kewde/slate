@@ -42,18 +42,9 @@ The public nature of a block chain allows anyone to observe the entire transacti
 
 On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
-## Shadow next to ...
+## Shadow next to other cryptocurrencies
 
-### Bitcoin
-
-ShadowCash was built on the same base as Bitcoin and operates on the same core principles. There is no central authority or bank mechanism that controls the flow of transactions. Crucial changes to bitcoin can be implemented into ShadowCash with easily.
-
-### Zerocoin
-Shadow does not require the initial trusted parameter setup which is present in the Zerocoin and Zerocash scheme.
-
-### Monero
-
-### Dash
+![Comparison](images/table.png)
 
 # Community
 
