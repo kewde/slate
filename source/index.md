@@ -1152,9 +1152,10 @@ Returns the public key for a given address.
 smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
 ```
 
-> Output:
+
 
 ```json
+ Output:
 {
 "result" : "Success.",
 "address in wallet" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
@@ -1173,15 +1174,17 @@ Decrypt and display all received messages.
 
 <aside class="warning">Warning: clear will delete all messages.</aside>
 
-> Example:
+
 
 ```shell
+ Example:
 smsginbox all
 ```
 
-> Output:
+
 
 ```json
+Output:
 {
 "message" : {
 "received" : "2015-09-13 16:19:53 Romance",
@@ -1221,9 +1224,9 @@ List and manage the secure message options.
 smsgoptions list
 ```
 
-> Output:
 
 ```json
+Output:
 {
 "option" : "newAddressRecv = true",
 "option" : "newAddressAnon = true",
@@ -1237,9 +1240,9 @@ smsgoptions list
 smsgoptions set newAddressRecv false
 ```
 
-> Output:
 
 ```json
+Output:
 {
 "option" : "newAddressRecv = false",
 "option" : "newAddressAnon = true",
@@ -1264,9 +1267,9 @@ Will also show all messages sent with smsganonsend.
 smsgoutbox
 ```
 
-> Output:
 
 ```json
+Output:
 {
 "message" : {
 "sent" : "2015-09-13 16:19:51 Romance",
@@ -1312,9 +1315,10 @@ Send and anonymous message to an address.
 smsgsendanon tFyq452LPtDotWat8PFwEV5oPoWDqagLNv "This secure messagings is brilliant!"
 ```
 
-> Output:
+
 
 ```json
+Output:
 {
 "result" : "Sent."
 }
@@ -1463,9 +1467,9 @@ curl "http://example.com/api/kittens"
   -H "Authorization: meowmeowmeow"
 ```
 
-> The above command returns JSON structured like this:
 
 ```json
+The above command returns JSON structured like this:
 [
   {
     "id": 1,
