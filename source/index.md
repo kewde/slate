@@ -89,7 +89,7 @@ RPC Port | 51736
 
 To get started with accepting ShadowCash is easy, simply download the latest Shadow client and you are ready to go. There are no third party payment processors or middlemen and more importantly the transactions and funds appear in your account in seconds.
 
-## Acquire
+## Exchanges
 
 Currently, you can only buy ShadowCash (SDC) once you have Bitcoin (BTC), then you can trade BTC for SDC on premium crypto-to-crypto exchanges.
 
