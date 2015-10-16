@@ -381,7 +381,7 @@ std::string CEKAStealthKey::ToStealthAddress() const
     return EncodeBase58(raw);
 }; //extkey.cpp
 ```
-**Shadows Source Code included in "cpp" language tab**
+Examples ![available languages](images/cpp.png)
 
 Stealth addresses are generated in a different way than normal bitcoin addresses, but they have a similair structure.
 A dual-key stealth address contains a lot more information than a normal Bitcoin address, because it requires the sender of a transaction to know the public scan key and the public spend key which is not stored on the blockchain.
