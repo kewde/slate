@@ -429,7 +429,7 @@ publicSpendKeyAlice = privateSpendKeyAlice * G
 publicScanKeyAlice = privateScanKeyAlice * G
 
 Bob (sender)
-e = ephem private key
+e = ephem secret key = ephem private key
 publicEphemKey = e * G
 Knows the public scan key of Alice (publicScanKeyAlice)!
 
