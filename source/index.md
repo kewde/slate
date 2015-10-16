@@ -684,25 +684,25 @@ addnode <node> <add|remove|onetry>
 
 ## addredeemscript
 
-```shell
+```json
 addredeemscript <redeemScript> [account]
 ```
 
 ## anoninfo
 
-```shell
+```json
 anoninfo [recalculate]
 ```
 
 ## anonoutputs
 
-```shell
+```json
 anonoutputs [systemTotals] [show_immature_outputs]
 ```
 
 ## backupwallet <destination>
 
-```shell
+```json
 backupwallet <destination>
 ```
 
@@ -712,43 +712,43 @@ backupwallet <destination>
 
 ## createrawtransaction
 
-```shell
+```json
 createrawtransaction [{"txid":txid,"vout":n},...] {address:amount,...}
 ```
 
 ## decoderawtransaction
 
-```shell
+```json
 decoderawtransaction <hex string>
 ```
 
 ## decodescript
 
-```shell
+```json
 decodescript <hex string>
 ```
 
 ## dumpprivkey
 
-```shell
+```json
 dumpprivkey <shadowcashaddress>
 ```
 
 ## dumpwallet
 
-```shell
+```json
 dumpwallet <filename>
 ```
 
 ## encryptwallet
 
-```shell
+```json
 encryptwallet <passphrase>
 ```
 
 ## estimateanonfee
 
-```shell
+```json
 estimateanonfee <amount> <ring_size> [narration]
 ```
 
@@ -757,31 +757,31 @@ Used to estimate the anon fee with a given amount and ring size.
 
 ## getaccount
 
-```shell
+```json
 getaccount <shadowcoinaddress>
 ```
 
 ## getaccountaddress
 
-```shell
+```json
 getaccountaddress <account>
 ```
 
 ## getaddednodeinfo
 
-```shell
+```json
 getaddednodeinfo <dns> [node]
 ```
 
 ## getaddressesbyaccount
 
-```shell
+```json
 getaddressesbyaccount <account>
 ```
 
 ## getbalance
 
-```shell
+```json
 getbalance [account] [minconf=1]
 ```
 
@@ -789,13 +789,13 @@ getbalance [account] [minconf=1]
 
 ## getblock
 
-```shell
+```json
 getblock <hash> [txinfo]
 ```
 
 ## getblockbynumber
 
-```shell
+```json
 getblockbynumber <number> [txinfo]
 ```
 
@@ -803,13 +803,13 @@ getblockbynumber <number> [txinfo]
 
 ## getblockhash
 
-```shell
+```json
 getblockhash <index>
 ```
 
 ## getblocktemplate [params]
 
-```shell
+```json
 getblocktemplate [params]
 ```
 
@@ -827,19 +827,19 @@ getblocktemplate [params]
 
 ## getnewaddress
 
-```shell
+```json
 getnewaddress [account]
 ```
 
 ## getnewpubkey
 
-```shell
+```json
 getnewpubkey [account]
 ```
 
 ## getnewstealthaddress
 
-```shell
+```json
 getnewstealthaddress [label]
 ```
 
@@ -849,19 +849,19 @@ getnewstealthaddress [label]
 
 ## getrawtransaction
 
-```shell
+```json
 getrawtransaction <txid> [verbose=0]
 ```
 
 ## getreceivedbyaccount
 
-```shell
+```json
 getreceivedbyaccount <account> [minconf=1]
 ```
 
 ## getreceivedbyaddress
 
-```shell
+```json
 getreceivedbyaddress <shadowcashaddress> [minconf=1]
 ```
 
@@ -869,55 +869,55 @@ getreceivedbyaddress <shadowcashaddress> [minconf=1]
 
 ## getsubsidy
 
-```shell
+```json
 getsubsidy [nTarget]
 ```
 
 ## gettransaction <txid>
 
-```shell
+```json
 gettransaction <txid>
 ```
 
 ## getwork
 
-```shell
+```json
 getwork [data]
 ```
 
 ## getworkex
 
-```shell
+```json
 getworkex [data, coinbase]
 ```
 
 ## help
 
-```shell
+```json
 help [command]
 ```
 
 ## importprivkey
 
-```shell
+```json
 importprivkey <shadowcoinprivkey> [label]
 ```
 
 ## importstealthaddress
 
-```shell
+```json
 importstealthaddress <scan_secret> <spend_secret> [label]
 ```
 
 ## importwallet
 
-```shell
+```json
 importwallet <filename>
 ```
 
 ## keypoolrefill
 
-```shell
+```json
 keypoolrefill [new-size]
 ```
 
@@ -930,25 +930,25 @@ Lists groups of addresses which have had their common ownership made public by c
 
 ## listreceivedbyaccount
 
-```shell
+```json
 listreceivedbyaccount [minconf=1] [includeempty=false]
 ```
 
 ## listreceivedbyaddress
 
-```shell
+```json
 listreceivedbyaddress [minconf=1] [includeempty=false]
 ```
 
 ## listsinceblock
 
-```shell
+```json
 listsinceblock [blockhash] [target-confirmations]
 ```
 
 ## liststealthaddresses
 
-```shell
+```json
 liststealthaddresses [show_secrets=0]
 ```
 
@@ -958,7 +958,7 @@ When used with show_secrets=1 it will return a list of all stealth addresses, th
 
 ## listtransactions
 
-```shell
+```json
 listtransactions [account] [count=10] [from=0] [show_coinstake=1]
 ```
 
@@ -974,7 +974,7 @@ When stealth addresses are generated their account name is "ao first_16_chars...
 
 ## listunspent
 
-```shell
+```json
 listunspent [minconf=1] [maxconf=9999999]
 ```
 
@@ -985,19 +985,19 @@ Results are an array of Objects, each of which has:
 
 ## makekeypair
 
-```shell
+```json
 makekeypair [prefix]
 ```
 
 ## move
 
-```shell
+```json
 move <fromaccount> <toaccount> <amount> [minconf=1] [comment]
 ```
 
 ## nextorphan
 
-```shell
+```json
 nextorphan [connecthash]
 ```
 
@@ -1010,121 +1010,121 @@ Repair wallet if checkwallet reports any problem
 
 ## reservebalance
 
-```shell
+```json
 reservebalance [<reserve> [amount]]
 ```
 
 ## rewindchain
 
-```shell
+```json
 rewindchain <number>
 ```
 
 ## scanforalltxns
 
-```shell
+```json
 scanforalltxns [fromHeight]
 ```
 
 ## scanforstealthtxns
 
-```shell
+```json
 scanforstealthtxns [fromHeight]
 ```
 
 ## sendalert
 
-```shell
+```json
 sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]
 ```
 
 ## sendanontoanon
 
-```shell
+```json
 sendanontoanon <stealth_address> <amount> <ring_size> [narration] [comment] [comment-to]
 ```
 
 ## sendanontosdc
 
-```shell
+```json
 sendanontosdc <stealth_address> <amount> <ring_size> [narration] [comment] [comment-to]
 ```
 
 ## sendfrom 
 
-```shell
+```json
 sendfrom <fromaccount> <toshadowcoinaddress> <amount> [minconf=1] [comment] [comment-to] [narration]
 ```
 
 ## sendmany
 
-```shell
+```json
 sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]
 ```
 
 ## sendrawtransaction
 
-```shell
+```json
 sendrawtransaction <hex string>
 ```
 
 ## sendsdctoanon
 
-```shell
+```json
 sendsdctoanon <stealth_address> <amount> [narration] [comment] [comment-to]
 ```
 
 ## sendtoaddress
 
-```shell
+```json
 sendtoaddress <shadowcoinaddress> <amount> [comment] [comment-to] [narration]
 ```
 
 ## sendtostealthaddress
 
-```shell
+```json
 sendtostealthaddress <stealth_address> <amount> [comment] [comment-to] [narration]
 ```
 
 ## setaccount
 
-```shell
+```json
 setaccount <shadowcoinaddress> <account>
 ```
 
 ## setbestblockbyheight <height>
 
-```shell
+```json
 setbestblockbyheight <height>
 ```
 
 ## settxfee
 
-```shell
+```json
 settxfee <amount>
 ```
 
 ## signmessage
 
-```shell
+```json
 signmessage <shadowcashaddress> <message>
 ```
 
 ## signrawtransaction
 
-```shell
+```json
 signrawtransaction <hex string> [{"txid":txid,"vout":n,"scriptPubKey":hex},...] [<privatekey1>,...] [sighashtype="ALL"]
 ```
 
 ## smsgaddkey
 
-```shell
+```json
 smsgaddkey <address> <pubkey>
 ```
 
 ## smsgbuckets [stats|dump]
 
-```shell
+```json
 smsgbuckets [stats|dump]
 ```
 
@@ -1140,7 +1140,7 @@ Enable secure messaging
 
 ## smsggetpubkey
 
-```shell
+```json
 smsggetpubkey <address>
 ```
 
@@ -1148,14 +1148,9 @@ Returns the public key for a given address.
 
 > Example:
 
-```shell
-smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
-```
-
-
-
 ```json
- Output:
+smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
+Output:
 {
 "result" : "Success.",
 "address in wallet" : "tFyq452LPtDotWat8PFwEV5oPoWDqagLNv",
@@ -1165,7 +1160,7 @@ smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
 
 ## smsginbox
 
-```shell
+```json
 smsginbox [all|unread|clear]
 ```
 
@@ -1176,14 +1171,10 @@ Decrypt and display all received messages.
 
 
 
-```shell
+```json
  Example:
 smsginbox all
-```
 
-
-
-```json
 Output:
 {
 "message" : {
@@ -1206,42 +1197,32 @@ Output:
 
 ## smsglocalkeys
 
-```shell
+```json
 smsglocalkeys [whitelist|all|wallet|recv <+/-> <address>|anon <+/-> <address>]
 ```
 
 ## smsgoptions
 
-```shell
+```json
 smsgoptions [list|set <optname> <value>]
 ```
 
 List and manage the secure message options.
 
-> Example:
-
-```shell
-smsgoptions list
-```
-
 
 ```json
+Example 1:
+smsgoptions list
+
 Output:
 {
 "option" : "newAddressRecv = true",
 "option" : "newAddressAnon = true",
 "result" : "Success."
-}
-```
 
-> Example 2:
-
-```shell
+Example 2:
 smsgoptions set newAddressRecv false
-```
 
-
-```json
 Output:
 {
 "option" : "newAddressRecv = false",
@@ -1252,7 +1233,7 @@ Output:
 
 ## smsgoutbox
 
-```shell
+```json
 smsgoutbox [all|clear]
 ```
 
@@ -1263,12 +1244,9 @@ Will also show all messages sent with smsganonsend.
 
 > Example:
 
-```shell
-smsgoutbox
-```
-
-
 ```json
+smsgoutbox
+
 Output:
 {
 "message" : {
@@ -1297,27 +1275,21 @@ Look for public keys in the block chain.
 
 ## smsgsend <addrFrom> <addrTo> <message>
 
-```shell
+```json
 smsgsend <addrFrom> <addrTo> <message>
 ```
 
 ## smsgsendanon
 
-```shell
+```json
 smsgsendanon <addrTo> <message>
 ```
 
 Send and anonymous message to an address.
 
-> Example:
-
-```shell
-smsgsendanon tFyq452LPtDotWat8PFwEV5oPoWDqagLNv "This secure messagings is brilliant!"
-```
-
-
-
 ```json
+smsgsendanon tFyq452LPtDotWat8PFwEV5oPoWDqagLNv "This secure messagings is brilliant!"
+
 Output:
 {
 "result" : "Sent."
@@ -1330,43 +1302,43 @@ Stop the shadowcoin server
 
 ## submitblock
 
-```shell
+```json
 submitblock <hex data> [optional-params-obj]
 ```
 
 ## thinforcestate
 
-```shell
+```json
 thinforcestate <state>
 ```
 
 ## thinscanmerkleblocks
 
-```shell
+```json
 thinscanmerkleblocks <height>
 ```
 
 ## txnreport
 
-```shell
+```json
 txnreport [collate_amounts] [show_key_images]
 ```
 
 ## validateaddress
 
-```shell
+```json
 validateaddress <shadowcashaddress>
 ```
 
 ## validatepubkey
 
-```shell
+```json
 validatepubkey <shadowcashpubkey>
 ```
 
 ## verifymessage
 
-```shell
+```json
 verifymessage <shadowcashaddress> <signature> <message>
 ```
 
