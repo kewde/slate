@@ -5,8 +5,8 @@ language_tabs:
   - shell
   - json
   - javascript
-  - math
-  - C++
+  - matlab
+  - cpp
 
 toc_footers:
   - <a href='http://aboutshadow.com/'>Shadow public website</a>
@@ -361,7 +361,7 @@ He has done amazing work on Bitcoin and should not be forgotten.
 
 
 ### Address encoding and decoding
-```C++
+```cpp
 //formatting function of stealth address
 std::string CEKAStealthKey::ToStealthAddress() const
 {
@@ -381,7 +381,7 @@ std::string CEKAStealthKey::ToStealthAddress() const
     return EncodeBase58(raw);
 }; //extkey.cpp
 ```
-```math
+```matlab
 Test
 ```
 
@@ -409,7 +409,7 @@ Parameter | value
 **Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)). The same checksum function used in Bitcoin addresses.
 
 ### Transaction
-```math
+```matlab
 
 Alice (receiver)
 publicSpendKeyAlice = public spend key
@@ -418,7 +418,7 @@ privateSpendKeyAlice = private spend key
 publicScanKeyAlice = EC point, 33 bytes
 privateScanKeyAlice = integer, 32 bytes
 
-This is where it gets a bit more complicated, but no magic, just math!
+This is where it gets a bit more complicated, but no magic, just matlab!
 G = Generator, the primitive root
 
 To continue on, we have to understand how the public addresses are generated.
@@ -452,11 +452,11 @@ When the wallet is decrypted:
 publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 ```
 
-The Stealth transaction uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
+The Stealth transaction uses a clever matlabematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
 
 The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
 It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
-Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new keypair.
+Instead a bit of matlabematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new keypair.
 
 It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
 All transactions have to be made with the SpendKey, only available after decrypting your wallet.
