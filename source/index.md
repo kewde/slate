@@ -381,26 +381,7 @@ std::string CEKAStealthKey::ToStealthAddress() const
     return EncodeBase58(raw);
 }; //extkey.cpp
 ```
-```
-//formatting function of stealth address
-std::string CEKAStealthKey::ToStealthAddress() const
-{
-    // - return base58 encoded public stealth address
-    
-    std::vector<uint8_t> raw;
-    raw = Params().Base58Prefix(CChainParams::STEALTH_ADDRESS);
-    
-    raw.push_back(nFlags); 
-    raw.insert(raw.end(), pkScan.begin(), pkScan.end());
-    raw.push_back(1); // number of spend pubkeys is 1
-    raw.insert(raw.end(), pkSpend.begin(), pkSpend.end());
-    raw.push_back(0); // number of signatures
-    raw.push_back(0); // ?
-    AppendChecksum(raw);
-    
-    return EncodeBase58(raw);
-}; //extkey.cpp
-```
+**Shadows Source Code included in "cpp" language tab**
 
 Stealth addresses are generated in a different way than normal bitcoin addresses, but they have a similair structure.
 A dual-key stealth address contains a lot more information than a normal Bitcoin address, because it requires the sender of a transaction to know the public scan key and the public spend key which is not stored on the blockchain.
@@ -426,7 +407,7 @@ Parameter | value
 **Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)). The same checksum function used in Bitcoin addresses.
 
 ### Transaction
-```matlab
+```
 
 Alice (receiver)
 publicSpendKeyAlice = public spend key
