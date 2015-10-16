@@ -2,11 +2,11 @@
 title: ShadowCore API
 
 language_tabs:
-  - math
-  - C++
   - shell
   - json
   - javascript
+  - math
+  - C++
 
 toc_footers:
   - <a href='http://aboutshadow.com/'>Shadow public website</a>
@@ -361,7 +361,7 @@ He has done amazing work on Bitcoin and should not be forgotten.
 
 
 ### Address encoding and decoding
- ```C++
+```C++
 //formatting function of stealth address
 std::string CEKAStealthKey::ToStealthAddress() const
 {
