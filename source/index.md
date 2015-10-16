@@ -168,19 +168,19 @@ ShadowCash source code is all open-source and available at our [GitHub repositor
 
 > Windows
 
-```shell
+```
 %appdata%\ShadowCoin
 ```
 
 > OSX
 
-```shell
+```
 ~/Library/Application Support/ShadowCoin/
 ```
 
 > Linux
 
-```shell
+```
 ~/.shadowcoin/
 ```
 
@@ -204,14 +204,14 @@ If you decide that a fullnode (default) is for you then the full sync can take a
 
 > Update and Install dependencies:
 
-```shell
+```
 sudo apt-get update && apt-get upgrade
 sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
 ```
 
 > Download the source code and compile shadowcoind
 
-```shell
+```
 git clone https://github.com/ShadowProject/shadow
 cd shadowcoin/src
 make -f makefile.unix
@@ -220,13 +220,13 @@ strip shadowcoind
 
 > Run the daemon
 
-```shell
+```
 shadowcoind -daemon
 ```
 
 > On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
 
-```shell
+```
 nano ~/.shadowcoin/shadowcoin.conf
 ```
 
@@ -240,20 +240,20 @@ nano ~/.shadowcoin/shadowcoin.conf
 
 > You can now start the shadowcoind daemon once more
 
-```shell
+```
 shadowcoind
 ```
 
 > List all commands for shadowcoind
 
-```shell
+```
 shadowcoind help
 #the above command will list all available functions for the shadowcoind daemon.
 ```
 
 > Stopping shadowcoind
 
-```shell
+```
 shadowcoind stop
 ```
 
@@ -272,14 +272,14 @@ If you wish you can also compile directly from source, below are the instruction
 
 > Update and Install dependencies
 
-```shell
+```
 sudo apt-get update && apt-get upgrade
 sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
 ```
 
 > Download the source code and compile shadow QT
 
-```shell
+```
 git clone https://github.com/ShadowProject/shadow
 cd shadow
 qmake
@@ -316,7 +316,7 @@ ShadowLite mobile users have access to all existing functionality with a reduced
 
 #### Enable Lite Mode
 
-```shell
+```
 thinmode=1
 ```
 
