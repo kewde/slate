@@ -360,7 +360,7 @@ He has done amazing work on Bitcoin and should not be forgotten.
 
 
 
-### Address encoding and decoding ![available languages](images/cpp.png)
+### Address encoding and decoding -
 ```cpp
 //formatting function of stealth address
 std::string CEKAStealthKey::ToStealthAddress() const
@@ -386,6 +386,7 @@ Stealth addresses are generated in a different way than normal bitcoin addresses
 A dual-key stealth address contains a lot more information than a normal Bitcoin address, because it requires the sender of a transaction to know the public scan key and the public spend key which is not stored on the blockchain.
 All data required to perform such transaction is contained and derivable from the Stealth address itself.
  
+ ![available languages](images/cpp.png)
 Just like a Bitcoin address, all data below is **Base-58** encoded, which also explains the familiar looking form.
 
 
