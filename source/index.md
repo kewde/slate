@@ -2,7 +2,7 @@
 title: ShadowCore API
 
 language_tabs:
-  - mathematics
+  - math
   - C++
   - shell
   - json
@@ -381,7 +381,7 @@ std::string CEKAStealthKey::ToStealthAddress() const
     return EncodeBase58(raw);
 }; //extkey.cpp
 ```
-```Mathematics
+```math
 Test
 ```
 
@@ -409,7 +409,7 @@ Parameter | value
 **Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)). The same checksum function used in Bitcoin addresses.
 
 ### Transaction
-```mathematics
+```math
 
 Alice (receiver)
 publicSpendKeyAlice = public spend key
