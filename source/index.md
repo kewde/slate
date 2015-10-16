@@ -2,11 +2,11 @@
 title: ShadowCore API
 
 language_tabs:
+  - cpp
   - shell
   - json
-  - javascript
   - matlab
-  - cpp
+
 
 toc_footers:
   - <a href='http://aboutshadow.com/'>Shadow public website</a>
