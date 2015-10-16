@@ -355,8 +355,11 @@ Once the Stealth address has been reveiled to the payer(s), it will be able to r
 
 *No man will make a great leader who wants to do it all himself or get all the credit for doing it.* ~Andrew Carnegie
 
-We would also like to take time to thank the original visionary of stealth addresses: **Peter Todd**, a Bitcoin core developer. You can find a link to his white paper in the references.
-He has done amazing work on Bitcoin and should not be forgotten.
+The original visionaries were the creators of Bytecoin, for whom we are thankful. Their technical documentation link has been included in the references. The information they provide may not always apply to Shadow.
+They are doing great work on creating a truely anonymous altcoin, surely worth to keep an eye on their work!
+
+We would also like to take time to thank **Peter Todd**,he figured out how to implement stealth addresses into Bitcoin. You can find a link to his white paper in the references.
+He is a Bitcoin core developer and has done amazing work on Bitcoin and deserves the mention.
 
 
 
@@ -426,7 +429,7 @@ publicSpendKeyAlice = privateSpendKeyAlice * G
 publicScanKeyAlice = privateScanKeyAlice * G
 
 Bob (sender)
-e = ephem secret
+e = ephem private key
 publicEphemKey = e * G
 Knows the public scan key of Alice (publicScanKeyAlice)!
 
@@ -436,7 +439,7 @@ Bob now publishes the public ephem key (publicEphemKey) to the receiver Alice.
 
 Because of the diffie-hellman algorithm ONLY THE RECEIVER AND SENDER can deduct the shared secret from the public ephem key.
 
-SharedSecret = SHA256(ephem secret * publicScanKeyAlice) (Formula for Sender)
+SharedSecret = SHA256(ephem private key  * publicScanKeyAlice) (Formula for Sender)
 SharedSecret = SHA256(privateScanKeyAlice * publicEphemKey) (Formula for Receiver)
 
 Bob can now generate the public key to where it should send the coins.
@@ -454,15 +457,34 @@ The Stealth transaction uses a clever matlabematical principle called the "Diffi
 
 The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
 It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
-Instead a bit of matlabematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new keypair.
+Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new keypair.
 
 It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
 All transactions have to be made with the SpendKey, only available after decrypting your wallet.
 The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
 
+The payee has to know the ephem public key to compute the SharedSecret, but how is that data transferred from payer to payee? The ephem public key is embedded in the *stealth metadata*.
+
+The stealth metadata comes in the form of outputs, and any stealth transaction will require atleast 2 outputs.
+
+Each spendable output in a stealth transaction will be preceded by the metadata for that output. Regular spends do not need metadata, because those don't require the payee to know the ephem key.
+
+Format goes as following:
+
+Output | Content
+--- | ---
+out #1 | metadata for spend A
+out #2 | stealth spend A
+out #3 | metadata for spend B
+out #4 | stealth spend B
+out #5 | **regular spend C**
+out #6 | metadata for spend D
+out #7 | stealth spend D
+
 
 ### References
-[1] Peter Todd, *[Bitcoin-development] Stealth Addresses, 2014*,  Available at  http://sourceforge.net/p/bitcoin/mailman/message/31813471/
+[1] ByteCoin, *Technical Documentation*, 2015, Available at https://bytecoin.org/documentation/
+[2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  http://sourceforge.net/p/bitcoin/mailman/message/31813471/
 
 ## Ring signatures
 <aside class="warning">Hardfork occurring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
