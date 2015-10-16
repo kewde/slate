@@ -381,8 +381,25 @@ std::string CEKAStealthKey::ToStealthAddress() const
     return EncodeBase58(raw);
 }; //extkey.cpp
 ```
-```matlab
-Test
+```
+//formatting function of stealth address
+std::string CEKAStealthKey::ToStealthAddress() const
+{
+    // - return base58 encoded public stealth address
+    
+    std::vector<uint8_t> raw;
+    raw = Params().Base58Prefix(CChainParams::STEALTH_ADDRESS);
+    
+    raw.push_back(nFlags); 
+    raw.insert(raw.end(), pkScan.begin(), pkScan.end());
+    raw.push_back(1); // number of spend pubkeys is 1
+    raw.insert(raw.end(), pkSpend.begin(), pkSpend.end());
+    raw.push_back(0); // number of signatures
+    raw.push_back(0); // ?
+    AppendChecksum(raw);
+    
+    return EncodeBase58(raw);
+}; //extkey.cpp
 ```
 
 Stealth addresses are generated in a different way than normal bitcoin addresses, but they have a similair structure.
