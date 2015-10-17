@@ -423,7 +423,7 @@ privateSpendKeyAlice = private spend key
 publicScanKeyAlice = EC point, 33 bytes
 privateScanKeyAlice = integer, 32 bytes
 
-This is where it gets a bit more complicated, but no magic, just matlab!
+This is where it gets a bit more complicated, but no magic, just math!
 G = Generator, the primitive root
 
 To continue on, we have to understand how the public addresses are generated.
@@ -457,7 +457,7 @@ When the wallet is decrypted:
 publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 ```
 
-The Stealth transaction uses a clever matlabematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
+The Stealth transaction uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
 
 The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
 It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
