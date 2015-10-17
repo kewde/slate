@@ -355,12 +355,15 @@ Once the Stealth address has been reveiled to the payer(s), it will be able to r
 
 *No man will make a great leader who wants to do it all himself or get all the credit for doing it.* ~Andrew Carnegie
 
-The original visionaries were the creators of Bytecoin, for whom we are thankful. Their technical documentation link has been included in the references. The information they provide may not always apply to Shadow.
+The original visionaries were the creators of Bytecoin, for whom we are thankful. Their technical documentation link has been included in the references *[1]*. The information they provide may not always apply to Shadow.
 They are doing great work on creating a truely anonymous altcoin, surely worth to keep an eye on their work!
 
-We would also like to take time to thank **Peter Todd**,he figured out how to implement stealth addresses into Bitcoin. You can find a link to his white paper in the references.
-He is a Bitcoin core developer and has done amazing work on Bitcoin and deserves the mention.
+We would also like to take time to thank **Peter Todd**,he figured out how to implement stealth addresses into Bitcoin. You can find a link to his white paper in the references *[2]*.
+He is a Bitcoin core developer and has done amazing work on Bitcoin and deserves the mention. 
 
+Peter is also associated with DarkWallet , whose wiki provided lots of information on the working of Stealth addresses! Again, the link can be found in the references *[3]*.
+
+The documentation at *sx* can also be very helpful to understand the concept of Stealth addresses, they also provide tools that can help you understand how it works. *[4]*.
 
 
 ### Address encoding and decoding 
@@ -487,6 +490,10 @@ out #7 | stealth spend D
 [1] ByteCoin, *Technical Documentation*, 2015, Available at https://bytecoin.org/documentation/
 
 [2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  http://sourceforge.net/p/bitcoin/mailman/message/31813471/
+
+[3] Dark Wallet, *Stealth*, 2015,  Available at https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth
+
+[4] Sx, *Stealth*, 2015,  Available at http://sx.dyne.org/stealth.html
 
 ## Ring signatures
 <aside class="warning">Hardfork occurring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
