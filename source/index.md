@@ -363,7 +363,7 @@ He is a Bitcoin core developer and has done amazing work on Bitcoin and deserves
 
 
 
-### Address encoding and decoding -
+### Address encoding and decoding 
 ```cpp
 //formatting function of stealth address
 std::string CEKAStealthKey::ToStealthAddress() const
@@ -390,6 +390,7 @@ A dual-key stealth address contains a lot more information than a normal Bitcoin
 All data required to perform such transaction is contained and derivable from the Stealth address itself.
  
  ![available languages](images/cpp.png)
+ 
 Just like a Bitcoin address, all data below is **Base-58** encoded, which also explains the familiar looking form.
 
 
@@ -473,17 +474,18 @@ Format goes as following:
 
 Output | Content
 --- | ---
-out #1 | metadata for spend A
-out #2 | stealth spend A
+out #1 | **metadata for spend A**
+out #2 | **stealth spend A**
 out #3 | metadata for spend B
 out #4 | stealth spend B
-out #5 | **regular spend C**
+out #5 | *regular spend C*
 out #6 | metadata for spend D
 out #7 | stealth spend D
 
 
 ### References
 [1] ByteCoin, *Technical Documentation*, 2015, Available at https://bytecoin.org/documentation/
+
 [2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  http://sourceforge.net/p/bitcoin/mailman/message/31813471/
 
 ## Ring signatures
