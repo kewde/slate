@@ -351,7 +351,7 @@ To increase the pool of outputs available for ring signatures, the SDC value is 
 ### Introduction and History ###
 Dual-key Stealth addresses is one of the cornerstones of most anonymous cryptocurrencies currently available. The usage allows the recipient to remain anonymous, even after sharing his stealth address publicly.
 
-Once the Stealth address has been reveiled to the payer(s), it will be able to receive infinite unlinkable payments. **That means that each payment to a Stealth address will computes a new unused normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
+Once the Stealth address has been reveiled to the payer(s), it will be able to receive infinite unlinkable payments. **That means that each payment to a Stealth address computes a new unused normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
 
 *No man will make a great leader who wants to do it all himself or get all the credit for doing it.* ~Andrew Carnegie
 
