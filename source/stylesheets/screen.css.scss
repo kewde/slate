@@ -554,7 +554,6 @@ html, body {
     @extend %right-col;
 
     &>p { margin: 0; }
-	&>pre { padding-top: 20px; }
 	
     a {
       color: #fff;
@@ -564,6 +563,7 @@ html, body {
   }
 
   pre {
+	padding-top: 20px !important;
     @extend %code-font;
   }
 
