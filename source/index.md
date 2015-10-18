@@ -351,7 +351,7 @@ To increase the pool of outputs available for ring signatures, the SDC value is 
 ### Introduction and History ###
 Dual-key Stealth addresses is one of the cornerstones of most anonymous cryptocurrencies currently available. The usage allows the recipient to remain anonymous, even after sharing his stealth address publicly.
 
-Once the Stealth address has been reveiled to the payer(s), it will be able to receive infinite unlinkable payments. **That means that each payment to a Stealth address computes a new unused normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
+Once the Stealth address has been revealed to the payer(s), it will be enable the payee to receive infinite unlinkable payments. **That means that each payment to a Stealth address computes a new unused normal address on which the funds will be received, any eavesdropper will be unable to link the two addresses.**
 
 *No man will make a great leader who wants to do it all himself or get all the credit for doing it.* ~Andrew Carnegie
 
@@ -366,7 +366,7 @@ Peter is also associated with DarkWallet , whose wiki provided lots of informati
 The documentation at *sx* can also be very helpful to understand the concept of Stealth addresses, they also provide tools that can help you understand how it works. *[4]*.
 
 
-### Address encoding and decoding 
+### Address encoding
 ```cpp
 //formatting function of stealth address
 std::string CEKAStealthKey::ToStealthAddress() const
@@ -389,7 +389,7 @@ std::string CEKAStealthKey::ToStealthAddress() const
 ```
 
 Stealth addresses are generated in a different way than normal bitcoin addresses, but they have a similair structure.
-A dual-key stealth address contains a lot more information than a normal Bitcoin address, because it requires the sender of a transaction to know the public scan key and the public spend key which is not stored on the blockchain.
+A dual-key stealth address contains a lot more information than a normal Bitcoin address, because it requires the sender of a transaction to know the public scan key and the public spend key **which is not stored on the blockchain**.
 All data required to perform such transaction is contained and derivable from the Stealth address itself.
  
  ![available languages](images/cpp.png)
@@ -413,7 +413,7 @@ Parameter | value
 **Prefix:** | No prefix is used, since length is equal to zero. Other coins do make use of this field, more information can be found [here](https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth#Computing_prefixes)
 **Checksum:** | Contains the first 4 bytes of the SHA-256 hash provided by the operation: SHA256(SHA256(previous_data_concatenated)). The same checksum function used in Bitcoin addresses.
 
-### Transaction
+### Address computation and Transaction format
 ```
 
 Alice (receiver)
@@ -450,28 +450,32 @@ Bob can now generate the public key to where it should send the coins.
 publicKeyToPay = publicSpendKeyAlice + SharedSecret * G
 
 Alice has two different ways of find out the the public key where the coins will go to.
-When the wallet isn't decrypted:
+When the wallet is encrypted:
 publicKeyToPay = publicSpendKeyAlice + SharedSecret * G
 
 When the wallet is decrypted:
 publicKeyToPay = (privateSpendKeyAlice + SharedSecret)* G
 ```
 
-The Stealth transaction uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", and when implemented correctly it will prevent any eavesdropper from finding out the recipient of that transaction as long as they do not have the private key of the receiver.
+If Alice would post a normal address publicly, anyone can explore the blockchain and see the transactions that belong to her. Stealth addresses solve this privacy issue. Alice can post her Stealth address publicly, and nobody will be any wiser of what transactions belong to her.
 
-The above mentioned process allows the sender to generate the public key for which the receiver is able to generate the private key for.
+**It's extremely important to note that the payer derives a new NORMAL address from the Stealth address, to which the funds will be sent and in that process only allowing the payee to compute the corresponding private key.**
+
+It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", which allows two entities to generate a shared secret based on their keypairs. 
+An eavesdropper is unable to compute the shared secret, enabling private communication between the two. In the case an eavesdropper has full control over one of the keypairs (private and public key) then privacy is obviously broken. 
+
 It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
 Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new keypair.
 
-It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require you to decrypt the wallet/stealth key. 
+It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require decryption of the wallet/stealth key. 
 All transactions have to be made with the SpendKey, only available after decrypting your wallet.
-The dual-key is actually more of a security practice, because if it weren't implemented, it would either render wallet encryption useless or not scan for stealth transactions hence the dual-key system was born.
+The dual-key is more of a security practice, it allows a wallet (while encrypted) to scan for transactions. If it weren't implemented, the wallet would have to remain decrypted, rendering the protection provided by the encryption useless.
 
 The payee has to know the ephem public key to compute the SharedSecret, but how is that data transferred from payer to payee? The ephem public key is embedded in the *stealth metadata*.
 
-The stealth metadata comes in the form of outputs, and any stealth transaction will require atleast 2 outputs.
+Any stealth transaction will require atleast 2 outputs, the stealth metadata and the actual spendable output.
 
-Each spendable output in a stealth transaction will be preceded by the metadata for that output. Regular spends do not need metadata, because those don't require the payee to know the ephem key.
+Each spendable output in a stealth transaction will be preceded by the metadata for that output. Regular spends do not need metadata, because there is no use of ephem keys in normal transactions.
 
 Format goes as following:
 
