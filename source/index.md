@@ -207,21 +207,19 @@ Update and Install dependencies:
 >sudo apt-get update && apt-get upgrade
 >sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
 
-
-> Download the source code and compile shadowcoind
-
 ```
-git clone https://github.com/ShadowProject/shadow
-cd shadowcoin/src
-make -f makefile.unix
-strip shadowcoind
+ Download the source code and compile shadowcoind
 ```
-
-> Run the daemon
+>git clone https://github.com/ShadowProject/shadow
+>cd shadowcoin/src
+>make -f makefile.unix
+>strip shadowcoind
 
 ```
-shadowcoind -daemon
+Run the daemon
 ```
+>shadowcoind -daemon
+
 
 > On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
 
