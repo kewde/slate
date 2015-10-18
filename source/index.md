@@ -220,39 +220,37 @@ Run the daemon
 ```
 >shadowcoind -daemon
 
-
-> On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
-
 ```
-nano ~/.shadowcoin/shadowcoin.conf
+ On the inital start-up shadowcoind will return an error because it cannot find the configuration file shadowcoin.conf
 ```
+>nano ~/.shadowcoin/shadowcoin.conf
 
-> Add the following to your config file, changing the username and password to something secure:
+
+``` 
+Add the following to your config file, changing the username and password to something secure:
+```
 > daemon=1
-
 > rpcuser=<secure username>
 > rpcpassword=<secure password>
 
-> You can copy the username and password provided in the earlier error message as the username and password is randomly generated and secure
-
-> You can now start the shadowcoind daemon once more
-
 ```
-shadowcoind
-```
+You can copy the username and password provided in the earlier error message as the username and password is randomly generated and secure
 
-> List all commands for shadowcoind
+ You can now start the shadowcoind daemon once more
+```
+>shadowcoind
 
 ```
-shadowcoind help
-#the above command will list all available functions for the shadowcoind daemon.
+List all commands for shadowcoind
 ```
+>shadowcoind help
 
-> Stopping shadowcoind
 
 ```
-shadowcoind stop
+Stopping shadowcoind
 ```
+>shadowcoind stop
+
 
 The Linux Wallet comes in two variations:
 
