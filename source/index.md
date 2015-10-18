@@ -356,7 +356,7 @@ Once the Stealth address has been revealed to the payer(s), it will be enable th
 *No man will make a great leader who wants to do it all himself or get all the credit for doing it.* ~Andrew Carnegie
 
 The original visionaries were the creators of Bytecoin, for whom we are thankful. Their technical documentation link has been included in the references *[1]*. The information they provide may not always apply to Shadow.
-They are doing great work on creating a truely anonymous altcoin, surely worth to keep an eye on their work!
+They are doing great work ByteCoin, surely worth to keep an eye on their work!
 
 We would also like to take time to thank **Peter Todd**,he figured out how to implement stealth addresses into Bitcoin. You can find a link to his white paper in the references *[2]*.
 He is a Bitcoin core developer and has done amazing work on Bitcoin and deserves the mention. 
@@ -390,7 +390,7 @@ std::string CEKAStealthKey::ToStealthAddress() const
 
 Stealth addresses are generated in a different way than normal bitcoin addresses, but they have a similair structure.
 A dual-key stealth address contains a lot more information than a normal Bitcoin address, because it requires the sender of a transaction to know the public scan key and the public spend key **which is not stored on the blockchain**.
-All data required to perform such transaction is contained and derivable from the Stealth address itself.
+All data required to perform such transaction is derivable from the Stealth address itself.
  
  ![available languages](images/cpp.png)
  
