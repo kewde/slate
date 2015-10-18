@@ -540,7 +540,7 @@ html, body {
     color: #fff;
     margin-left: 3rem;
 	@extend %break-words;
-    //padding: 2em $main-padding;
+    padding: $main-padding;
     margin: 0;
     width: $examples-width;
 
