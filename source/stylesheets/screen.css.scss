@@ -540,7 +540,8 @@ html, body {
     color: #fff;
     margin-left: 3rem;
 	white-space: pre-line;
-    padding: 18px; //2em $main-padding
+    padding-left: 10px; //2em $main-padding
+	padding-top: 10px;
     margin: 0;
     width: $examples-width;
 
@@ -553,7 +554,8 @@ html, body {
     @extend %right-col;
 
     &>p { margin: 0; }
-
+	&>pre { padding-top: 20px; }
+	
     a {
       color: #fff;
       text-decoration: none;
