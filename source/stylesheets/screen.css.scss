@@ -539,8 +539,8 @@ html, body {
     background-color: $code-bg;
     color: #fff;
     margin-left: 3rem;
-	@extend %break-words;
-    padding: $main-padding;
+	white-space: pre-line;
+    padding: 18px; //2em $main-padding
     margin: 0;
     width: $examples-width;
 
