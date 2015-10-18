@@ -203,9 +203,10 @@ If you decide that a fullnode (default) is for you then the full sync can take a
 ## Linux
 ```
 Update and Install dependencies:
+```
 >sudo apt-get update && apt-get upgrade
 >sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
-```
+
 
 > Download the source code and compile shadowcoind
 
