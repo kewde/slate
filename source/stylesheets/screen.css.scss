@@ -282,8 +282,8 @@ html, body {
   // I know, it's hackish, but it's the simplist way to make the left
   // half of the content always this background color.
   .dark-box {
-    width: $examples-width;
-    background-color: $examples-bg;
+    width: 20%;
+    //background-color: $examples-bg;
     position: absolute;
     right: 0;
     top: 0;
@@ -348,7 +348,7 @@ html, body {
   }
 
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
-    margin-right: $examples-width;
+    margin-right: 0%;
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
@@ -536,10 +536,12 @@ html, body {
 
 .content {
   pre, blockquote {
-    background-color: $code-bg;
+    background-color: #1d1c22; //code-bg
     color: #fff;
-
-    padding: 2em $main-padding;
+    margin-left: 3rem;
+	white-space: pre-line;
+    padding-left: 10px; //2em $main-padding
+	padding-right: 30px;
     margin: 0;
     width: $examples-width;
 
@@ -552,7 +554,7 @@ html, body {
     @extend %right-col;
 
     &>p { margin: 0; }
-
+	
     a {
       color: #fff;
       text-decoration: none;
@@ -561,17 +563,19 @@ html, body {
   }
 
   pre {
+	padding-top: 20px !important;
     @extend %code-font;
   }
 
   blockquote {
     &>p {
-      background-color: $code-annotation-bg;
+      background-color: #4D0000; //$code-annotation-bg 
       border-radius: 5px;
       padding: $code-annotation-padding;
       color: #ccc;
       border-top: 1px solid #000;
-      border-bottom: 1px solid #404040;
+      border-bottom: 1px solid #404040; //may change to a bit of blueish #4D1360
+	  @extend %break-words;
     }
   }
 }
@@ -630,4 +634,23 @@ html, body {
   %right-col + %left-col {
     margin-top: $main-padding;
   }
+  
+  //video stuff
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+//http://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/
+
 }
