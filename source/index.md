@@ -264,24 +264,24 @@ The Linux Wallet comes in two variations:
 If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
 ## Shadowcoin-QT from Source
-
-> Update and Install dependencies
+```
+ Update and Install dependencies
+```
+>sudo apt-get update && apt-get upgrade
+>sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
 
 ```
-sudo apt-get update && apt-get upgrade
-sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
+ Download the source code and compile shadow QT
 ```
-
-> Download the source code and compile shadow QT
+>git clone https://github.com/ShadowProject/shadow
+>cd shadow
+>qmake
+>make
 
 ```
-git clone https://github.com/ShadowProject/shadow
-cd shadow
-qmake
-make
+Run the executable found within the shadowcoin folder with : 
 ```
-
-> Run the executable found within the shadowcoin folder with : ./shadow
+>./shadow
 
 <aside class="warning">
 Warning : never use root to start the QT or daemon!
@@ -310,14 +310,22 @@ ShadowLite mobile users have access to all existing functionality with a reduced
 ### Instructions
 
 #### Enable Lite Mode
+```
+For those of you who wish to enable the lite wallet, open your shadowcoin.conf configuration file with a text editor such as nano
+```
+>nano shadowcoin.conf
 
 ```
-thinmode=1
+And add the following line
 ```
+>thinmode=1
 
-For those of you who wish to use the lite wallet, just add the following to your ```shadowcoin.conf``` configuration file:
 
-or alternatively, you can startup the client with the ```-thinmode``` parameter.
+
+```
+Alternatively, you can startup the client with the parameter
+```
+>shadowcoind -thinmode
 
 # ShadowSend v2.0
 
@@ -330,8 +338,6 @@ We also presented performance data of our scheme including proof sizes, signatur
 A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
 <central><iframe src="//www.slideshare.net/slideshow/embed_code/43827434" width="960" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe></center>
-
-
 
 
 ## ShadowTokens (SDT)
@@ -701,12 +707,12 @@ Open up a command prompt, change directory to the installation folder of Shadow 
 # JSON-RPC API Reference
 
 ## addmultisigaddress
-```shell
+```json
 addmultisigaddress <nrequired> <'["key","key"]'> [account]
 ```
 
 ## addnode
-```shell
+```json
 addnode <node> <add|remove|onetry>
 ```
 
@@ -735,8 +741,11 @@ backupwallet <destination>
 ```
 
 ## checkwallet
+Check wallet for integrity.
 
 ## clearwallettransactions 
+Delete all transactions from wallet - reload with reloadanondata
+Warning: Backup your wallet first!
 
 ## createrawtransaction
 
@@ -1030,6 +1039,7 @@ nextorphan [connecthash]
 ```
 
 ## reloadanondata 
+Removes all wallet transactions, anon cache, and rebuilds everything from zero.
 
 ## repairwallet
 Repair wallet if checkwallet reports any problem
@@ -1049,13 +1059,13 @@ rewindchain <number>
 ```
 
 ## scanforalltxns
-
+Scans for all transactions and overwrites prior history and does update.
 ```json
 scanforalltxns [fromHeight]
 ```
 
 ## scanforstealthtxns
-
+Scans for all Stealth transactions and overwrites prior history and does update.
 ```json
 scanforstealthtxns [fromHeight]
 ```
@@ -1174,9 +1184,8 @@ smsggetpubkey <address>
 
 Returns the public key for a given address.
 
-> Example:
-
 ```json
+Example:
 smsggetpubkey tFyq452LPtDotWat8PFwEV5oPoWDqagLNv
 Output:
 {

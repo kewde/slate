@@ -569,12 +569,12 @@ html, body {
 
   blockquote {
     &>p {
-      background-color: #4D0000; //$code-annotation-bg
+      background-color: #4D0000; //$code-annotation-bg 
       border-radius: 5px;
       padding: $code-annotation-padding;
       color: #ccc;
       border-top: 1px solid #000;
-      border-bottom: 1px solid #404040;
+      border-bottom: 1px solid #404040; //may change to a bit of blueish #4D1360
 	  @extend %break-words;
     }
   }
