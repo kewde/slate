@@ -307,9 +307,10 @@ We've taken a completely different approach to wallet design based on the princi
 
 ShadowLite mobile users have access to all existing functionality with a reduced bandwidth, storage and memory footprint.
 
+Staking with the Lite wallet has been removed because staking is a reward for securing the network, Lite wallets do not do this.
+
 ### Instructions
 
-#### Enable Lite Mode
 ```
 For those of you who wish to enable the lite wallet, open your shadowcoin.conf configuration file with a text editor such as nano
 ```
@@ -323,9 +324,21 @@ And add the following line
 
 
 ```
-Alternatively, you can startup the client with the parameter
+Alternatively, you can startup the client with the parameter -thinmode. (no graphical interface) 
 ```
 >shadowcoind -thinmode
+
+```
+Or if you need a graphical interface.
+```
+> ./shadow -thinmode
+
+
+There are two ways to start the wallet in Lite mode, both are described in this section.
+
+The first method changes the ```shadowcoin.conf``` and will cause the wallet to permanently boot up in lite mode for as long as it is in the configuration file.
+
+The second method will boot up an instance in Lite mode, not permanent. In case you always want to boot up in Lite mode we suggest the first method, but if need to make a transaction quickly without having to download the whole blockchain you can start the daemon with the ```-thinmode``` parameter.
 
 # ShadowSend v2.0
 
