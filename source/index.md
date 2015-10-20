@@ -207,7 +207,7 @@ The Linux Wallet comes in two variations:
 - **Daemon**
   - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
 
-  ## Windows
+ ## Windows
 
 <aside class="notice">
 The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
