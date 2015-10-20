@@ -290,7 +290,7 @@ Stopping shadowcoind
 Warning : never use root to start the QT or daemon!
 </aside>
 
-## Mac Os
+## Mac OSX
 
 <aside class="notice">
 The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet.
@@ -301,6 +301,10 @@ The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you 
 <aside class="notice">
 The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
 </aside>
+
+## Android
+
+## iOS
 
 ## ShadowLite
 
@@ -652,16 +656,9 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 ## Trade
 ## White paper
 
-# ShadowGo
-
-## Android
-## iOS
-
-# Other
-
-# Tor
-
-# I2P
+# Hiding your IP
+## Tor
+## I2P
 
 ## Backup & restore wallet
 ## Connecting to the network
