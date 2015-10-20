@@ -228,7 +228,7 @@ The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all 
 ## Mac OSX
 
 <aside class="notice">
-The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet.
+The OSX QT Wallet comes pre-packaged with a Shadow executable, this is all you need to get your ShadowCash Wallet.
 </aside>
 
 ## Compiling source (Linux)
