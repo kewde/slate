@@ -556,7 +556,8 @@ html, body {
   }
 
   pre {
-	padding: 17px 20px !important;
+    padding: 17px 20px !important;
+    white-space: pre-line;
     @extend %code-font;
   }
 
