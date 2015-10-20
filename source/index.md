@@ -207,11 +207,19 @@ The Linux Wallet comes in two variations:
 - **Daemon**
   - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
 
-### Shadowcoind from Source
+  ## Windows
 
-If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+<aside class="notice">
+The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
+</aside>
 
-## Compiling from source
+## Mac OSX
+
+<aside class="notice">
+The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet.
+</aside>
+
+## Compiling source (Linux)
 
 ```
  Update and Install dependencies
@@ -237,6 +245,9 @@ Shadow comes in two versions, one with a graphical interface and one without a g
 The daemon version is without a graphical interface and is mostly used on servers through which you can 
 
 ```
+
+-------------------------------------------------------
+Daemon version, command line only.
 Update and Install dependencies:
 ```
 >sudo apt-get update && apt-get upgrade
@@ -288,18 +299,6 @@ Stopping shadowcoind
 
 <aside class="warning">
 Warning : never use root to start the QT or daemon!
-</aside>
-
-## Mac OSX
-
-<aside class="notice">
-The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet.
-</aside>
-
-## Windows
-
-<aside class="notice">
-The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
 </aside>
 
 ## Android
@@ -661,8 +660,6 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 ## I2P
 
 ## Backup & restore wallet
-## Connecting to the network
-## Wallet options
 ## Support
 
 For support please visit one of the links below:
