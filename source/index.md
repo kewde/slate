@@ -166,42 +166,76 @@ ShadowCash source code is all open-source and available at our [GitHub repositor
 - Latest iOS wallet download - being upgraded!
 
 ### Bootstrap & Useful Paths
-
-> Windows
+```
+Windows
+```
+>%appdata%\ShadowCoin
 
 ```
-%appdata%\ShadowCoin
+OSX
 ```
-
-> OSX
-
-```
-~/Library/Application Support/ShadowCoin/
-```
-
-> Linux
+>~/Library/Application Support/ShadowCoin/
 
 ```
-~/.shadowcoin/
+Linux
 ```
+>~/.shadowcoin/
 
-So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts a process known as "syncing". The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
 
-1. looking to help further strengthen the network by providing a full peer 
-2. have ShadowCash (SDC) and wish to participate in staking or 
-3. plan to run services on the Shadow network and require a full node.
+So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts to synchronise the blockchain. The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
+
+1. Looking to help further strengthen the network by providing a full peer 
+2. Have ShadowCash (SDC) and wish to participate in staking
+3. Plan to run services on the Shadow network and require a full node.
 
 If neither of the above apply you can set the Shadow wallet to "thinmode" which provides lightening fast synchronization to the ShadowCore P2P network.
-If you decide that a fullnode (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method.
+If you decide that a full node (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method.
 
 1. Close the Shadow Wallet and **download the latest Bootstrap** file from: [github.com/ShadowProject/bootstrap/](https://github.com/ShadowProject/bootstrap/)
 2. Unzip the ```bootstrap.dat.zip``` file
-3. Place the ```bootstrap.dat``` file in one of the below locations depending on the OS
-4. Start the ShadowCash Wallet again (The client might be unresponsive but don't be alarmed - it's just loading all the blockchain data)
+3. Place the ```bootstrap.dat``` file in one of the below locations depending on your operating system
+4. Start the ShadowCash Wallet again (The client might be unresponsive but don't worry - it's just loading all the blockchain data)
 
 # Installing and running a client
 
 ## Linux
+
+The Linux Wallet comes in two variations:
+
+- **QT Wallet**
+  - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
+- **Daemon**
+  - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
+
+### Shadowcoind from Source
+
+If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+
+## Compiling from source
+
+```
+ Update and Install dependencies
+```
+>sudo apt-get update && apt-get upgrade
+>sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
+
+```
+ Download the source code and compile shadow QT
+```
+>git clone https://github.com/ShadowProject/shadow
+>cd shadow
+>qmake
+>make
+
+```
+Run the executable found within the shadowcoin folder with : 
+```
+>./shadow
+
+Shadow comes in two versions, one with a graphical interface and one without a graphical interface (daemon).
+
+The daemon version is without a graphical interface and is mostly used on servers through which you can 
+
 ```
 Update and Install dependencies:
 ```
@@ -251,38 +285,6 @@ List all commands for shadowcoind
 Stopping shadowcoind
 ```
 >shadowcoind stop
-
-
-The Linux Wallet comes in two variations:
-
-- **QT Wallet**
-  - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
-- **Daemon**
-  - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
-
-### Shadowcoind from Source
-
-If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
-
-## Shadowcoin-QT from Source
-```
- Update and Install dependencies
-```
->sudo apt-get update && apt-get upgrade
->sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
-
-```
- Download the source code and compile shadow QT
-```
->git clone https://github.com/ShadowProject/shadow
->cd shadow
->qmake
->make
-
-```
-Run the executable found within the shadowcoin folder with : 
-```
->./shadow
 
 <aside class="warning">
 Warning : never use root to start the QT or daemon!
@@ -554,7 +556,7 @@ Each Shadow coin has its own private key, so when spending Shadow, each coin or 
 Our white paper on ShadowSend 2 can be found [here](http://shadow.cash/downloads/shadowcash-anon.pdf).
 
 
-# ShadowChat
+# Encrypted Messaging
 
 Communication is an essential component of doing business. Modern technology gives us cheap, reliable and effortless methods to communicate with others regardless of physical distance.
 
@@ -562,11 +564,11 @@ However, this technology does little to safeguard the content of our messages fr
 
 ## Introduction
 
-ShadowCash has implemented a P2P (peer-to-peer) Instant Messaging system utilizing  state-of-the-art encryption technology to keep your communications private. All messages are encrypted by the proven **AES-256-CBC algorithm**, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilizing  sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
+ShadowChat is a P2P (peer-to-peer) Instant Messaging system utilizing  state-of-the-art encryption technology to keep your communications private. All messages are encrypted by the proven **AES-256-CBC algorithm**, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilizing  sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
 
 To eliminate the risk and hassle of sharing passwords, we utilize the proven and trusted method of **Elliptic Curve Diffie-Hellman (ECDH) key exchange**.
 The Elliptic Curve Digital Signature Algorithm (ECDSA) is used to give you confidence that the messages you received came from the original recipient and remained untouched in propagation.
-Messages are distributed over the preexisting ShadowCoin p2p network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
+Messages are distributed over the preexisting Shadow P2P network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
 
 ## Key Sharing
 
