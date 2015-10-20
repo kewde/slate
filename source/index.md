@@ -224,21 +224,21 @@ The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you 
 ```
  Update and Install dependencies
 ```
->sudo apt-get update && apt-get upgrade
->sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
+>#sudo apt-get update && apt-get upgrade
+>#sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
 
 ```
  Download the source code and compile shadow QT
 ```
->git clone https://github.com/ShadowProject/shadow
->cd shadow
->qmake
->make
+>#git clone https://github.com/ShadowProject/shadow
+>#cd shadow
+>#qmake
+>#make
 
 ```
 Run the executable found within the shadowcoin folder with : 
 ```
->./shadow
+>#./shadow
 
 Shadow comes in two versions, one with a graphical interface and one without a graphical interface (daemon).
 
@@ -250,16 +250,16 @@ The daemon version is without a graphical interface and is mostly used on server
 Daemon version, command line only.
 Update and Install dependencies:
 ```
->sudo apt-get update && apt-get upgrade
->sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
+>#sudo apt-get update && apt-get upgrade
+>#sudo apt-get install git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev
 
 ```
  Download the source code and compile shadowcoind
 ```
->git clone https://github.com/ShadowProject/shadow
->cd shadowcoin/src
->make -f makefile.unix
->strip shadowcoind
+>#git clone https://github.com/ShadowProject/shadow
+>#cd shadowcoin/src
+>#make -f makefile.unix
+>#strip shadowcoind
 
 ```
 Run the daemon
