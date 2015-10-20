@@ -347,6 +347,20 @@ html, body {
     clear: both;
   }
 
+  // General links
+  a {
+    background: rgba(#5294E2, 0.07);
+    border-radius: 3px;
+    color: #2163b1;
+    padding: 1px 4px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s; transition: all 0.3s;
+    &:hover {
+      background: rgba(#5294E2, 0.2);
+      color: #014391;
+    }
+  }
+
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
     margin-right: 0%;
     padding: 0 $main-padding;

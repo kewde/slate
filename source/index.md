@@ -5,7 +5,6 @@ language_tabs:
   - cpp
   - shell
   - json
-  - matlab
 
 
 toc_footers:
