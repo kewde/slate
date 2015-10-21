@@ -72,17 +72,52 @@ On December 10, 1948, the General Assembly of the United Nations adopted and pro
 | **Bitcoin Based**    |    true    |    false    |    true    |    false    |
 | **CryptoNote Based** |    false    |    true    |    false    |    true    |
 
-### ANON 
+### Privacy Features 
 
 <span class="shadow-table"></span>
 
 |                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
 | -------------------- | ---------- | -----------| ---------- | ---------- |
-| **ANON (MIXING)**    |    false    |    false    |    true    |    false    |    
-| **ANON (ZK/CN)**   |    true    |    true    |    false    |    true    |
+| **Mixing**    |    false    |    false    |    true    |    false    |
+| **Stealth Addresses**   |    true    |    true    |    false    |    true    |
+| **Ring Signatures**   |    true    |    true    |    false    |    true    |
+| **Zero Knowledge**   |    true    |    false    |    false    |    false    |
 | **Untraceable**    |    true    |    true    |    undefined    |    true    |
 | **Unlinkable**    |    true    |    true    |    false    |    true    |
 | **End to end Anon** |    true    |    true    |    false    |    true    |
+
+### Wallet Features -Core-
+
+<span class="shadow-table"></span>
+
+|                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
+| -------------------- | ---------- | -----------| ---------- | ---------- |
+| **GUI Wallet**    |    true    |    false    |    true    |    true    |    
+| **HTML Interface**   |    true    |    false    |    false    |    false    |
+| **Lite Wallet**    |    true    |    false    |    false    |    true    |
+| **HD Wallet**    |    true    |    false    |    false    |    false    |
+| **Multisignatures** |    progress    |    false    |    false    |    false    |
+
+- HD: Hierarchical Deterministic
+
+### Blockchain Decentralized Apps
+
+<span class="shadow-table"></span>
+
+|                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
+| -------------------- | ---------- | -----------| ---------- | ---------- |
+| **Encrypted Chat**    |    true    |    false    |    false    |    true    |    
+| **MarketPlace**   |    progress    |    false    |    false    |    false    |
+
+### Other Features
+
+<span class="shadow-table"></span>
+
+|                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
+| -------------------- | ---------- | -----------| ---------- | ---------- |
+| **Web Wallet**    |    false    |    true    |    false    |    false    |    
+| **Fast Transactions**   |    false    |    false    |    true    |    false    |
+| **Incentive Nodes**   |    false    |    false    |    true    |    false    |
 
 ![Comparison](images/table.png)
 
