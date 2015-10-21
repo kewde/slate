@@ -626,6 +626,7 @@ td.gray {
 
 .content table tr:nth-child(odd)>td, .content table tr:nth-child(even)>td {
     border: 1px solid white;
+    padding: 8px;
 }
 
 .content table tr:nth-child(odd)>td:first-child, , .content table tr:nth-child(even)>td:first-child {
