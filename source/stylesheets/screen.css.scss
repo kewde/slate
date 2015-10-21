@@ -601,6 +601,39 @@ pre.mermaid {
     text-align: center;
 }
 
+td.green {
+    background: #95CE95 !important;
+}
+td.red {
+    background-color: #E28D8D !important;
+}
+td.orange {
+    background-color: #F1C982 !important;
+}
+td.gray {
+    background-color: #A7A7A7 !important;
+}
+
+.content table th {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    vertical-align: bottom;
+    border: 1px solid white;
+    background: #1d1c22;
+    text-shadow: none;
+    color: white;
+}
+
+.content table tr:nth-child(odd)>td, .content table tr:nth-child(even)>td {
+    border: 1px solid white;
+}
+
+.content table tr:nth-child(odd)>td:first-child, , .content table tr:nth-child(even)>td:first-child {
+    background: #1d1c22;
+    color: white;
+    text-shadow: none;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // RESPONSIVE DESIGN
 ////////////////////////////////////////////////////////////////////////////////

@@ -35,11 +35,18 @@ Shadow will soon offer a complete privacy platform which aims to establish an an
 ## Basic flowchart
 
 <pre class="mermaid">
-graph LR
-	A[Square Rect] -- Link text --> B((Circle))
-	A --> C(Round Rect)
-	B --> D{Rhombus}
-	C --> D
+%% Subgraph example
+graph TB
+     subgraph Block 1
+     a1-->a2
+     end
+     subgraph Block 2
+     b1-->b2
+     end
+     subgraph Block 3
+     c1-->c2
+     end
+     c1-->a2
 </pre>
 
 ## Mission Statement
@@ -55,6 +62,27 @@ The public nature of a block chain allows anyone to observe the entire transacti
 On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
 ## Shadow next to other cryptocurrencies
+
+<span class="shadow-table"></span>
+
+|                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
+| -------------------- | ---------- | -----------| ---------- | ---------- |
+| **Proof-of-Work**    |    false    |    true    |    true    |    true    |    
+| **Proof-of-Stake**   |    true    |    false    |    false    |    progress    |
+| **Bitcoin Based**    |    true    |    false    |    true    |    false    |
+| **CryptoNote Based** |    false    |    true    |    false    |    true    |
+
+### ANON 
+
+<span class="shadow-table"></span>
+
+|                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
+| -------------------- | ---------- | -----------| ---------- | ---------- |
+| **ANON (MIXING)**    |    false    |    false    |    true    |    false    |    
+| **ANON (ZK/CN)**   |    true    |    true    |    false    |    true    |
+| **Untraceable**    |    true    |    true    |    undefined    |    true    |
+| **Unlinkable**    |    true    |    true    |    false    |    true    |
+| **End to end Anon** |    true    |    true    |    false    |    true    |
 
 ![Comparison](images/table.png)
 
