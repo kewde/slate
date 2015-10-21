@@ -35,11 +35,18 @@ Shadow will soon offer a complete privacy platform which aims to establish an an
 ## Basic flowchart
 
 <pre class="mermaid">
-graph LR
-	A[Square Rect] -- Link text --> B((Circle))
-	A --> C(Round Rect)
-	B --> D{Rhombus}
-	C --> D
+%% Subgraph example
+graph TB
+     subgraph Block 1
+     a1-->a2
+     end
+     subgraph Block 2
+     b1-->b2
+     end
+     subgraph Block 3
+     c1-->c2
+     end
+     c1-->a2
 </pre>
 
 ## Mission Statement
@@ -56,6 +63,27 @@ The public nature of a block chain allows anyone to observe the entire transacti
 
 
 ## Shadow next to other cryptocurrencies
+
+<span class="shadow-table"></span>
+
+|                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
+| -------------------- | ---------- | -----------| ---------- | ---------- |
+| **Proof-of-Work**    |    false    |    true    |    true    |    true    |    
+| **Proof-of-Stake**   |    true    |    false    |    false    |    progress    |
+| **Bitcoin Based**    |    true    |    false    |    true    |    false    |
+| **CryptoNote Based** |    false    |    true    |    false    |    true    |
+
+### ANON 
+
+<span class="shadow-table"></span>
+
+|                      |   SHADOW   |   MONERO   |    DASH    |  DARKNOTE  |
+| -------------------- | ---------- | -----------| ---------- | ---------- |
+| **ANON (MIXING)**    |    false    |    false    |    true    |    false    |    
+| **ANON (ZK/CN)**   |    true    |    true    |    false    |    true    |
+| **Untraceable**    |    true    |    true    |    undefined    |    true    |
+| **Unlinkable**    |    true    |    true    |    false    |    true    |
+| **End to end Anon** |    true    |    true    |    false    |    true    |
 
 ![Comparison](images/table.png)
 
