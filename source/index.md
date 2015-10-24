@@ -537,7 +537,7 @@ If Alice would post a normal address publicly, anyone can explore the blockchain
 It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", which allows two entities to generate a shared secret based on their keypairs. 
 An eavesdropper is unable to compute the shared secret, enabling private communication between the two. In the case an eavesdropper has full control over one of the keypairs (private and public key) then privacy is obviously broken. 
 
-It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
+It is important to mention that we can not use the ```SharedSecret``` directly to generate the keypair, because that would also allow the sender control over the private key.
 Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the ```SharedSecret``` is added to ```PrivateKeyAlice``` and we use that to generate the new keypair.
 
 It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ```ScanKeyAlice```) but not make any transactions, because that would require decryption of the wallet/stealth key. 
