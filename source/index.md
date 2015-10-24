@@ -29,26 +29,6 @@ After its first birthday, Shadow had evolved from a simple idea into one of the 
 ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. 
 Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
-# Demos
-
-
-## Basic flowchart
-
-<pre class="mermaid">
-%% Subgraph example
-graph TB
-     subgraph Block 1
-     a1-->a2
-     end
-     subgraph Block 2
-     b1-->b2
-     end
-     subgraph Block 3
-     c1-->c2
-     end
-     c1-->a2
-</pre>
-
 ## Mission Statement
 
 >On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
@@ -82,7 +62,7 @@ The public nature of a block chain allows anyone to observe the entire transacti
 | **Mixing**    |    false    |    false    |    true    |    false    |
 | **Stealth Addresses**   |    true    |    true    |    false    |    true    |
 | **Ring Signatures**   |    true    |    true    |    false    |    true    |
-| **Zero Knowledge**   |    true    |    false    |    false    |    false    |
+| **Zero Knowledge**   |    true    |    true    |    false    |    false    |
 | **Untraceable**    |    true    |    true    |    undefined    |    true    |
 | **Unlinkable**    |    true    |    true    |    false    |    true    |
 | **End to end Anon** |    true    |    true    |    false    |    true    |
@@ -766,15 +746,24 @@ coreos/docker
 
 There are 2 ways of starting the daemon in testnet mode.
 
-### 1 editing the shadowcoin.conf
-Find the path to the files. (Windows: %appdata%/ShadowCoin/)
+### 1. Editing the shadowcoin.conf
+Find the path to the files. 
 
+--- | ---
+**Windows** | %appdata%\ShadowCoin
+**OSX** |~/Library/Application Support/ShadowCoin/
+**Linux** | ~/.shadowcoin/
+
+```
 Create or add to the shadowcoin.conf file the following:
-testnet=1
-addnode=vps1.shadow.cash
-addnode=vps2.shadow.cash
+```
+>testnet=1
+>addnode=vps1.shadow.cash
+>addnode=vps2.shadow.cash
 
+```
 The addnode will help with extra connections because there are not many people running full testnet nodes.
+```
 
 ### 2 start executable with testnet parameter
 
@@ -1648,3 +1637,21 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
 
+# Demos
+
+## Basic flowchart
+
+<pre class="mermaid">
+%% Subgraph example
+graph TB
+     subgraph Block 1
+     a1-->a2
+     end
+     subgraph Block 2
+     b1-->b2
+     end
+     subgraph Block 3
+     c1-->c2
+     end
+     c1-->a2
+</pre>
