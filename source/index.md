@@ -262,10 +262,10 @@ The Linux Wallet comes in two variations:
 - **Daemon**
   - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
 
- ## Windows
+## Windows
 
 <aside class="notice">
-The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
+The Windows QT Wallet comes pre-packaged with a Shadow executable, this is all you need to get your ShadowCash Wallet
 </aside>
 
 ## Mac OSX
@@ -712,8 +712,8 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 ## Tor
 ## I2P
 
-## Backup & restore wallet
-## Support
+# Backup & restore wallet
+# Support
 
 For support please visit one of the links below:
 
@@ -723,7 +723,7 @@ For support please visit one of the links below:
 
 # Developers
 
-## Setting up the build environment and building
+## Build environment and building
 
 Windows
 OSX
@@ -731,16 +731,16 @@ Linux
 Rasbperry Pi
 Docker
 
-## Installing and running a node
+## Install
 
 Windows
 osx
 linux
 coreos/docker
 
-## Setting up and running a node on digitalocean using coreos/docker
+## Coreos/Docker
 
-## Setting up and running a node on scaleway
+## Scaleway
 
 ## Testnet
 
@@ -749,7 +749,6 @@ There are 2 ways of starting the daemon in testnet mode.
 ### 1. Editing the shadowcoin.conf
 Find the path to the files. 
 
---- | ---
 **Windows** | %appdata%\ShadowCoin
 **OSX** |~/Library/Application Support/ShadowCoin/
 **Linux** | ~/.shadowcoin/
@@ -765,12 +764,15 @@ Create or add to the shadowcoin.conf file the following:
 The addnode will help with extra connections because there are not many people running full testnet nodes.
 ```
 
-### 2 start executable with testnet parameter
+### 2. Start executable with testnet parameter
 
 Start the ShadowCoin executable with the "-testnet" flag.
 Windows:
 Open up a command prompt, change directory to the installation folder of Shadow and run the following command:
 ```shadow.exe -testnet```
+
+Linux: 
+```shadowcoind -testnet```
 
 ## Blockchain / Blocks / Transactions
 ## Data structures
