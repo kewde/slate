@@ -246,7 +246,7 @@ So you may be wondering what is "bootstrap" and what does it do? when you load t
 If neither of the above apply you can set the Shadow wallet to "thinmode" which provides lightening fast synchronization to the ShadowCore P2P network.
 If you decide that a full node (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method.
 
-1. Close the Shadow Wallet and **download the latest Bootstrap** file from: [github.com/ShadowProject/bootstrap/](https://github.com/ShadowProject/bootstrap/)
+1. Close the Shadow Wallet and [download the latest Bootstrap file from GitHub](https://github.com/ShadowProject/bootstrap/)
 2. Unzip the ```bootstrap.dat.zip``` file
 3. Place the ```bootstrap.dat``` file in one of the below locations depending on your operating system
 4. Start the ShadowCash Wallet again (The client might be unresponsive but don't worry - it's just loading all the blockchain data)
@@ -544,7 +544,7 @@ It uses a system of dual-keys to allow the wallet software to scan for stealth p
 All transactions have to be made with the ```SpendKey```, only available after decrypting your wallet.
 The dual-key is more of a security practice, it allows a wallet (while encrypted) to scan for transactions. If it weren't implemented, the wallet would have to remain decrypted, rendering the protection provided by the encryption useless.
 
-The payee has to know the ephem public key to compute the SharedSecret, but how is that data transferred from payer to payee? The ephem public key is embedded in the *stealth metadata*.
+The payee has to know the ephem public key to compute the ```SharedSecret```, but how is that data transferred from payer to payee? The ephem public key is embedded in the *stealth metadata*.
 
 Any stealth transaction will require atleast 2 outputs, the stealth metadata and the actual spendable output.
 
@@ -749,6 +749,8 @@ There are 2 ways of starting the daemon in testnet mode.
 ### 1. Editing the shadowcoin.conf
 Find the path to the files. 
 
+OS | Path
+--- | ---
 **Windows** | %appdata%\ShadowCoin
 **OSX** |~/Library/Application Support/ShadowCoin/
 **Linux** | ~/.shadowcoin/
