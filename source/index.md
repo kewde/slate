@@ -275,6 +275,17 @@ If you decide that a fullnode (default) is for you then the full sync can take a
 # Installing and running a client
 
 ## Linux
+
+The Linux Wallet comes in two variations:
+
+- **Daemon**
+  - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
+- **QT GUI Wallet**
+  - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
+
+### Shadowcoind from Source
+
+If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 ```
 Update and Install dependencies:
 ```
@@ -303,9 +314,9 @@ Run the daemon
 ``` 
 Add the following to your config file, changing the username and password to something secure:
 ```
-> daemon=1
-> rpcuser=<secure username>
-> rpcpassword=<secure password>
+>daemon=1
+>rpcuser=[secure username]
+>rpcpassword=[secure password]
 
 ```
 You can copy the username and password provided in the earlier error message as the username and password is randomly generated and secure
@@ -325,19 +336,7 @@ Stopping shadowcoind
 ```
 >shadowcoind stop
 
-
-The Linux Wallet comes in two variations:
-
-- **QT Wallet**
-  - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
-- **Daemon**
-  - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
-
-### Shadowcoind from Source
-
-If you wish you can also compile directly from source, below are the instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
-
-## Shadowcoin-QT from Source
+### Shadow QT Wallet from Source
 ```
  Update and Install dependencies
 ```
