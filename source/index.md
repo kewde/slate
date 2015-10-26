@@ -120,8 +120,6 @@ On December 10, 1948, the General Assembly of the United Nations adopted and pro
 | **Fast Transactions**   |    false    |    false    |    true    |    false    |
 | **Incentive Nodes**   |    false    |    false    |    true    |    false    |
 
-![Comparison](images/table.png)
-
 # Community
 
 Shadow has an awesome community, ranging from privacy activists to technical and financial experts. 
