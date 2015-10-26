@@ -29,26 +29,6 @@ After its first birthday, Shadow had evolved from a simple idea into one of the 
 ShadowSend development has created near-instant, untraceable/unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs, dual-key stealth addresses, and ring signatures. 
 Shadow will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
 
-# Demos
-
-
-## Basic flowchart
-
-<pre class="mermaid">
-%% Subgraph example
-graph TB
-     subgraph Block 1
-     a1-->a2
-     end
-     subgraph Block 2
-     b1-->b2
-     end
-     subgraph Block 3
-     c1-->c2
-     end
-     c1-->a2
-</pre>
-
 ## Mission Statement
 
 Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. 
