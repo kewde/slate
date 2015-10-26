@@ -81,7 +81,8 @@ On December 10, 1948, the General Assembly of the United Nations adopted and pro
 | **Mixing**    |    false    |    false    |    true    |    false    |
 | **Stealth Addresses**   |    true    |    true    |    false    |    true    |
 | **Ring Signatures**   |    true    |    true    |    false    |    true    |
-| **Zero Knowledge**   |    true    |    false    |    false    |    false    |
+| **Optimised Ring Signatures**   |    true    |    false    |    false    |    false    |
+| **Zero Knowledge**   |    true    |    true    |    false    |    true    |
 | **Untraceable**    |    true    |    true    |    undefined    |    true    |
 | **Unlinkable**    |    true    |    true    |    false    |    true    |
 | **End to end Anon** |    true    |    true    |    false    |    true    |
