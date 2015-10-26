@@ -8,7 +8,7 @@ language_tabs:
 
 
 toc_footers:
-  - <a href='http://aboutshadow.com/'>Shadow public website</a>
+  - <a href='http://aboutshadow.com/'>Shadow Website</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
