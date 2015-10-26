@@ -265,7 +265,7 @@ The Linux Wallet comes in two variations:
 
 Warning : never use root to start the QT or daemon!
 
-### Shadowcoind from Source
+### Shadow Daemon from Source (shadowcoind)
 ```
 Update and Install dependencies:
 ```
@@ -318,7 +318,7 @@ Stopping shadowcoind
 
 If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
-### Shadow QT Wallet from Source
+### Shadow QT Wallet from Source (shadow)
 ```
  Update and Install dependencies
 ```
