@@ -263,9 +263,7 @@ The Linux Wallet comes in two variations:
 - **QT GUI Wallet**
   - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
 
-<aside class="warning">
 Warning : never use root to start the QT or daemon!
-</aside>
 
 ### Shadowcoind from Source
 ```
