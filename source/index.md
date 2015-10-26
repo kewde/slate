@@ -263,9 +263,11 @@ The Linux Wallet comes in two variations:
 - **QT GUI Wallet**
   - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
 
-### Shadowcoind from Source
+<aside class="warning">
+Warning : never use root to start the QT or daemon!
+</aside>
 
-If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+### Shadowcoind from Source
 ```
 Update and Install dependencies:
 ```
@@ -316,6 +318,8 @@ Stopping shadowcoind
 ```
 >shadowcoind stop
 
+If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+
 ### Shadow QT Wallet from Source
 ```
  Update and Install dependencies
@@ -336,9 +340,7 @@ Run the executable found within the shadowcoin folder with :
 ```
 >./shadow
 
-<aside class="warning">
-Warning : never use root to start the QT or daemon!
-</aside>
+If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
 ## Mac Os
 
