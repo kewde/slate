@@ -42,7 +42,7 @@ Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoi
 The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
 
 
-## Shadow next to other cryptocurrencies
+## Shadow and others
 
 <span class="shadow-table"></span>
 
@@ -564,13 +564,13 @@ out #7 | stealth spend D
 
 
 ### References
-[1] ByteCoin, *Technical Documentation*, 2015, Available at https://bytecoin.org/documentation/
+[1] ByteCoin, *Technical Documentation*, 2015, Available at [https://bytecoin.org/documentation/](https://bytecoin.org/documentation/
 
-[2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  http://sourceforge.net/p/bitcoin/mailman/message/31813471/
+[2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  [http://sourceforge.net/p/bitcoin/mailman/message/31813471/](http://sourceforge.net/p/bitcoin/mailman/message/31813471/)
 
-[3] Dark Wallet, *Stealth*, 2015,  Available at https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth
+[3] Dark Wallet, *Stealth*, 2015,  Available at [https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth](https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth)
 
-[4] Sx, *Stealth*, 2015,  Available at http://sx.dyne.org/stealth.html
+[4] Sx, *Stealth*, 2015,  Available at [http://sx.dyne.org/stealth.html](http://sx.dyne.org/stealth.html)
 
 ## Ring signatures
 <aside class="warning">Hardfork occurring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
@@ -710,7 +710,14 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 
 # Hiding your IP
 ## Tor
+
+### The simple method
+
+
+
 ## I2P
+
+I2P is currently not supported.
 
 # Backup & restore wallet
 # Support
@@ -747,14 +754,6 @@ coreos/docker
 There are 2 ways of starting the daemon in testnet mode.
 
 ### 1. Editing the shadowcoin.conf
-Find the path to the files. 
-
-OS | Path
---- | ---
-**Windows** | %appdata%\ShadowCoin
-**OSX** |~/Library/Application Support/ShadowCoin/
-**Linux** | ~/.shadowcoin/
-
 ```
 Create or add to the shadowcoin.conf file the following:
 ```
@@ -765,6 +764,14 @@ Create or add to the shadowcoin.conf file the following:
 ```
 The addnode will help with extra connections because there are not many people running full testnet nodes.
 ```
+
+Find the path to the files. 
+
+OS | Path
+--- | ---
+**Windows** | %appdata%\ShadowCoin
+**OSX** |~/Library/Application Support/ShadowCoin/
+**Linux** | ~/.shadowcoin/
 
 ### 2. Start executable with testnet parameter
 
