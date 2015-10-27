@@ -8,7 +8,7 @@ language_tabs:
 
 
 toc_footers:
-  - <a href='http://aboutshadow.com/'>Shadow public website</a>
+  - <a href='http://aboutshadow.com/'>Shadow Website</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -62,7 +62,8 @@ The public nature of a block chain allows anyone to observe the entire transacti
 | **Mixing**    |    false    |    false    |    true    |    false    |
 | **Stealth Addresses**   |    true    |    true    |    false    |    true    |
 | **Ring Signatures**   |    true    |    true    |    false    |    true    |
-| **Zero Knowledge**   |    true    |    true    |    false    |    false    |
+| **Optimised Ring Signatures**   |    true    |    false    |    false    |    false    |
+| **Zero Knowledge**   |    true    |    true    |    false    |    true    |
 | **Untraceable**    |    true    |    true    |    undefined    |    true    |
 | **Unlinkable**    |    true    |    true    |    false    |    true    |
 | **End to end Anon** |    true    |    true    |    false    |    true    |
@@ -99,8 +100,6 @@ The public nature of a block chain allows anyone to observe the entire transacti
 | **Web Wallet**    |    false    |    true    |    false    |    false    |    
 | **Fast Transactions**   |    false    |    false    |    true    |    false    |
 | **Incentive Nodes**   |    false    |    false    |    true    |    false    |
-
-![Comparison](images/table.png)
 
 # Community
 
@@ -257,25 +256,14 @@ If you decide that a full node (default) is for you then the full sync can take 
 
 The Linux Wallet comes in two variations:
 
-- **QT Wallet**
-  - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
 - **Daemon**
   - Run the "shadowcoind" executable from the linux download to start the Shadow daemon
+- **QT GUI Wallet**
+  - Run the "shadow" executable from the linux download to run the Shadow QT Wallet
 
-## Windows
+Warning : never use root to start the QT or daemon!
 
-<aside class="notice">
-The Windows QT Wallet comes pre-packaged with a Shadow executable, this is all you need to get your ShadowCash Wallet
-</aside>
-
-## Mac OSX
-
-<aside class="notice">
-The OSX QT Wallet comes pre-packaged with a Shadow executable, this is all you need to get your ShadowCash Wallet.
-</aside>
-
-## Compiling source (Linux)
-
+### Shadow Daemon from Source (shadowcoind)
 ```
  Update and Install dependencies
 ```
@@ -328,9 +316,9 @@ Run the daemon
 ``` 
 Add the following to your config file, changing the username and password to something secure:
 ```
-> daemon=1
-> rpcuser=<secure username>
-> rpcpassword=<secure password>
+>daemon=1
+>rpcuser=[secure username]
+>rpcpassword=[secure password]
 
 ```
 You can copy the username and password provided in the earlier error message as the username and password is randomly generated and secure
@@ -350,9 +338,30 @@ Stopping shadowcoind
 ```
 >shadowcoind stop
 
-<aside class="warning">
-Warning : never use root to start the QT or daemon!
-</aside>
+If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+
+### Shadow QT Wallet from Source (shadow)
+```
+ Update and Install dependencies
+```
+>sudo apt-get update && apt-get upgrade
+>sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
+
+```
+ Download the source code and compile shadow QT
+```
+>git clone https://github.com/ShadowProject/shadow
+>cd shadow
+>qmake
+>make
+
+```
+Run the executable found within the shadowcoin folder with : 
+```
+>./shadow
+
+If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+>>>>>>> refs/remotes/ShadowProject/master
 
 ## Android
 
@@ -1536,133 +1545,3 @@ Contact the developers privately by sending an e-mail to [bounties@shadow.cash](
 
 We would strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix (along with your SDC address to claim the bounty). For more information, see this link.
 
-
-----
-
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-
-```json
-The above command returns JSON structured like this:
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Isis",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Isis",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-# Demos
-
-## Basic flowchart
-
-<pre class="mermaid">
-%% Subgraph example
-graph TB
-     subgraph Block 1
-     a1-->a2
-     end
-     subgraph Block 2
-     b1-->b2
-     end
-     subgraph Block 3
-     c1-->c2
-     end
-     c1-->a2
-</pre>
