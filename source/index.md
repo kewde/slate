@@ -1545,4 +1545,3 @@ Contact the developers privately by sending an e-mail to [bounties@shadow.cash](
 #### Code issues
 
 We would strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix (along with your SDC address to claim the bounty). For more information, see this link.
-
