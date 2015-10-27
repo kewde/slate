@@ -719,6 +719,7 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 
 # Hiding your IP
 ## Tor
+[Click here for a full tutorial]www.sky-ip.org/configure-bitcoin-node-debian-ubuntu.html)
 
 ### The simple method
 
