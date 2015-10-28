@@ -262,7 +262,7 @@ The Linux Wallet comes in two variations:
 
 Warning : never use root to start the QT or daemon!
 
-### 1. Shadow Daemon from Source (shadowcoind)
+### Shadow Daemon from Source (shadowcoind)
 ```
 Update and Install dependencies:
 ```
@@ -313,8 +313,28 @@ Stopping shadowcoind
 
 If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
-### 2. Shadow QT Wallet from Source (shadow)
-Test
+
+### Shadow QT Wallet from Source (shadow)
+```
+ Update and Install dependencies
+```
+>sudo apt-get update && apt-get upgrade
+>sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
+
+```
+ Download the source code and compile shadow QT
+```
+>git clone https://github.com/ShadowProject/shadow
+>cd shadow
+>qmake
+>make
+
+```
+Run the executable found within the shadowcoin folder with : 
+```
+>./shadow
+
+If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
 ## Android
 
@@ -721,8 +741,8 @@ There are 2 ways of starting the daemon in testnet mode.
 Create or add to the shadowcoin.conf file the following:
 ```
 >testnet=1
->addnode=vps1.shadow.cash
->addnode=vps2.shadow.cash
+>addnode=seed.shadow.cash
+>addnode=seed2.shadow.cash
 
 ```
 The addnode will help with extra connections because there are not many people running full testnet nodes.
