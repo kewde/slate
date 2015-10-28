@@ -11,9 +11,6 @@ toc_footers:
   - <a href='http://aboutshadow.com/'>Shadow Website</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
-includes:
-  - errors
-
 search: true
 ---
 
@@ -31,6 +28,8 @@ Shadow will soon offer a complete privacy platform which aims to establish an an
 
 ## Mission Statement
 
+>On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
+
 Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. 
 Prior to Bitcoin, the largest problem for these virtual currencies was the prevention of double spending attacks. 
 In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). 
@@ -39,9 +38,8 @@ Each member of Bitcoin’s network has the ability to analyze every transaction 
 Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. 
 The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
 
-On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
-## Shadow next to other cryptocurrencies
+## Shadow and others
 
 <span class="shadow-table"></span>
 
@@ -118,7 +116,7 @@ Below you will find a list of places where you can find other Shadow users, comm
 - Reddit: [reddit.com/r/ShadowCash](https://www.reddit.com/r/ShadowCash)
 - Twitter: [twitter.com/allaboutshadow](http://www.twitter.com/allaboutshadow)
 
-# ShadowCash
+# Currency
 
 ## Specification
 
@@ -221,38 +219,35 @@ ShadowCash source code is all open-source and available at our [GitHub repositor
 - Latest iOS wallet download - being upgraded!
 
 ### Bootstrap & Useful Paths
-
-> Windows
+```
+Windows
+```
+>%appdata%\ShadowCoin
 
 ```
-%appdata%\ShadowCoin
+OSX
 ```
-
-> OSX
-
-```
-~/Library/Application Support/ShadowCoin/
-```
-
-> Linux
+>~/Library/Application Support/ShadowCoin/
 
 ```
-~/.shadowcoin/
+Linux
 ```
+>~/.shadowcoin/
 
-So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts a process known as "syncing". The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
 
-1. looking to help further strengthen the network by providing a full peer 
-2. have ShadowCash (SDC) and wish to participate in staking or 
-3. plan to run services on the Shadow network and require a full node.
+So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts to synchronise the blockchain. The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
+
+1. Looking to help further strengthen the network by providing a full peer 
+2. Have ShadowCash (SDC) and wish to participate in staking
+3. Plan to run services on the Shadow network and require a full node.
 
 If neither of the above apply you can set the Shadow wallet to "thinmode" which provides lightening fast synchronization to the ShadowCore P2P network.
-If you decide that a fullnode (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method.
+If you decide that a full node (default) is for you then the full sync can take a little while; if you wish to speed this up you can bootstrap the process which will get your wallet up and running much quicker than the default method.
 
-1. Close the Shadow Wallet and **download the latest Bootstrap** file from: [github.com/ShadowProject/bootstrap/](https://github.com/ShadowProject/bootstrap/)
+1. Close the Shadow Wallet and [download the latest Bootstrap file from GitHub](https://github.com/ShadowProject/bootstrap/)
 2. Unzip the ```bootstrap.dat.zip``` file
-3. Place the ```bootstrap.dat``` file in one of the below locations depending on the OS
-4. Start the ShadowCash Wallet again (The client might be unresponsive but don't be alarmed - it's just loading all the blockchain data)
+3. Place the ```bootstrap.dat``` file in one of the below locations depending on your operating system
+4. Start the ShadowCash Wallet again (The client might be unresponsive but don't worry - it's just loading all the blockchain data)
 
 # Installing and running a client
 
@@ -269,6 +264,30 @@ Warning : never use root to start the QT or daemon!
 
 ### Shadow Daemon from Source (shadowcoind)
 ```
+ Update and Install dependencies
+```
+>sudo apt-get update && apt-get upgrade
+>sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
+
+```
+ Download the source code and compile shadow QT
+```
+>git clone https://github.com/ShadowProject/shadow
+>cd shadow
+>qmake
+>make
+
+```
+Run the executable found within the shadowcoin folder with : 
+```
+>./shadow
+
+Shadow comes in two versions, one with a graphical interface and one without a graphical interface (daemon).
+
+The daemon version is without a graphical interface and is mostly used on servers through which you can 
+
+```
+Daemon version, command line only.
 Update and Install dependencies:
 ```
 >sudo apt-get update && apt-get upgrade
@@ -341,18 +360,11 @@ Run the executable found within the shadowcoin folder with :
 >./shadow
 
 If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+>>>>>>> refs/remotes/ShadowProject/master
 
-## Mac Os
+## Android
 
-<aside class="notice">
-The OSX QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet.
-</aside>
-
-## Windows
-
-<aside class="notice">
-The Windows QT Wallet comes pre-packaged with an Shadow executable, this is all you need to get your ShadowCash Wallet
-</aside>
+## iOS
 
 ## ShadowLite
 
@@ -533,14 +545,14 @@ If Alice would post a normal address publicly, anyone can explore the blockchain
 It uses a clever mathematical principle called the "Diffie-Hellman Key Exchange", which allows two entities to generate a shared secret based on their keypairs. 
 An eavesdropper is unable to compute the shared secret, enabling private communication between the two. In the case an eavesdropper has full control over one of the keypairs (private and public key) then privacy is obviously broken. 
 
-It is important to mention that we can not use the SharedSecret directly to generate the keypair, because that would also allow the sender control over the private key.
-Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the SharedSecret is added to PrivateKeyAlice and we use that to generate the new keypair.
+It is important to mention that we can not use the ```SharedSecret``` directly to generate the keypair, because that would also allow the sender control over the private key.
+Instead a bit of mathematical "magic" (BIP32-style derivation) is applied: the ```SharedSecret``` is added to ```PrivateKeyAlice``` and we use that to generate the new keypair.
 
-It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ScanKeyAlice) but not make any transactions, because that would require decryption of the wallet/stealth key. 
-All transactions have to be made with the SpendKey, only available after decrypting your wallet.
+It uses a system of dual-keys to allow the wallet software to scan for stealth payments (using ```ScanKeyAlice```) but not make any transactions, because that would require decryption of the wallet/stealth key. 
+All transactions have to be made with the ```SpendKey```, only available after decrypting your wallet.
 The dual-key is more of a security practice, it allows a wallet (while encrypted) to scan for transactions. If it weren't implemented, the wallet would have to remain decrypted, rendering the protection provided by the encryption useless.
 
-The payee has to know the ephem public key to compute the SharedSecret, but how is that data transferred from payer to payee? The ephem public key is embedded in the *stealth metadata*.
+The payee has to know the ephem public key to compute the ```SharedSecret```, but how is that data transferred from payer to payee? The ephem public key is embedded in the *stealth metadata*.
 
 Any stealth transaction will require atleast 2 outputs, the stealth metadata and the actual spendable output.
 
@@ -560,13 +572,13 @@ out #7 | stealth spend D
 
 
 ### References
-[1] ByteCoin, *Technical Documentation*, 2015, Available at https://bytecoin.org/documentation/
+[1] ByteCoin, *Technical Documentation*, 2015, Available at [https://bytecoin.org/documentation/](https://bytecoin.org/documentation/
 
-[2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  http://sourceforge.net/p/bitcoin/mailman/message/31813471/
+[2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  [http://sourceforge.net/p/bitcoin/mailman/message/31813471/](http://sourceforge.net/p/bitcoin/mailman/message/31813471/)
 
-[3] Dark Wallet, *Stealth*, 2015,  Available at https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth
+[3] Dark Wallet, *Stealth*, 2015,  Available at [https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth](https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth)
 
-[4] Sx, *Stealth*, 2015,  Available at http://sx.dyne.org/stealth.html
+[4] Sx, *Stealth*, 2015,  Available at [http://sx.dyne.org/stealth.html](http://sx.dyne.org/stealth.html)
 
 ## Ring signatures
 <aside class="warning">Hardfork occurring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
@@ -608,7 +620,7 @@ Each Shadow coin has its own private key, so when spending Shadow, each coin or 
 Our white paper on ShadowSend 2 can be found [here](http://shadow.cash/downloads/shadowcash-anon.pdf).
 
 
-# ShadowChat
+# Encrypted Messaging
 
 Communication is an essential component of doing business. Modern technology gives us cheap, reliable and effortless methods to communicate with others regardless of physical distance.
 
@@ -616,11 +628,11 @@ However, this technology does little to safeguard the content of our messages fr
 
 ## Introduction
 
-ShadowCash has implemented a P2P (peer-to-peer) Instant Messaging system utilizing  state-of-the-art encryption technology to keep your communications private. All messages are encrypted by the proven **AES-256-CBC algorithm**, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilizing  sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
+ShadowChat is a P2P (peer-to-peer) Instant Messaging system utilizing  state-of-the-art encryption technology to keep your communications private. All messages are encrypted by the proven **AES-256-CBC algorithm**, and distributed between nodes in such a way as to prevent the recipients of messages from being inferred by assailants utilizing  sophisticated traffic analysis, even if the assailants can view the entire network and/or run nodes of the network.
 
 To eliminate the risk and hassle of sharing passwords, we utilize the proven and trusted method of **Elliptic Curve Diffie-Hellman (ECDH) key exchange**.
 The Elliptic Curve Digital Signature Algorithm (ECDSA) is used to give you confidence that the messages you received came from the original recipient and remained untouched in propagation.
-Messages are distributed over the preexisting ShadowCoin p2p network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
+Messages are distributed over the preexisting Shadow P2P network, and a copy of each encrypted message is stored on each node for a period of 48 hours.
 
 ## Key Sharing
 
@@ -704,17 +716,20 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 ## Trade
 ## White paper
 
-# ShadowGo
+# Hiding your IP
+## Tor
+[Click here for a full tutorial]www.sky-ip.org/configure-bitcoin-node-debian-ubuntu.html)
 
-## Android
-## iOS
+### The simple method
 
-# Other
 
-## Backup & restore wallet
-## Connecting to the network
-## Wallet options
-## Support
+
+## I2P
+
+I2P is currently not supported.
+
+# Backup & restore wallet
+# Support
 
 For support please visit one of the links below:
 
@@ -724,7 +739,7 @@ For support please visit one of the links below:
 
 # Developers
 
-## Setting up the build environment and building
+## Build environment and building
 
 Windows
 OSX
@@ -732,37 +747,50 @@ Linux
 Rasbperry Pi
 Docker
 
-## Installing and running a node
+## Install
 
 Windows
 osx
 linux
 coreos/docker
 
-## Setting up and running a node on digitalocean using coreos/docker
+## Coreos/Docker
 
-## Setting up and running a node on scaleway
+## Scaleway
 
 ## Testnet
 
 There are 2 ways of starting the daemon in testnet mode.
 
-### 1 editing the shadowcoin.conf
-Find the path to the files. (Windows: %appdata%/ShadowCoin/)
-
+### 1. Editing the shadowcoin.conf
+```
 Create or add to the shadowcoin.conf file the following:
-testnet=1
-addnode=vps1.shadow.cash
-addnode=vps2.shadow.cash
+```
+>testnet=1
+>addnode=vps1.shadow.cash
+>addnode=vps2.shadow.cash
 
+```
 The addnode will help with extra connections because there are not many people running full testnet nodes.
+```
 
-### 2 start executable with testnet parameter
+Find the path to the files. 
+
+OS | Path
+--- | ---
+**Windows** | %appdata%\ShadowCoin
+**OSX** |~/Library/Application Support/ShadowCoin/
+**Linux** | ~/.shadowcoin/
+
+### 2. Start executable with testnet parameter
 
 Start the ShadowCoin executable with the "-testnet" flag.
 Windows:
 Open up a command prompt, change directory to the installation folder of Shadow and run the following command:
 ```shadow.exe -testnet```
+
+Linux: 
+```shadowcoind -testnet```
 
 ## Blockchain / Blocks / Transactions
 ## Data structures
@@ -1516,6 +1544,3 @@ Contact the developers privately by sending an e-mail to [bounties@shadow.cash](
 #### Code issues
 
 We would strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix (along with your SDC address to claim the bounty). For more information, see this link.
-
-
-----
