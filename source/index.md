@@ -264,30 +264,6 @@ Warning : never use root to start the QT or daemon!
 
 ### Shadow Daemon from Source (shadowcoind)
 ```
- Update and Install dependencies
-```
->sudo apt-get update && apt-get upgrade
->sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
-
-```
- Download the source code and compile shadow QT
-```
->git clone https://github.com/ShadowProject/shadow
->cd shadow
->qmake
->make
-
-```
-Run the executable found within the shadowcoin folder with : 
-```
->./shadow
-
-Shadow comes in two versions, one with a graphical interface and one without a graphical interface (daemon).
-
-The daemon version is without a graphical interface and is mostly used on servers through which you can 
-
-```
-Daemon version, command line only.
 Update and Install dependencies:
 ```
 >sudo apt-get update && apt-get upgrade
@@ -360,7 +336,6 @@ Run the executable found within the shadowcoin folder with :
 >./shadow
 
 If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
->>>>>>> refs/remotes/ShadowProject/master
 
 ## Android
 
