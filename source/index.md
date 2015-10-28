@@ -1458,7 +1458,7 @@ Shadow is controlled by all Shadow users around the world. If you are a develope
 
 We are a non-profit and Open Source software project and are trying to build a private economy. We appreciate all the help we can get in making this a reality. Both addresses are managed by Rynomster (lead developer). If applicable, please specify whether you want to remain anonymous. Many thanks to all our sponsors!
  
-- Official **BTC donation** address: ```155cKQ5pk9kCQoXigxQapnLNyBK3hMrd2V```
+- Official **BTC donation** address: ```1GiosBkSpN8RS9pm1kgZU8AZUBEnLKYFem```
 - Official **SDC development** donation address: ```SdcdevXEaZaE9nDKjh6aH7kd3NcLX5rwAY```
 
 ## Report
