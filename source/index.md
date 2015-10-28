@@ -1469,7 +1469,7 @@ Please do not report security vulnerabilities publicly. The details for responsi
 
 ### Bugs & Bounty program
 
-Official bug donation Address: ```SdcbugSrxsYSBzxB2cVfiAYdqwjftLBaF1```
+Official bug donation Address: ```Sdcbug68Hcpim7zpnEZsQRRz1rowvz9axS```
 
 According to Linus’ Law, “given enough eyeballs, all bugs are shallow”. That’s one of the reasons why Shadow’s source code is publicly available; but merely making the source code available doesn’t accomplish anything if people don’t read it!
 
