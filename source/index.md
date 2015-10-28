@@ -287,7 +287,6 @@ Run the daemon
 ```
 >nano ~/.shadowcoin/shadowcoin.conf
 
-
 ``` 
 Add the following to your config file, changing the username and password to something secure:
 ```
@@ -316,26 +315,7 @@ Stopping shadowcoind
 If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
 ### Shadow QT Wallet from Source (shadow)
-```
- Update and Install dependencies
-```
->sudo apt-get update && apt-get upgrade
->sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
-
-```
- Download the source code and compile shadow QT
-```
->git clone https://github.com/ShadowProject/shadow
->cd shadow
->qmake
->make
-
-```
-Run the executable found within the shadowcoin folder with : 
-```
->./shadow
-
-If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
+Test
 
 ## Android
 
