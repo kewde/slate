@@ -210,9 +210,11 @@ ShadowCash source code is all open-source and available at our [GitHub repositor
 ## Download
 
 ### Desktop Wallet
-- Latest [Windows](http://shadow.cash/downloads/shadow_1.3.3.3_win32.zip) wallet download
-- Latest [Linux](http://shadow.cash/downloads/shadow_1.3.3.3_linux64_static.zip) wallet download
-- Latest [OSX](http://shadow.cash/downloads/shadow_1.3.3.3_macosx.dmg) wallet download
+- Latest [Windows x32](http://shadow.cash/downloads/latest/windows32) wallet download
+- Latest [Windows x64](http://shadow.cash/downloads/latest/windows64) wallet download
+- Latest [Linux x32](http://shadow.cash/downloads/latest/linux32) wallet download
+- Latest [Linux x64](http://shadow.cash/downloads/latest/linux64) wallet download
+- Latest [OSX](http://shadow.cash/downloads/latest/macosx) wallet download
 
 ### Mobile Wallet
 - Latest Android wallet download - being upgraded!
