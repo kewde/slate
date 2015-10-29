@@ -208,9 +208,11 @@ ShadowCash source code is all open-source and available at our [GitHub repositor
 ## Download
 
 ### Desktop Wallet
-- Latest [Windows](http://shadow.cash/downloads/shadow_1.3.3.3_win32.zip) wallet download
-- Latest [Linux](http://shadow.cash/downloads/shadow_1.3.3.3_linux64_static.zip) wallet download
-- Latest [OSX](http://shadow.cash/downloads/shadow_1.3.3.3_macosx.dmg) wallet download
+- Latest [Windows x32](http://shadow.cash/downloads/latest/windows32) wallet download
+- Latest [Windows x64](http://shadow.cash/downloads/latest/windows64) wallet download
+- Latest [Linux x32](http://shadow.cash/downloads/latest/linux32) wallet download
+- Latest [Linux x64](http://shadow.cash/downloads/latest/linux64) wallet download
+- Latest [OSX](http://shadow.cash/downloads/latest/macosx) wallet download
 
 ### Mobile Wallet
 - Latest Android wallet download - being upgraded!
@@ -262,30 +264,6 @@ Warning : never use root to start the QT or daemon!
 
 ## Linux daemon from source (shadowcoind)
 ```
- Update and Install dependencies
-```
->sudo apt-get update && apt-get upgrade
->sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libqt5webkit5-dev
-
-```
- Download the source code and compile shadow QT
-```
->git clone https://github.com/ShadowProject/shadow
->cd shadow
->qmake
->make
-
-```
-Run the executable found within the shadowcoin folder with : 
-```
->./shadow
-
-Shadow comes in two versions, one with a graphical interface and one without a graphical interface (daemon).
-
-The daemon version is without a graphical interface and is mostly used on servers through which you can 
-
-```
-Daemon version, command line only.
 Update and Install dependencies:
 ```
 >sudo apt-get update && apt-get upgrade
@@ -309,7 +287,6 @@ Run the daemon
 ```
 >nano ~/.shadowcoin/shadowcoin.conf
 
-
 ``` 
 Add the following to your config file, changing the username and password to something secure:
 ```
@@ -329,15 +306,16 @@ List all commands for shadowcoind
 ```
 >shadowcoind help
 
-
 ```
 Stopping shadowcoind
 ```
 >shadowcoind stop
 
+Advanced users only.
 If you wish you can also compile directly from source, follow these instructions to compile latest ShadowCore headless daemon based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
-## Graphical Linux wallet from source (shadow)
+## Graphical Linux wallet from source (Shadow QT)
+
 ```
  Update and Install dependencies
 ```
@@ -357,8 +335,8 @@ Run the executable found within the shadowcoin folder with :
 ```
 >./shadow
 
-If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
->>>>>>> refs/remotes/ShadowProject/master
+Advanced users only.
+If you wish to you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
 ## Android
 
@@ -765,8 +743,8 @@ There are 2 ways of starting the daemon in testnet mode.
 Create or add to the shadowcoin.conf file the following:
 ```
 >testnet=1
->addnode=vps1.shadow.cash
->addnode=vps2.shadow.cash
+>addnode=seed.shadow.cash
+>addnode=seed2.shadow.cash
 
 ```
 The addnode will help with extra connections because there are not many people running full testnet nodes.
@@ -1486,8 +1464,8 @@ Shadow is controlled by all Shadow users around the world. If you are a develope
 
 We are a non-profit and Open Source software project and are trying to build a private economy. We appreciate all the help we can get in making this a reality. Both addresses are managed by Rynomster (lead developer). If applicable, please specify whether you want to remain anonymous. Many thanks to all our sponsors!
  
-- Official **BTC donation** address: ```155cKQ5pk9kCQoXigxQapnLNyBK3hMrd2V```
-- Official **SDC development** donation address: ```SdcdevXEaZaE9nDKjh6aH7kd3NcLX5rwAY```
+- Official **BTC donation** address: ```1GiosBkSpN8RS9pm1kgZU8AZUBEnLKYFem```
+- Official **SDC development** donation address: ```SdcDevWEbq3CZgZc8UNbST1TaYLA5vLZTS```
 
 ## Report
 
@@ -1497,7 +1475,7 @@ Please do not report security vulnerabilities publicly. The details for responsi
 
 ### Bugs & Bounty program
 
-Official bug donation Address: ```SdcbugSrxsYSBzxB2cVfiAYdqwjftLBaF1```
+Official bug donation Address: ```Sdcbug68Hcpim7zpnEZsQRRz1rowvz9axS```
 
 According to Linus’ Law, “given enough eyeballs, all bugs are shallow”. That’s one of the reasons why Shadow’s source code is publicly available; but merely making the source code available doesn’t accomplish anything if people don’t read it!
 
