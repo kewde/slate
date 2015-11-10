@@ -35,6 +35,25 @@ Shadow will soon offer a complete privacy platform which aims to establish an an
 
 >On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
+Privacy is inherently entangled with power. Privacy gives you a protected space to express and think for yourself freely. An individual stripped of his privacy is a powerless one. 
+
+
+Our society is increasingly becoming more comfortable with surveillance, while in reality it's a battle of power, a battle that normal people like me and you are losing. We are giving up our power to those who are already too powerful.
+
+
+There is a balance that has to be preserved between the people in charge and the rest of society. Lately that balance has been disrupted by secret government programs and the general public doesn't seem to care.
+
+
+The reason why we're giving up our privacy so easily is because it isn't built in by default. Even the people trained to protect their privacy sometimes have a hard time working with the software that's out there. We live in a world where comfort is priority.
+We don't like waiting or doing extra work to protect our privacy. 
+
+
+The software that guarantees our privacy is often uncomfortable to work with. It requires many different procedures and a very prone to failure by human error. 
+
+
+The Shadow Project is on a mission to solve this. Our focus is on protecting privacy and anonymity, so you don't have to! We want to create applications with a streamlined procedure, that allows for privacy and anonymity but not at the cost of comfort.
+
+
 Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. 
 Prior to Bitcoin, the largest problem for these virtual currencies was the prevention of double spending attacks. 
 In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). 
