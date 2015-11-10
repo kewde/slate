@@ -779,6 +779,7 @@ Linux:
 
 # JSON-RPC API Reference
 
+Shadow has many new components meaning we also added extra API calls on top of the original [Bitcoin API.](¶https://bitcoin.org/en/developer-reference#bitcoin-core-apis)
 
 ## anoninfo
 
