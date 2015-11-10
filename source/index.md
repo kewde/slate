@@ -54,6 +54,7 @@ The software that guarantees our privacy is often uncomfortable to work with. It
 The Shadow Project is on a mission to solve this. Our focus is on protecting privacy and anonymity, so you don't have to! We want to create applications with a streamlined procedure, that allows for privacy and anonymity but not at the cost of comfort.
 
 
+
 Due to their superiority over traditional methods of exchange, virtual currencies are quickly becoming  very popular. 
 Prior to Bitcoin, the largest problem for these virtual currencies was the prevention of double spending attacks. 
 In short, double spending is the malicious act of executing multiple transactions using the same units of currency (the equivalent of counterfeiting paper money). 
