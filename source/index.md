@@ -981,6 +981,42 @@ setbestblockbyheight <height>
 settxfee <amount>
 ```
 
+## stop
+
+Stop the shadowcoin server
+
+
+## thinforcestate
+
+```json
+thinforcestate <state>
+```
+
+## thinscanmerkleblocks
+
+```json
+thinscanmerkleblocks <height>
+```
+
+## txnreport
+
+```json
+txnreport [collate_amounts] [show_key_images]
+```
+
+## validateaddress
+
+```json
+validateaddress <shadowcashaddress>
+```
+
+## validatepubkey
+
+```json
+validatepubkey <shadowcashpubkey>
+```
+
+# SMSG API
 ## smsgaddkey
 
 ```json
@@ -1158,41 +1194,6 @@ Output:
 {
 "result" : "Sent."
 }
-```
-
-## stop
-
-Stop the shadowcoin server
-
-
-## thinforcestate
-
-```json
-thinforcestate <state>
-```
-
-## thinscanmerkleblocks
-
-```json
-thinscanmerkleblocks <height>
-```
-
-## txnreport
-
-```json
-txnreport [collate_amounts] [show_key_images]
-```
-
-## validateaddress
-
-```json
-validateaddress <shadowcashaddress>
-```
-
-## validatepubkey
-
-```json
-validatepubkey <shadowcashpubkey>
 ```
 
 
