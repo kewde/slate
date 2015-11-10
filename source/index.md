@@ -398,9 +398,11 @@ A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
 
 ## ShadowTokens (SDT)
 
-In order to transact anonymously, we have introduced an anonymous token, which we will refer to as Shadow. Shadow can be minted, which destroys SDC (ShadowCash), and outputs a group of Shadow tokens totaling the same value (minus the transaction fee) of the destroyed SDC. 
-Shadow Tokens take form of outputs on the ShadowCash blockchain and each one of them has its own private/public keypair. 
-Shadow tokens are spendable only by providing a traceable ring signature to prove ownership of the token.
+In order to transact anonymously, we have introduced ```an anonymous token```, which we will refer to as Shadow. Shadow can be minted, destroying SDC (ShadowCash) in the process, and outputting a group of Shadow tokens totalling the same value (minus the transaction fee) of the destroyed SDC. 
+Shadow Tokens take form of outputs on the ShadowCash blockchain and each one of them has its own private and public key. 
+SDT is only spendable by providing a ```traceable ring signature``` to prove ownership of a token of the same value.
+
+Once a Shadow Token is created, we can claim a different output in pool of the same value, by providing a traceable ring signature. We provide a keyImage of the private key to prevent double spending.
 
 To increase the pool of outputs available for ring signatures, the SDC value is broken up into separate Shadow Tokens for each decimal place of the total value. The tokens are further broken up into values of 1, 3, 4 and 5. For example 1.7 SDC would become 3 tokens of values 1.0, 0.3 and 0.4.
 
@@ -557,11 +559,9 @@ out #7 | stealth spend D
 [4] Sx, *Stealth*, 2015,  Available at [http://sx.dyne.org/stealth.html](http://sx.dyne.org/stealth.html)
 
 ## Ring signatures
-<aside class="warning">Hardfork occurring on 19th of October 00:00 GMT to implement the new ring signature scheme into the main net.</aside>
-
 The ring signatures are a crucial part to anonymize the sender of a transaction.
 
-Ring signature consists of the public key of the token being spent, plus the public keys from 3 to 200 other tokens of the same value as the token being spent. The nature of ring signatures makes it impossible to discover member of the coins in the ring signature is being spent, and transactions are no longer traceable.
+As previously mentioned, all tokens have their own public and private key. It consists of the public key of the token being spent, plus the public keys from 3 to 200 other tokens of the same value as the token being spent. The nature of ring signatures makes it impossible to discover member of the coins in the ring signature is being spent, and transactions are no longer traceable.
 
 It is not possible to determine which tokens have been spent, so all tokens remain in the blockchain as spendable outputs available as members of ring signatures for other token spends.
 
@@ -694,7 +694,8 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 
 # Hiding your IP
 ## Tor
-[Click here for a full tutorial]www.sky-ip.org/configure-bitcoin-node-debian-ubuntu.html)
+[Click here for a full tutorial](www.sky-ip.org/configure-bitcoin-node-debian-ubuntu.html)
+
 
 ### The simple method
 
@@ -778,21 +779,6 @@ Linux:
 
 # JSON-RPC API Reference
 
-## addmultisigaddress
-```json
-addmultisigaddress <nrequired> <'["key","key"]'> [account]
-```
-
-## addnode
-```json
-addnode <node> <add|remove|onetry>
-```
-
-## addredeemscript
-
-```json
-addredeemscript <redeemScript> [account]
-```
 
 ## anoninfo
 
@@ -806,54 +792,12 @@ anoninfo [recalculate]
 anonoutputs [systemTotals] [show_immature_outputs]
 ```
 
-## backupwallet <destination>
-
-```json
-backupwallet <destination>
-```
-
 ## checkwallet
 Check wallet for integrity.
 
 ## clearwallettransactions 
 Delete all transactions from wallet - reload with reloadanondata
 Warning: Backup your wallet first!
-
-## createrawtransaction
-
-```json
-createrawtransaction [{"txid":txid,"vout":n},...] {address:amount,...}
-```
-
-## decoderawtransaction
-
-```json
-decoderawtransaction <hex string>
-```
-
-## decodescript
-
-```json
-decodescript <hex string>
-```
-
-## dumpprivkey
-
-```json
-dumpprivkey <shadowcashaddress>
-```
-
-## dumpwallet
-
-```json
-dumpwallet <filename>
-```
-
-## encryptwallet
-
-```json
-encryptwallet <passphrase>
-```
 
 ## estimateanonfee
 
@@ -863,76 +807,6 @@ estimateanonfee <amount> <ring_size> [narration]
 
 <amount> is a real and is rounded to the nearest 0.000001
 Used to estimate the anon fee with a given amount and ring size.
-
-## getaccount
-
-```json
-getaccount <shadowcoinaddress>
-```
-
-## getaccountaddress
-
-```json
-getaccountaddress <account>
-```
-
-## getaddednodeinfo
-
-```json
-getaddednodeinfo <dns> [node]
-```
-
-## getaddressesbyaccount
-
-```json
-getaddressesbyaccount <account>
-```
-
-## getbalance
-
-```json
-getbalance [account] [minconf=1]
-```
-
-## getbestblockhash
-
-## getblock
-
-```json
-getblock <hash> [txinfo]
-```
-
-## getblockbynumber
-
-```json
-getblockbynumber <number> [txinfo]
-```
-
-## getblockcount
-
-## getblockhash
-
-```json
-getblockhash <index>
-```
-
-## getblocktemplate [params]
-
-```json
-getblocktemplate [params]
-```
-
-## getcheckpoint
-
-## getconnectioncount
-
-## getdifficulty
-
-## getinfo
-
-## getmininginfo
-
-## getnetworkinfo
 
 ## getnewaddress
 
@@ -952,40 +826,12 @@ getnewpubkey [account]
 getnewstealthaddress [label]
 ```
 
-## getpeerinfo
-
-## getrawmempool
-
-## getrawtransaction
-
-```json
-getrawtransaction <txid> [verbose=0]
-```
-
-## getreceivedbyaccount
-
-```json
-getreceivedbyaccount <account> [minconf=1]
-```
-
-## getreceivedbyaddress
-
-```json
-getreceivedbyaddress <shadowcashaddress> [minconf=1]
-```
-
 ## getstakinginfo
 
 ## getsubsidy
 
 ```json
 getsubsidy [nTarget]
-```
-
-## gettransaction <txid>
-
-```json
-gettransaction <txid>
 ```
 
 ## getwork
@@ -1006,28 +852,10 @@ getworkex [data, coinbase]
 help [command]
 ```
 
-## importprivkey
-
-```json
-importprivkey <shadowcoinprivkey> [label]
-```
-
 ## importstealthaddress
 
 ```json
 importstealthaddress <scan_secret> <spend_secret> [label]
-```
-
-## importwallet
-
-```json
-importwallet <filename>
-```
-
-## keypoolrefill
-
-```json
-keypoolrefill [new-size]
 ```
 
 ## listaccounts
@@ -1037,23 +865,6 @@ keypoolrefill [new-size]
 
 Lists groups of addresses which have had their common ownership made public by common use as inputs or as the resulting change in past transactions
 
-## listreceivedbyaccount
-
-```json
-listreceivedbyaccount [minconf=1] [includeempty=false]
-```
-
-## listreceivedbyaddress
-
-```json
-listreceivedbyaddress [minconf=1] [includeempty=false]
-```
-
-## listsinceblock
-
-```json
-listsinceblock [blockhash] [target-confirmations]
-```
 
 ## liststealthaddresses
 
@@ -1080,28 +891,10 @@ Stealth address = "smYmoN9xyenTSow9RP4ecf172sdKTeN9k4ZVCiUhFY6MTQRqSS2LRSZSZECwn
 
 When stealth addresses are generated their account name is "ao first_16_chars...", the 3 dots at the end are important!
 
-
-## listunspent
-
-```json
-listunspent [minconf=1] [maxconf=9999999]
-```
-
-Returns array of unspent transaction outputs with between minconf and maxconf (inclusive) confirmations.
-Optionally filtered to only include txouts paid to specified addresses.
-Results are an array of Objects, each of which has:
-{txid, vout, scriptPubKey, amount, confirmations}
-
 ## makekeypair
 
 ```json
 makekeypair [prefix]
-```
-
-## move
-
-```json
-move <fromaccount> <toaccount> <amount> [minconf=1] [comment]
 ```
 
 ## nextorphan
@@ -1160,23 +953,6 @@ sendanontoanon <stealth_address> <amount> <ring_size> [narration] [comment] [com
 sendanontosdc <stealth_address> <amount> <ring_size> [narration] [comment] [comment-to]
 ```
 
-## sendfrom 
-
-```json
-sendfrom <fromaccount> <toshadowcoinaddress> <amount> [minconf=1] [comment] [comment-to] [narration]
-```
-
-## sendmany
-
-```json
-sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]
-```
-
-## sendrawtransaction
-
-```json
-sendrawtransaction <hex string>
-```
 
 ## sendsdctoanon
 
@@ -1184,11 +960,6 @@ sendrawtransaction <hex string>
 sendsdctoanon <stealth_address> <amount> [narration] [comment] [comment-to]
 ```
 
-## sendtoaddress
-
-```json
-sendtoaddress <shadowcoinaddress> <amount> [comment] [comment-to] [narration]
-```
 
 ## sendtostealthaddress
 
@@ -1196,11 +967,6 @@ sendtoaddress <shadowcoinaddress> <amount> [comment] [comment-to] [narration]
 sendtostealthaddress <stealth_address> <amount> [comment] [comment-to] [narration]
 ```
 
-## setaccount
-
-```json
-setaccount <shadowcoinaddress> <account>
-```
 
 ## setbestblockbyheight <height>
 
@@ -1212,18 +978,6 @@ setbestblockbyheight <height>
 
 ```json
 settxfee <amount>
-```
-
-## signmessage
-
-```json
-signmessage <shadowcashaddress> <message>
-```
-
-## signrawtransaction
-
-```json
-signrawtransaction <hex string> [{"txid":txid,"vout":n,"scriptPubKey":hex},...] [<privatekey1>,...] [sighashtype="ALL"]
 ```
 
 ## smsgaddkey
@@ -1409,11 +1163,6 @@ Output:
 
 Stop the shadowcoin server
 
-## submitblock
-
-```json
-submitblock <hex data> [optional-params-obj]
-```
 
 ## thinforcestate
 
@@ -1443,12 +1192,6 @@ validateaddress <shadowcashaddress>
 
 ```json
 validatepubkey <shadowcashpubkey>
-```
-
-## verifymessage
-
-```json
-verifymessage <shadowcashaddress> <signature> <message>
 ```
 
 
