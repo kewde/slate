@@ -726,7 +726,61 @@ This step is pretty straight forward, install Tor.
 Platform | url
 --- | ---
 Windows | [Download](https://www.torproject.org/download/download-easy.html.en)
-Linux |  apt-get install tor
+Linux |  [Download](https://www.torproject.org/download/download-easy.html.en#linux)
+
+Extract the contents of the ZIP or Tar file to a folder.
+
+Linux: tar xf tor-browser-linux32-5.0.7_en-US.tar.xz
+
+**Step 2: Download Shadow**
+If you truely want to remain anonymous then you should also download the Shadow client through Tor. 
+
+Open up the Tor-browser and visit http://shadowproject.io/getting-started and download the latest binary for your operating system.
+Extract  the ZIP to folder of your choice.
+
+**DOWNLOADING THE BLOCKCHAIN THROUGH TOR IS VERY SLOW, IT IS ADVISED TO SPEED UP THE PROCESS WITH THE BLOCKHAIN.ZIP METHOD**
+Download and put the contents of [the blockchain.zip file](https://github.com/ShadowProject/blockchain/releases/download/latest/blockchain.zip) into your .shadowcoin folder!
+
+**Step 3: Edit settings**
+ Open up the Shadow client and go to **Settings > Options > Network**
+ 
+ Enable Proxy settings and set it to:
+ Proxy IP: 127.0.0.1
+ Port: 9150
+ SOCKS Version: 5
+ 
+ Click on OK and you're good to go.
+ 
+**Step 4: Configure the Hidden Service (optional)**
+
+UNFINISHED 
+
+For Tor to work in the best configuration you'll want to configure your computer as a hidden service.
+
+Open the following file in your favorite text editor:
+
+Platform | command
+--- | ---
+Windows | tor-browser_en-US/Browser/TorBrowser/Data/Tor/torrc
+Linux | nano tor-browser_en-US/Browser/TorBrowser/Data/Tor/torrc
+
+ Save the file in nano by pressing CTRL + X , enter y to confirm saving and hit enter.
+
+Make sure to replace the **FULL_PATH** with the corresponding path.
+For windows this would be something like:
+C:/Users/user/Desktop
+
+Linux:
+Just type 'pwd' in the terminal and you'll get the path your current folder.
+
+´´´
+HiddenServiceDir FULL_PATH/tor-browser_en-US/Browser/TorBrowser/Data/shadow-service/
+HiddenServicePort 8333 127.0.0.1:8333
+SocksPort 127.0.0.1:9150
+´´´
+
+
+
 
 
 [Click here for a full tutorial](www.sky-ip.org/configure-bitcoin-node-debian-ubuntu.html)
