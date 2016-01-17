@@ -33,8 +33,7 @@ Shadow will soon offer a complete privacy platform which aims to establish an an
 
 ## Mission Statement
 
->On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks” [ link ]. Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
-
+```On December 10, 1948, the General Assembly of the United Nations adopted and proclaimed the Universal Declaration of Human Rights. Article 12 states, “No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks”. ```
 Privacy is inherently entangled with power. Privacy gives you a protected space to express and think for yourself freely. An individual stripped of his privacy is a powerless one. 
 
 
@@ -48,10 +47,10 @@ The reason why we're giving up our privacy so easily is because it isn't built i
 We don't like waiting or doing extra work to protect our privacy. 
 
 
-The software that guarantees our privacy is often uncomfortable to work with. It requires many different procedures and a very prone to failure by human error. 
+The software that guarantees our privacy is often uncomfortable to work with. It requires many different procedures and is prone to failure by human error. 
 
 
-The Shadow Project is on a mission to solve this. Our focus is on protecting privacy and anonymity, so you don't have to! We want to create applications with a streamlined procedure, that allows for privacy and anonymity but not at the cost of comfort.
+The Shadow Project is on a mission to solve this. Our focus is on protecting privacy and anonymity, so you don't have to worry about it! We want to create applications with a streamlined procedure, that allows for privacy and anonymity but not at the cost of comfort.
 
 
 
@@ -63,6 +62,7 @@ Each member of Bitcoin’s network has the ability to analyze every transaction 
 Unfortunately, as one may be able to easily deduce, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. 
 The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant.
 
+Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
 ## Shadow and others
 
@@ -228,7 +228,7 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
  
 ## Source code
 
-ShadowCash source code is all open-source and available at our [GitHub repository](https://github.com/SDCDev/shadowcoin)
+ShadowCash source code is all open-source and available at our [GitHub repository](https://github.com/SDCDev/shadow)
 
 ## Download
 
@@ -298,7 +298,7 @@ Update and Install dependencies:
  Download the source code and compile shadowcoind
 ```
 >git clone https://github.com/ShadowProject/shadow
->cd shadowcoin/src
+>cd shadow/src
 >make -f makefile.unix
 >strip shadowcoind
 
@@ -719,6 +719,16 @@ White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www
 
 # Hiding your IP
 ## Tor
+
+**Step 1: Install Tor**
+This step is pretty straight forward, install Tor.
+
+Platform | url
+--- | ---
+Windows | [Download](https://www.torproject.org/download/download-easy.html.en)
+Linux |  apt-get install tor
+
+
 [Click here for a full tutorial](www.sky-ip.org/configure-bitcoin-node-debian-ubuntu.html)
 
 
