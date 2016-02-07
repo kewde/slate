@@ -29,11 +29,6 @@ Bitcoin relies on a peer-to-peer network (P2P) where each member (peer) of the n
 The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant. Unfortunately, while names and personal data aren't revealed in transaction records, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. Addresses can be linked and traced to individuals and businesses by block chain anaylsis.
 
 
-### Bytecoin
-
-Or Cryptonote... Need History
-
-
 ### Shadow
 
 Born on July 19, 2014, the Shadow Project quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code.
