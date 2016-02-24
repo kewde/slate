@@ -756,7 +756,9 @@ A new opcode **CHECKLOCKTIMEVERIFY** (CLTV) is implemented to enable the mutual 
 ## Mutual assured destruction (MAD)
 This stategy finds its roots in the Ultimatum Game, a well known economic experiment in the field of Game Theory. The key difference between Shadows escrow and the Ultimatum Game is that negotiations are possible in the form of refunds. The payoff matrix exemplifies all the scenarios without the possibility of refund.
 
-```![Escrow](escrow.jpg)```
+```
+![Escrow](escrow.jpg)
+```
 
 **Bad buyer.**  
 
