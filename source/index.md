@@ -230,7 +230,7 @@ ShadowCore has a HTML cryptobrowser at the core of its graphical user interface 
 ## Hierarchical Deterministic Wallet (HD)
 
 ShadowCore supports the [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allowing users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy.
-In essence this means that you only have to back up your wallet once, all private keys are derived from the mnenomic seed and they can be retrieved anytime if you have the seed. This means that you'll never have to worry about your back ups, coins will never be lost.
+In essence this means that you only have to back up your wallet once, all private keys are derived from the mnenomic seed and they can be retrieved anytime if you have the seed. This means that you'll never have to worry about backups as long as you have one, coins will never be lost.
 
 To create a better user experience ShadowCore implemented [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), allowing users to create a HD wallet based on a mnenomic sentence consisting of 24 words and the ability to secure that with a password for plausible deniability.
 
@@ -240,11 +240,6 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
 - [BIP32: hierarchical deterministic wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) — Bitcoin Improvement Proposals
 - [Deterministic wallet](https://en.bitcoin.it/wiki/Deterministic_Wallet) — Bitcoin Wiki
  
-
-
-## Source Code
-
-ShadowCash its source code is open-source and available at our [GitHub repository](https://github.com/SDCDev/shadow)
 
 
 # Download
@@ -278,9 +273,9 @@ Linux
 
 #### What Is "bootstrap" and What Does It Do?
 
-When you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts to synchronise the block chain. By default the client will configure a full node. A full node needs an up-to-date, full copy of the ShadowCash block chain on your local hardware.
+When you load the Shadow Wallet for the first time it connects to the peer-to-peer network and starts to synchronise the block chain. **By default the client will configure a full node.** A full node needs an up-to-date, full copy of the ShadowCash block chain on your computer to properly function. 
 
-This is very useful if for example you are:
+A full node is very useful for the following reasons:
 
 1. Looking to help further strengthen the network by providing a full peer/node.
 2. Already own ShadowCash (SDC) and wish to participate in staking.
@@ -295,6 +290,48 @@ If you decide that a full node is for you then the full sync of the block chain 
 3. Place the ```bootstrap.dat``` file in one of the below locations depending on your operating system
 4. Start the ShadowCash Wallet again (The client might be unresponsive but don't worry - it's just loading all the blockchain data)
 
+## ShadowLite
+
+ShadowLite is an innovative component of the Shadow platform that brings lightning-fast syncing with the Shadow blockchain.
+
+We've taken a completely different approach to wallet design based on the principles of the "Simplified Payment Verification" or “SPV” system outlined in section 8 of [Satoshi’s white paper](https://bitcoin.org/bitcoin.pdf). Instead of releasing a separate client, we’ve integrated optional lite functionality within the wallet. This allows for startup configuration to determine which mode you are running (thin or full).
+
+ShadowLite mobile users have access to all existing functionality with a reduced bandwidth, storage and memory footprint.
+
+Staking within the Lite wallet has been removed because staking is a reward function for securing the network. Lite wallets, by nature, do not secure the network.
+
+### Instructions
+
+There are two ways to start the wallet in Lite mode, both are described in this section.
+
+#### Method 1:
+
+The first method changes the ```shadowcoin.conf``` and will cause the wallet to permanently boot up in lite mode for as long as it is in the configuration file.
+
+```
+For those of you who wish to enable the lite wallet, open your shadowcoin.conf configuration file with a text editor such as nano
+```
+>nano shadowcoin.conf
+
+```
+And add the following line
+```
+>thinmode=1
+
+#### Method 2:
+
+The second method will boot up an instance in Lite mode, not permanent. In case you always want to boot up in Lite mode we suggest the first method, but if need to make a transaction quickly without having to download the whole blockchain you can start the daemon with the ```-thinmode``` parameter.
+
+```
+Alternatively, you can startup the client with the parameter -thinmode. (no graphical interface)
+```
+>shadowcoind -thinmode
+
+```
+Or if you need a graphical interface.
+```
+> ./shadow -thinmode
+
 # Compiling from source
 
 ## Linux
@@ -308,6 +345,9 @@ The Linux Wallet comes in two variations:
 
 **Warning : never use root to start the QT or daemon!**
 
+## Source Code
+
+ShadowCash its source code is open-source and available at our [GitHub repository](https://github.com/SDCDev/shadow)
 
 ## Linux Daemon from Source (shadowcoind)
 ```
@@ -384,53 +424,6 @@ Run the executable found within the shadowcoin folder with :
 
 * Advanced users only.
 If you wish to you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.*
-
-
-## Mobile (Android & iOS)
-
-In Development
-
-## ShadowLite
-
-ShadowLite is an innovative component of the Shadow platform that brings lightning-fast syncing with the Shadow blockchain.
-
-We've taken a completely different approach to wallet design based on the principles of the "Simplified Payment Verification" or “SPV” system outlined in section 8 of [Satoshi’s white paper](https://bitcoin.org/bitcoin.pdf). Instead of releasing a separate client, we’ve integrated optional lite functionality within the wallet. This allows for startup configuration to determine which mode you are running (thin or full).
-
-ShadowLite mobile users have access to all existing functionality with a reduced bandwidth, storage and memory footprint.
-
-Staking within the Lite wallet has been removed because staking is a reward function for securing the network. Lite wallets, by nature, do not secure the network.
-
-### Instructions
-
-There are two ways to start the wallet in Lite mode, both are described in this section.
-
-#### Method 1:
-
-The first method changes the ```shadowcoin.conf``` and will cause the wallet to permanently boot up in lite mode for as long as it is in the configuration file.
-
-```
-For those of you who wish to enable the lite wallet, open your shadowcoin.conf configuration file with a text editor such as nano
-```
->nano shadowcoin.conf
-
-```
-And add the following line
-```
->thinmode=1
-
-#### Method 2:
-
-The second method will boot up an instance in Lite mode, not permanent. In case you always want to boot up in Lite mode we suggest the first method, but if need to make a transaction quickly without having to download the whole blockchain you can start the daemon with the ```-thinmode``` parameter.
-
-```
-Alternatively, you can startup the client with the parameter -thinmode. (no graphical interface)
-```
->shadowcoind -thinmode
-
-```
-Or if you need a graphical interface.
-```
-> ./shadow -thinmode
 
 
 # ShadowSend v2.0
