@@ -196,7 +196,7 @@ You can also instantly pay for purchases with ShadowCash anywhere Bitcoin is acc
 - [SHAPESHIFT](https://shapeshift.io/)
 - [PURSE](https://purse.io/)
 
-## Network Security
+## Network Consensus
 
 ### Proof of Work (PoW) - Complete
 Specification | Value
@@ -219,22 +219,20 @@ PoW mining has ended, but you can still use your mining rigs to earn ShadowCash 
 
 ## Introduction
 
-ShadowCore is a decentralized anonymous communication, commerce and currency platform available for all desktop and mobile operating systems. Transactions are lightning fast, cannot be frozen and cannot be traced when using ShadowSend. Users earn 2% interest on wealth per annum for securing the network through PoS.
+ShadowCore is the main engine on which all decentralized actions take place, it is used when referencing to the back end of the program and takes cares of the network bootstrapping and propogation of data throughout it. It is also in charge of synchronising and verifying the blockchain for each node to make sure it can participate in the network.
+
+The data being propogated are encrypted messages and transactions, you can find more information about the workings of these in other sections of this documentation. 
 
 ## HTML Cryptobrowser
 
-ShadowCore is an HTML Cryptobrowser and a secure platform through which the cryptocurrency, ShadowCash, can be transferred. One of the significant advantages of ShadowCore is its deep integration with the rest of Shadow's features as well as offering native TOR support for IP obfuscation.
+ShadowCore has a HTML cryptobrowser at the core of its graphical user interface (GUI). One thing you may have noticed is that we strive for the best user experience (UX) and that involves a good graphical interface. We chose to use a combination of HTML and Javascript because this allows web designers and developers to help the project. They are very familiair with creating a good user experience through a simple yet beautiful interface.
 
-## Hierarchical Deterministic (HD)
+## Hierarchical Deterministic Wallet (HD)
 
 ShadowCore supports the [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allowing users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy.
+In essence this means that you only have to back up your wallet once, all private keys are derived from the mnenomic seed and they can be retrieved anytime if you have the seed. This means that you'll never have to worry about your back ups, coins will never be lost.
 
-To create a better user experience ShadowCore implemented [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), allowing users to create a wallet based on a mnenomic sentence consisting of 24 words with the ability to secure that with a password.
-
-#### Synonyms
-
-- HD protocol
-- HD wallet
+To create a better user experience ShadowCore implemented [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), allowing users to create a HD wallet based on a mnenomic sentence consisting of 24 words and the ability to secure that with a password for plausible deniability.
 
 ### Links
 
@@ -246,7 +244,7 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
 
 ## Source Code
 
-All ShadowCash source code is open-source and available at our [GitHub repository](https://github.com/SDCDev/shadow)
+ShadowCash its source code is open-source and available at our [GitHub repository](https://github.com/SDCDev/shadow)
 
 
 ## Download
