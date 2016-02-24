@@ -744,11 +744,11 @@ Our white paper on ShadowChat can be found [here](http://www.shadow.cash/downloa
 
 # ShadowMarket
 
-## Decentralized MarketPlace
+## Decentralized Marketplace
 The main component of the Shadow platform is the **decentralized marketplace** dubbed 'ShadowMarket'. The decentralized nature of the network makes it very resilient against shutdown attempts and permits for anyone to participate in a true free market without the possibility of interference or eavesdropping by malicious parties. Every node in the network distributes and stores all the open market listings, to prevent bloating the network with outdated and incorrect listings, each one must contain an expiration date and the approriate listing fee must be paid. The blockchain-like mechanism for storing the listings is a technique called Private Information Retrieval and is key to preserving the anonymity and privacy of both the vendor and possible buyer(s).
 
 ## Two-party Smart escrow
-The smart escrow system is devised so neither party can profitably defraud the other party without risk. It is based on mutual assured destrution (MAD): The buyer risks twice the amount required for purchase and the vendor risks the purchase price plus the item that they ship. These funds are locked in a 2-of-2 multisignature address and can only be released when both parties agree and sign the transaction. If they can't agree before a certain expiration date, the funds stay locked indefinitely and the address becomes unspendable. The expiration date is extendable if both parties agree to send the transaction to yet another 2-of-2 multisignature address with a new expiration date.
+The **smart escrow system** is devised so neither party can profitably defraud the other party without risk. It is based on mutual assured destrution (MAD): The buyer risks twice the amount required for purchase and the vendor risks the purchase price plus the item that they ship. These funds are locked in a 2-of-2 multisignature address and can only be released when both parties agree and sign the transaction. If they can't agree before a certain expiration date, the funds stay locked indefinitely and the address becomes unspendable. The expiration date is extendable if both parties agree to send the transaction to yet another 2-of-2 multisignature address with a new expiration date.
 
 
 A new opcode **CHECKLOCKTIMEVERIFY** (CLTV) is implemented to enable the mutual assured destruction, more about the technical specifications of this improvement can be found on the BIP65 github page . Shadow uses a different escrow model than proposed in BIP65, instead we drop both keys when the expiration is reached, essentially destroying the funds.
@@ -756,19 +756,21 @@ A new opcode **CHECKLOCKTIMEVERIFY** (CLTV) is implemented to enable the mutual 
 ## Mutual assured destruction (MAD)
 This stategy finds its roots in the Ultimatum Game, a well known economic experiment in the field of Game Theory. The key difference between Shadows escrow and the Ultimatum Game is that negotiations are possible in the form of refunds. The payoff matrix exemplifies all the scenarios without the possibility of refund.
 
-Bad buyer.  
+![Escrow](images/escrow.jpeg)
+
+**Bad buyer.**  
 
 If the buyer receives the item and decides not to finalize the transaction then the address becomes unspendable after the expiration date and neither party gets their insurance deposit back. The buyer will have effectively paid twice the price but the vendor loses his insurance deposit and the item.  
 
-Bad vendor.  
+**Bad vendor. ** 
 
 The vendor does not to ship the item, leaving the buyer with the option to finalize the transaction or not: finalizing the transaction causes him to minimalize his loses to one time the price of the item and the vendor makes a profit of one time the item price. If the buyer decides not to finalize the transaction he loses twice the amount of the item price but also causes the vendor to lose his insurance deposit. The buyer is to some extent at a disadvantage and motivated to finalize the transaction to minimize his loses in case of a vendor scam. Both the buyer and the vendor will be motivated to extend the escrow transaction and work towards a refund agreement that both parties are willing to sign.
 
-Why not use escrow agents then?  
+**Why not use escrow agents then? ** 
 
 Because this brings a middleman into the equation which is no means of fairly solving disputes. It is still the buyers word against the vendors. A delivery receipt does not always mean the correct item was received. 
 
-What if the item was lost in the mail?
+**What if the item was lost in the mail?**
 
 The buyer will have to convince the vendor that he didn't receive the item and both parties must come to a refund agreement that both parties are willing to sign. The vendor may believe the buyer if they have a good history of transactions.  If the vendors thinks you are trying to scam them then he might decide to not deal with you again and you lose your insurance deposit and the vendor loses once the item price and the item lost in the mail.
 ## Reputation
@@ -776,7 +778,6 @@ While two-party escrow with Mutual Assured Destruction is a viable way to preven
 
 ## Listing fees
 The **listing fee**, charged for each market listing, is 0.2 SDC per 4KB per 2 days, so posting a 4KB listing for 4 days will be 0.4 SDC, just as an 8KB ad for 2 days will be 0.4 SDC. Updates to marketplace listings will cost 0.05 SDC and will not add any duration to the listing.
-## White paper
 
 # Hiding your IP
 ## Tor
