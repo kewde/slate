@@ -756,17 +756,17 @@ A new opcode **CHECKLOCKTIMEVERIFY** (CLTV) is implemented to enable the mutual 
 ## Mutual assured destruction (MAD)
 This stategy finds its roots in the Ultimatum Game, a well known economic experiment in the field of Game Theory. The key difference between Shadows escrow and the Ultimatum Game is that negotiations are possible in the form of refunds. The payoff matrix exemplifies all the scenarios without the possibility of refund.
 
-![Escrow](escrow.jpg)
+```![Escrow](escrow.jpg)```
 
 **Bad buyer.**  
 
 If the buyer receives the item and decides not to finalize the transaction then the address becomes unspendable after the expiration date and neither party gets their insurance deposit back. The buyer will have effectively paid twice the price but the vendor loses his insurance deposit and the item.  
 
-**Bad vendor. ** 
+**Bad vendor.** 
 
 The vendor does not to ship the item, leaving the buyer with the option to finalize the transaction or not: finalizing the transaction causes him to minimalize his loses to one time the price of the item and the vendor makes a profit of one time the item price. If the buyer decides not to finalize the transaction he loses twice the amount of the item price but also causes the vendor to lose his insurance deposit. The buyer is to some extent at a disadvantage and motivated to finalize the transaction to minimize his loses in case of a vendor scam. Both the buyer and the vendor will be motivated to extend the escrow transaction and work towards a refund agreement that both parties are willing to sign.
 
-**Why not use escrow agents then? ** 
+**Why not use escrow agents then?** 
 
 Because this brings a middleman into the equation which is no means of fairly solving disputes. It is still the buyers word against the vendors. A delivery receipt does not always mean the correct item was received. 
 
