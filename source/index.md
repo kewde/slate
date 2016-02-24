@@ -247,9 +247,9 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
 ShadowCash its source code is open-source and available at our [GitHub repository](https://github.com/SDCDev/shadow)
 
 
-## Download
+# Download
 
-### Desktop Wallet
+## Desktop Wallet
 - Latest [Windows x32](http://shadow.cash/downloads/latest/windows32) wallet download
 - Latest [Windows x64](http://shadow.cash/downloads/latest/windows64) wallet download
 - Latest [Linux x32](http://shadow.cash/downloads/latest/linux32) wallet download
@@ -260,7 +260,7 @@ ShadowCash its source code is open-source and available at our [GitHub repositor
 - Latest Android wallet download - being upgraded!
 - Latest iOS wallet download - being upgraded!
 
-### Bootstrap & Useful Paths
+## Bootstrap & Useful Paths
 ```
 Windows
 ```
@@ -295,7 +295,7 @@ If you decide that a full node is for you then the full sync of the block chain 
 3. Place the ```bootstrap.dat``` file in one of the below locations depending on your operating system
 4. Start the ShadowCash Wallet again (The client might be unresponsive but don't worry - it's just loading all the blockchain data)
 
-# Installing and Running a Client
+# Compiling from source
 
 ## Linux
 
