@@ -218,7 +218,7 @@ ShadowCash source code is all open-source and available at our [GitHub repositor
 - Latest Android wallet download - being upgraded!
 - Latest iOS wallet download - being upgraded!
 
-### Bootstrap & Useful Paths
+### Useful Paths
 ```
 Windows
 ```
@@ -234,7 +234,7 @@ Linux
 ```
 >~/.shadowcoin/
 
-
+## Bootstrap
 So you may be wondering what is "bootstrap" and what does it do? when you load the Shadow Wallet for the first time it connects to the ShadowCore P2P network and starts to synchronise the blockchain. The purpose of this is to create a full copy of the ShadowCash blockchain on the local hardware. This is very useful if for example you are: 
 
 1. Looking to help further strengthen the network by providing a full peer 
