@@ -273,7 +273,7 @@ Update and Install dependencies:
  Download the source code and compile shadowcoind
 ```
 >git clone https://github.com/ShadowProject/shadow
->cd shadowcoin/src
+>cd shadow/src
 >make -f makefile.unix
 >strip shadowcoind
 
@@ -307,6 +307,11 @@ List all commands for shadowcoind
 >shadowcoind help
 
 ```
+Update shadowcoind
+```
+>git pull
+
+```
 Stopping shadowcoind
 ```
 >shadowcoind stop
@@ -333,6 +338,11 @@ If you wish you can also compile directly from source, follow these instructions
 Run the executable found within the shadowcoin folder with : 
 ```
 >./shadow
+
+```
+Update shadow QT
+```
+>git pull
 
 If you wish you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.
 
