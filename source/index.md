@@ -165,14 +165,6 @@ RPC Port | 51736
 | Confirmations   | **10**         |
 | Maturity        | **500**        |
 
-<!---
-## Accept
-
-Accepting ShadowCash is easy! Simply download the latest shadow client and you are ready to go. There are no third party payment processors or middlemen and more importantly the transactions and funds appear in your account in seconds.
-
-- Getting Started Tutorials (coming soon)
--->
-
 ## Exchanges
 
 Currently you can only buy ShadowCash (SDC) once you have Bitcoin (BTC). Bitcoin can be bought at a number of places [link needed](). Once you have BTC you can buy SDC on a number of crypto-to-crypto currency exchanges.
@@ -273,11 +265,6 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
 - Latest [Linux x64](http://shadow.cash/downloads/latest/linux64) wallet download
 - Latest [OSX](http://shadow.cash/downloads/latest/macosx) wallet download
 
-<!---
-### Mobile Wallet
-- Latest Android wallet download - being upgraded!
-- Latest iOS wallet download - being upgraded!
--->
 
 ## Bootstrap & Useful Paths
 ```
@@ -452,12 +439,6 @@ If you wish to you can also compile directly from source, follow these instructi
 
 # ShadowSend v2.0
 
-<!---
-## Timeline
-
-- ShadowSend v1.0 public release, December 2014
-- ShadowSend v2.0 public release, May 2015
--->
 
 ## Introduction
 
@@ -883,71 +864,6 @@ For support please visit one of the links below:
 - Forum: [talk.shadowproject.io](https://talk.shadowproject.io/)
 - IRC: freenode.net #shadowcash
 - SLACK: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
-
-<!---
-# Developers
-
-## Build environment and building
-
-Windows
-OSX
-Linux
-Rasbperry Pi
-Docker
-
-## Install
-
-Windows
-osx
-linux
-coreos/docker
-
-## Coreos/Docker
-
-## Scaleway
-
-## Testnet
-
-There are 2 ways of starting the daemon in testnet mode.
-
-### 1. Editing the shadowcoin.conf
-```
-Create or add to the shadowcoin.conf file the following:
-```
->testnet=1
->addnode=seed.shadow.cash
->addnode=seed2.shadow.cash
-
-```
-The addnode will help with extra connections because there are not many people running full testnet nodes.
-```
-
-Find the path to the files.
-
-OS | Path
---- | ---
-**Windows** | %appdata%\ShadowCoin
-**OSX** |~/Library/Application Support/ShadowCoin/
-**Linux** | ~/.shadowcoin/
-
-### 2. Start executable with testnet parameter
-
-Start the ShadowCoin executable with the "-testnet" flag.
-Windows:
-Open up a command prompt, change directory to the installation folder of Shadow and run the following command:
-```shadow.exe -testnet```
-
-Linux:
-```shadowcoind -testnet```
-
-## Blockchain / Blocks / Transactions
-## Data structures
-## Spending
-## Simple Raw Transaction
-## Complex Raw Transaction
-## Signing
-## Multisig
--->
 
 # JSON-RPC API Reference
 
