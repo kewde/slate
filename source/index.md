@@ -224,12 +224,12 @@ The [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (H
 In essence this means that you only have to back up your wallet once, all private keys are derived from the mnenomic seed (up to 24 words) and they can be retrieved anytime if you have the seed. This means that you'll never have to worry about backups as long as you have one, coins will never be lost.
 
 ### Upgrading to a HD wallet
-If you're still on the 1.3.3.2 release and you want to the latest version of Shadow then you should use the following guidelines. 
-All wallets after 1.3.3.2 come will automatically generate a HD wallet, these wallets however do not come with a mnemonic seed (24 words). A back up made of this wallet will automatically restore all private keys, so your coins are always safe.
+If you're still **on the 1.3.3.2** release and you want to the latest version of Shadow then you should use the following guidelines. 
+All wallets **after 1.3.3.2** come will automatically generate a HD wallet, these wallets however do not come with a mnemonic seed (24 words). A back up made of this wallet will automatically restore all private keys, so your coins are always safe.
 If you want you can specify a mnenomic seed if you want to make use of the feature, but we've kept this as an option.
 
 <aside class="warning">
-**ALWAYS BACKUP WALLET.DAT FIRST**
+ALWAYS BACKUP WALLET.DAT FIRST
 </aside>
  
 **STEP 1**
