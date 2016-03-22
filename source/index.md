@@ -228,18 +228,22 @@ If you're still on the 1.3.3.2 release and you want to the latest version of Sha
 All wallets after 1.3.3.2 come will automatically generate a HD wallet, these wallets however do not come with a mnemonic seed (24 words). A back up made of this wallet will automatically restore all private keys, so your coins are always safe.
 If you want you can specify a mnenomic seed if you want to make use of the feature, but we've kept this as an option.
 
- ALWAYS BACKUP WALLET.DAT FIRST
-STEP 1
-Save your wallet.dat and rename it.
-Load the new Shadow Latest client
-Create a new HD Wallet (Options --> Key Management --> New Key) - give it a "name".
-Goto (Key Management --> Advanced Management) and make sure that the new "name" account is showing as "default".
-The wallet will have pre-generated a Default normal and stealth address
-Send some funds to test (from your old wallet)
+<aside class="warning">
+**ALWAYS BACKUP WALLET.DAT FIRST**
+</aside>
+ 
+**STEP 1**
+
+1. Save your wallet.dat and rename it.
+2. Load the new Shadow Latest client
+3. Create a new HD Wallet (Options --> Key Management --> New Key) - give it a "name".
+4. Goto (Key Management --> Advanced Management) and make sure that the new "name" account is showing as "default".
+5. The wallet will have pre-generated a Default normal and stealth address
+6. Send some funds to test (from your old wallet)
+
 So now I would suggest you try a restore of this account to test it!
 
 **STEP 2**
-
 
 1. Save your wallet.dat and rename it. 
 2. Load the Shadow Latest Client 
