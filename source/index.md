@@ -68,14 +68,7 @@ The Shadow Project is on a mission to solve this. The focus of our privacy platf
 
 Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
-## Summary
-
-ShadowSend development has created near-instant, untraceable, unlinkable and trustless transactions utilizing non-interactive zero knowledge proofs (NKZIP), dual-key stealth addresses, and ring signatures. This is the first of a kind on the Bitcoin codebase.
-
-
-The Shadow Project team will soon offer a complete privacy platform which aims to establish an anonymous economy, delivering total financial freedom and privacy to all.
-
-## Privacy-Centric Cryptocurrency Projects
+## Other cryptocurrency projects
 ### Security Specifications
 
 <span class="shadow-table"></span>
@@ -161,6 +154,7 @@ Below you will find a list of places where you can find other Shadow users, comm
 
 Specification | Value
 --- | ---
+Protocol | **PoSv3**
 Block Time | **60 seconds**
 Difficulty Re-target | **every block**
 Nominal Stake Interest | **2% annually**
