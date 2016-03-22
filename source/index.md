@@ -165,11 +165,13 @@ RPC Port | 51736
 | Confirmations   | **10**         |
 | Maturity        | **500**        |
 
+<!---
 ## Accept
 
 Accepting ShadowCash is easy! Simply download the latest shadow client and you are ready to go. There are no third party payment processors or middlemen and more importantly the transactions and funds appear in your account in seconds.
 
 - Getting Started Tutorials (coming soon)
+-->
 
 ## Exchanges
 
@@ -271,9 +273,11 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
 - Latest [Linux x64](http://shadow.cash/downloads/latest/linux64) wallet download
 - Latest [OSX](http://shadow.cash/downloads/latest/macosx) wallet download
 
+<!---
 ### Mobile Wallet
 - Latest Android wallet download - being upgraded!
 - Latest iOS wallet download - being upgraded!
+-->
 
 ## Bootstrap & Useful Paths
 ```
@@ -448,10 +452,12 @@ If you wish to you can also compile directly from source, follow these instructi
 
 # ShadowSend v2.0
 
+<!---
 ## Timeline
 
 - ShadowSend v1.0 public release, December 2014
 - ShadowSend v2.0 public release, May 2015
+-->
 
 ## Introduction
 
