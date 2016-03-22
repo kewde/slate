@@ -876,13 +876,6 @@ SocksPort 127.0.0.1:9150
 
 ### The simple method
 
-
-
-## I2P
-
-In Development
-
-# Backup & restore wallet
 # Support
 
 For support please visit one of the links below:
@@ -891,6 +884,7 @@ For support please visit one of the links below:
 - IRC: freenode.net #shadowcash
 - SLACK: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
 
+<!---
 # Developers
 
 ## Build environment and building
@@ -953,6 +947,7 @@ Linux:
 ## Complex Raw Transaction
 ## Signing
 ## Multisig
+-->
 
 # JSON-RPC API Reference
 
