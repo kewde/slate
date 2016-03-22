@@ -238,13 +238,12 @@ The wallet will have pre-generated a Default normal and stealth address
 Send some funds to test (from your old wallet)
 So now I would suggest you try a restore of this account to test it!
 
-STEP 2 
---- 
-Save your wallet.dat and rename it. 
-Load the Shadow Latest Client 
-Goto (Options --> Key Management --> Restore) - complete steps 
-Goto (Help --> Debug --> Console) and type scanforalltxns 590000 
-You should see your test transaction show up. 
+**STEP 2**
+1. Save your wallet.dat and rename it. 
+2. Load the Shadow Latest Client 
+3. Goto (Options --> Key Management --> Restore) - complete steps 
+4. Goto (Help --> Debug --> Console) and type scanforalltxns 590000 
+5. You should see your test transaction show up. 
 
 
 To create a better user experience ShadowCore implemented [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), allowing users to create a HD wallet based on a mnenomic sentence consisting of 24 words and the ability to secure that with a password for plausible deniability.
