@@ -239,6 +239,8 @@ Send some funds to test (from your old wallet)
 So now I would suggest you try a restore of this account to test it!
 
 **STEP 2**
+
+
 1. Save your wallet.dat and rename it. 
 2. Load the Shadow Latest Client 
 3. Goto (Options --> Key Management --> Restore) - complete steps 
