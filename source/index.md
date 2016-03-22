@@ -29,11 +29,6 @@ Bitcoin relies on a peer-to-peer network (P2P) where each member (peer) of the n
 The public nature of a block chain allows anyone to observe the entire transaction history and holdings of every participant. Unfortunately, while names and personal data aren't revealed in transaction records, a block chain such as Bitcoin’s does not allow for native anonymity or privacy. Addresses can be linked and traced to individuals and businesses by block chain anaylsis.
 
 
-### Bytecoin
-
-Or Cryptonote... Need History
-
-
 ### Shadow
 
 Born on July 19, 2014, the Shadow Project quickly distinguished itself as an innovative and unique open source project with a mission to create the first truly anonymous and decentralized cryptocurrency built with Bitcoin’s code.
@@ -69,7 +64,7 @@ The Shadow Project is on a mission to solve this. The focus of our privacy platf
 Nearly 67 years later, we believe this declaration to be more important than ever. To help protect this most basic right to privacy, The Shadow Project is building an encrypted, digital ecosystem. Cryptographic innovations will catalyze the evolution of communication, commerce, and currency. Shadow’s mission is to remain at the forefront of this evolution with it’s decentralized privacy platform, made available to all operating systems.
 
 ## Other cryptocurrency projects
-### Security Specifications
+### Network architecture
 
 <span class="shadow-table"></span>
 
@@ -80,7 +75,7 @@ Nearly 67 years later, we believe this declaration to be more important than eve
 | **Bitcoin Based**    |    true    |    false    |    true    |    false    |    true    |    true    |
 | **CryptoNote Based** |    false    |    true    |    false    |    true    |    false    |    false    |
 
-### Privacy Features
+### Anonymity features
 
 <span class="shadow-table"></span>
 
@@ -94,7 +89,7 @@ Nearly 67 years later, we believe this declaration to be more important than eve
 | **Unlinkable**    |    true    |    true    |    false    |    true    |    false    |    undefined    |
 | **End to end Anon** |    true    |    true    |    false    |    true    |    false    |    undefined    |
 
-### Wallet Features -Core-
+### Wallet features
 
 <span class="shadow-table"></span>
 
@@ -217,14 +212,39 @@ ShadowCore is the main engine on which all decentralized actions take place, it 
 
 The data being propogated are encrypted messages and transactions, you can find more information about the workings of these in other sections of this documentation. 
 
-## HTML Cryptobrowser
+## HTML  (GUI)
 
-ShadowCore has a HTML cryptobrowser at the core of its graphical user interface (GUI). One thing you may have noticed is that we strive for the best user experience (UX) and that involves a good graphical interface. We chose to use a combination of HTML and Javascript because this allows web designers and developers to help the project. They are very familiair with creating a good user experience through a simple yet beautiful interface.
+Shadow has a HTML cryptobrowser at the core of its graphical user interface (GUI). One thing you may have noticed is that we strive for the best user experience (UX) and that involves a good graphical interface. We chose to use a combination of HTML and Javascript because this allows web designers and developers to help the project. They are very familiair with creating a good user experience through a simple yet beautiful interface.
+
+INSERT PICTURES
 
 ## Hierarchical Deterministic Wallet (HD)
 
-ShadowCore supports the [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allowing users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy.
-In essence this means that you only have to back up your wallet once, all private keys are derived from the mnenomic seed and they can be retrieved anytime if you have the seed. This means that you'll never have to worry about backups as long as you have one, coins will never be lost.
+The [Hierarchical Deterministic](https://bitcoin.org/en/glossary/hd-protocol) (HD) key creation and transfer protocol ([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)), allows users to create [child keys](https://bitcoin.org/en/glossary/child-key) from [parent keys](https://bitcoin.org/en/glossary/parent-key) in a hierarchy.
+In essence this means that you only have to back up your wallet once, all private keys are derived from the mnenomic seed (up to 24 words) and they can be retrieved anytime if you have the seed. This means that you'll never have to worry about backups as long as you have one, coins will never be lost.
+
+### Upgrading to a HD wallet
+If you're still on the 1.3.3.2 release and you want to the latest version of Shadow then you should use the following guidelines. 
+All wallets after 1.3.3.2 come will automatically generate a HD wallet, these wallets however do not come with a mnemonic seed (24 words). A back up made of this wallet will automatically restore all private keys, so your coins are always safe.
+If you want you can specify a mnenomic seed if you want to make use of the feature, but we've kept this as an option.
+
+ ALWAYS BACKUP WALLET.DAT FIRST
+STEP 1
+Save your wallet.dat and rename it.
+Load the new Shadow Latest client
+Create a new HD Wallet (Options --> Key Management --> New Key) - give it a "name".
+Goto (Key Management --> Advanced Management) and make sure that the new "name" account is showing as "default".
+The wallet will have pre-generated a Default normal and stealth address
+Send some funds to test (from your old wallet)
+So now I would suggest you try a restore of this account to test it!
+
+STEP 2 | value
+--- | --- 
+Save your wallet.dat and rename it. | 
+Load the Shadow Latest Client | 
+Goto (Options --> Key Management --> Restore) - complete steps | 
+Goto (Help --> Debug --> Console) and type scanforalltxns 590000 | 
+You should see your test transaction show up. | 
 
 To create a better user experience ShadowCore implemented [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), allowing users to create a HD wallet based on a mnenomic sentence consisting of 24 words and the ability to secure that with a password for plausible deniability.
 
@@ -770,25 +790,30 @@ The **listing fee**, charged for each market listing, is 0.2 SDC per 4KB per 2 d
 ## Tor
 
 **Step 1: Install Tor**
-This step is pretty straight forward, install Tor.
+This step is pretty straight forward, install Tor. We advice you to run Tor **as a service**, this means it will start at boot and will always run in the background.
 
-Platform | url
---- | ---
-Windows | [Download](https://www.torproject.org/download/download-easy.html.en)
-Linux |  [Download](https://www.torproject.org/download/download-easy.html.en#linux)
+Platform | Service | URL
+--- | --- | ---
+Windows | No | [Download](https://www.torproject.org/download/download-easy.html.en) 
+Ubuntu | yes | apt-get install tor 
+Debian |  yes | apt-get install tor
+CentOS| yes | yum install tor
 
-Extract the contents of the ZIP or Tar file to a folder.
+Extract the ZIP file if you're on Windows. 
+For **Windows** the Tor proxy server will run as long as the *Tor Browser* is open and running. When you close it the connection of Shadow will also drop.
+To prevent this from happening we suggest running the Tor daemon as a service, this isn't very hard.
 
-Linux: tar xf tor-browser-linux32-5.0.7_en-US.tar.xz
+Open up the command line as administator and navigate to the Tor Browser folder.
+cd "C:/what_ever_path/Tor Browser/Browser/TorBrowser/Tor"
+
 
 **Step 2: Download Shadow**
-If you truely want to remain anonymous then you should also download the Shadow client through Tor.
-
+If you truely want to remain anonymous then you should download the Shadow client through Tor.
 
 Open up the Tor-browser and visit http://shadowproject.io/getting-started and download the latest binary for your operating system.
 Extract  the ZIP to folder of your choice.
 
-**DOWNLOADING THE BLOCKCHAIN THROUGH TOR IS VERY SLOW, IT IS ADVISED TO SPEED UP THE PROCESS WITH THE BLOCKHAIN.ZIP METHOD**
+**DOWNLOADING THE BLOCKCHAIN PEER-TO-PEER THROUGH TOR IS VERY SLOW, IT IS ADVISED TO SPEED UP THE PROCESS WITH THE BLOCKHAIN.ZIP METHOD**
 Download and put the contents of [the blockchain.zip file](https://github.com/ShadowProject/blockchain/releases/download/latest/blockchain.zip) into your .shadowcoin folder!
 
 **Step 3: Edit settings**
