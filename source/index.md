@@ -1183,6 +1183,7 @@ validatepubkey <shadowcashpubkey>
 
 # SMSG API
 ## smsgaddkey
+smsgaddkey <address> <pubkey>
 
 ```json
 smsgaddkey <address> <pubkey>
@@ -1261,6 +1262,7 @@ Output:
 ```
 
 ## smsglocalkeys
+List and manage keys.
 
 ```json
 smsglocalkeys [whitelist|all|wallet|recv <+/-> <address>|anon <+/-> <address>]
