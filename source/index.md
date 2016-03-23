@@ -630,7 +630,7 @@ As previously mentioned, all tokens have their own public and private key. It co
 
 ### Double Spend Prevention
 
-The ring signature tags (keyImage) of the spent Shadow tokens are embedded in the blockchain to prevent double spends. Each tag is unique to the Shadow token, regardless of the other members of the ring signature.
+The ring signature tags (keyImage) of the spent Shadow tokens are embedded in the transaction to prevent double spends. Each tag is unique to the Shadow token, regardless of the other members of the ring signature.
 
 When a new transaction contains a keyImage that has already been used, and thus is present in the blockchain, the new transaction will be rejected by the network.
 
@@ -652,7 +652,7 @@ In order to spend Shadow, we use ring signatures to sign the transaction. Our sc
 
 For efficiency’s sake, when spending Shadow, we get a list of all anonymous outputs in the system, then we remove coins that don't have enough same value outputs in the system, then we choose the smallest coin or least number of smallest coins that can cover the amount + transaction fee.
 
-Each Shadow coin has its own private key, so when spending Shadow, each coin or anonymous input, will need to have its own ring signature generated, and will then have to be verified.
+Each ShadowToken consist of a unique private key and public key, so what happens when you spend your ShadowToken? When doing a **normal** transaction (like in Bitcoin), you would prove you received an amount of coins by pointing to the transaction that got you the coins in the first place. That's signed with the private to prove you hold the keys to the address. Now for an **anonymous** transaction that procedure is different: we do not point to previous transactions. Rather we take a pool of coins (public keys of other people their coins) that have the same value as the coin we're trying to spend and then we drop our public key. We then say "we own one of the public keys in this pool of coins", or in cryptographical terms: a ring signature. 
 
 ## White Paper
 
@@ -797,8 +797,18 @@ For **Windows** the Tor proxy server will run as long as the *Tor Browser* is op
 To prevent this from happening we suggest running the Tor daemon as a service, this isn't very hard.
 
 Open up the command line as administator and navigate to the Tor Browser folder.
-cd "C:/what_ever_path/Tor Browser/Browser/TorBrowser/Tor"
 
+```cd "C:/what_ever_path/Tor Browser/Browser/TorBrowser/Tor"```
+
+```notepad.exe torrc```
+
+It is extremely important that you add the following to this file: 
+
+```ControlPort auto```
+
+Your Tor Browser will never start up again if you fail to turn the ControlPort on!
+
+```tor.exe --service install --options -f C:/what_ever_path/Tor Browser/Browser/TorBrowser/Tor/torrc```
 
 **Step 2: Download Shadow**
 If you truely want to remain anonymous then you should download the Shadow client through Tor.
@@ -850,12 +860,8 @@ SocksPort 127.0.0.1:9150
 
 
 
-
-
 [Click here for a full tutorial](www.sky-ip.org/configure-bitcoin-node-debian-ubuntu.html)
 
-
-### The simple method
 
 # Support
 
