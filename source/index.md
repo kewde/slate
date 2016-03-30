@@ -601,7 +601,7 @@ Each Shadow coin has its own private key, so when spending Shadow, each coin or 
 
 ## White paper
 
-Our white paper on ShadowSend 2 can be found [here](http://shadow.cash/downloads/shadowcash-anon.pdf).
+Our white paper on ShadowSend 2 can be found [here](https://github.com/shadowproject/whitepapers/blob/master/shadowcash_anon.pdf).
 
 
 # Encrypted Messaging
@@ -687,7 +687,7 @@ Address and compact signature are not included when message is sent anonymously 
 
 ## White paper
 
-White paper: [http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf](http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf)
+White paper: [View on github](https://github.com/shadowproject/whitepapers/blob/master/shadowcash_em.pdf)
 
 
 # ShadowMarket
