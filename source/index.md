@@ -8,8 +8,8 @@ language_tabs:
 
 
 toc_footers:
-  - <a href='http://shadowproject.io/'>Shadow Website</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='https://shadowproject.io/'>Shadow Website</a>
+  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 search: true
 ---
@@ -135,13 +135,13 @@ The biggest part of the community resides in #general on Slack, great times assu
 Below you will find a list of places where you can find other Shadow users, community members and news.
 
 - IRC: freenode.net #shadowcash
-- Blog: [blog.shadowproject.io](http://www.blog.shadowproject.io)
-- Forum: [talk.shadowproject.io](http://www.talk.shadowproject.io)
+- Blog: [blog.shadowproject.io](https://www.blog.shadowproject.io)
+- Forum: [talk.shadowproject.io](https://www.talk.shadowproject.io)
 - Slack: [shadowproject.slack.com](https://shadowproject.slack.com/)
 - Reddit: [reddit.com/r/Shadowcash](https://www.reddit.com/r/Shadowcash)
-- Twitter: [twitter.com/allaboutshadow](http://www.twitter.com/allaboutshadow)
+- Twitter: [twitter.com/allaboutshadow](https://www.twitter.com/allaboutshadow)
 
-- Slack Invite: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
+- Slack Invite: [shadowproject.herokuapp.com](https://shadowproject.herokuapp.com/)
 
 # Currency
 
@@ -448,7 +448,7 @@ The ShadowSend protocol uses dual-key stealth addresses, traceable ring signatur
 
 Below you will find a presentation of the anonymous cryptographic transaction protocol which utilizes the above mentioned cryptographic principles. We explain how Shadow introduces a much higher level of privacy and anonymity to the network while still preserving the core principles of trustless decentralization, unforgeability and double-spend prevention. We also present performance data of our scheme including proof sizes, signature generation times and verification times in our [white paper](http://shadow.cash/downloads/shadowcash-anon.pdf).
 
-A detailed diagram is available [here](http://i.imgur.com/2XTQhYF.jpg).
+A detailed diagram is available [here](https://i.imgur.com/2XTQhYF.jpg).
 
 <central><iframe src="//www.slideshare.net/slideshow/embed_code/43827434" width="960" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe></center>
 
@@ -614,11 +614,11 @@ out #7 | stealth spend D
 ### References
 [1] ByteCoin, *Technical Documentation*, 2015, Available at [https://bytecoin.org/documentation/](https://bytecoin.org/documentation/
 
-[2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  [http://sourceforge.net/p/bitcoin/mailman/message/31813471/](http://sourceforge.net/p/bitcoin/mailman/message/31813471/)
+[2] Peter Todd, *[Bitcoin-development] Stealth Addresses*, 2014,  Available at  [https://sourceforge.net/p/bitcoin/mailman/message/31813471/](https://sourceforge.net/p/bitcoin/mailman/message/31813471/)
 
 [3] Dark Wallet, *Stealth*, 2015,  Available at [https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth](https://wiki.unsystem.net/en/index.php/DarkWallet/Stealth)
 
-[4] Sx, *Stealth*, 2015,  Available at [http://sx.dyne.org/stealth.html](http://sx.dyne.org/stealth.html)
+[4] Sx, *Stealth*, 2015,  Available at [https://sx.dyne.org/stealth.html](https://sx.dyne.org/stealth.html)
 
 
 ## Ring signatures
@@ -745,7 +745,7 @@ Our white paper on ShadowChat can be found [here](http://www.shadow.cash/downloa
 
 
 # ShadowMarket
-
+![ShadowMarket](https://i.imgur.com/A4TETRM.jpg)
 ## Decentralized Marketplace
 The main component of the Shadow platform is the **decentralized marketplace** dubbed 'ShadowMarket'. The decentralized nature of the network makes it very resilient against shutdown attempts and permits for anyone to participate in a true free market without the possibility of interference or eavesdropping by malicious parties. Every node in the network distributes and stores all the open market listings, to prevent bloating the network with outdated and incorrect listings, each one must contain an expiration date and the approriate listing fee must be paid. The blockchain-like mechanism for storing the listings is a technique called Private Information Retrieval and is key to preserving the anonymity and privacy of both the vendor and possible buyer(s).
 
@@ -815,7 +815,7 @@ Your Tor Browser will never start up again if you fail to turn the ControlPort o
 **Step 2: Download Shadow**
 If you truely want to remain anonymous then you should download the Shadow client through Tor.
 
-Open up the Tor-browser and visit http://shadowproject.io/getting-started and download the latest binary for your operating system.
+Open up the Tor-browser and visit https://shadowproject.io/getting-started and download the latest binary for your operating system.
 Extract  the ZIP to folder of your choice.
 
 **DOWNLOADING THE BLOCKCHAIN PEER-TO-PEER THROUGH TOR IS VERY SLOW, IT IS ADVISED TO SPEED UP THE PROCESS WITH THE BLOCKHAIN.ZIP METHOD**
@@ -871,7 +871,7 @@ For support please visit one of the links below:
 
 - Forum: [talk.shadowproject.io](https://talk.shadowproject.io/)
 - IRC: freenode.net #shadowcash
-- SLACK: [shadowproject.herokuapp.com](http://shadowproject.herokuapp.com/)
+- SLACK: [shadowproject.herokuapp.com](https://shadowproject.herokuapp.com/)
 
 # JSON-RPC API Reference
 
