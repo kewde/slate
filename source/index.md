@@ -15,7 +15,7 @@ search: true
 ---
 
 # About Shadow
-<center><div class="video-container"><iframe width="854" height="480" src="https://www.youtube.com/embed/i-xnh7NFCA8" frameborder="0" allowfullscreen></iframe><div></center>
+<div class="video-container"><iframe width="720" height="480" src="https://www.youtube.com/embed/i-xnh7NFCA8" frameborder="0" allowfullscreen></iframe><div>
 
 ## History
 ### Bitcoin
