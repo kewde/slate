@@ -210,7 +210,9 @@ The data being propogated are encrypted messages and transactions, you can find 
 
 Shadow has a HTML cryptobrowser at the core of its graphical user interface (GUI). One thing you may have noticed is that we strive for the best user experience (UX) and that involves a good graphical interface. We chose to use a combination of HTML and Javascript because this allows web designers and developers to help the project. They are very familiair with creating a good user experience through a simple yet beautiful interface.
 
-INSERT PICTURES
+![Overview](https://cdn-images-1.medium.com/max/1400/0*z-K8SYQqwpRRo6yg.jpg)
+
+![Wallet](https://cdn-images-1.medium.com/max/1400/0*xo9jG8LJvsHi7yWS.jpg)
 
 ## Hierarchical Deterministic Wallet (HD)
 
