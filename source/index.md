@@ -1208,11 +1208,10 @@ validatepubkey <shadowcashpubkey>
 
 # SMSG API
 ## smsgaddkey
-smsgaddkey <address> <pubkey>
-
 ```json
 smsgaddkey <address> <pubkey>
 ```
+smsgaddkey <address> <pubkey>
 
 ## smsgbuckets [stats|dump]
 
