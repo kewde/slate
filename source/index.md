@@ -269,7 +269,7 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
 
 
 
-### Useful Paths
+## Useful Paths
 ```
 Windows
 ```
@@ -285,7 +285,7 @@ Linux
 ```
 >~/.shadowcoin/
 
-#### Bootstrap?
+## Bootstrap?
 
 When you load the Shadow Wallet for the first time it connects to the peer-to-peer network and starts to synchronise the block chain. **By default the client will configure a full node.** A full node needs an up-to-date, full copy of the ShadowCash block chain on your computer to properly function. 
 
