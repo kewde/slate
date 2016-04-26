@@ -285,7 +285,14 @@ Linux
 ```
 >~/.shadowcoin/
 
+<aside class="warning">Warning: deleting the wallet.dat file in this directory will cause you to lose all of your coins if you have no back up.</aside>
+These are the paths where your **blockchain data, wallet and pretty much everything related to Shadow** is stored. 
+
+When using the blockchain.zip method these are the location where you extract the blockchain.zip file.
+
 ## Bootstrap?
+
+<aside class="notice">Use this method to synchronize your node within 10 minutes!</aside>
 
 When you load the Shadow Wallet for the first time it connects to the peer-to-peer network and starts to synchronise the block chain. **By default the client will configure a full node.** A full node needs an up-to-date, full copy of the ShadowCash block chain on your computer to properly function. 
 
