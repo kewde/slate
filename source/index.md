@@ -268,7 +268,8 @@ To create a better user experience ShadowCore implemented [BIP39](https://github
 - Latest [OSX](http://shadow.cash/downloads/latest/macosx) wallet download
 
 
-## Bootstrap & Useful Paths
+
+### Useful Paths
 ```
 Windows
 ```
@@ -284,7 +285,7 @@ Linux
 ```
 >~/.shadowcoin/
 
-#### What Is "bootstrap" and What Does It Do?
+#### Bootstrap?
 
 When you load the Shadow Wallet for the first time it connects to the peer-to-peer network and starts to synchronise the block chain. **By default the client will configure a full node.** A full node needs an up-to-date, full copy of the ShadowCash block chain on your computer to properly function. 
 
@@ -294,13 +295,14 @@ A full node is very useful for the following reasons:
 2. Already own ShadowCash (SDC) and wish to participate in staking.
 3. Plan to run services on the Shadow network that require a full node.
 
+
 - Refer to "ShadowLite" section if none of the above apply to you but you want a fast-syncing initial startup.
 
 If you decide that a full node is for you then the full sync of the block chain can take quite a while; sometimes up to 24 hours depending on your hardware. To speed this up the team provides compressed backups of the blockchain in a "bootstrap" file. Adding the current bootstrap to your local directory speeds up the syncronization process which will get your wallet up and running much quicker than the default method.
 
-1. Close the Shadow Wallet and [download the latest Bootstrap file from GitHub](https://github.com/ShadowProject/bootstrap/)
-2. Unzip the ```bootstrap.dat.zip``` file
-3. Place the ```bootstrap.dat``` file in one of the below locations depending on your operating system
+1. Close the Shadow Wallet and [download the latest Blockchain file from GitHub](https://github.com/ShadowProject/blockchain/)
+2. Place the ```blockchain.zip``` file in one of the locations as seen above, depending on your operating system
+3. Unzip the ```blockchain.zip``` file
 4. Start the ShadowCash Wallet again (The client might be unresponsive but don't worry - it's just loading all the blockchain data)
 
 ## ShadowLite
@@ -407,6 +409,11 @@ List all commands for shadowcoind
 >shadowcoind help
 
 ```
+Update shadowcoind
+```
+>git pull
+
+```
 Stopping shadowcoind
 ```
 >shadowcoind stop
@@ -435,8 +442,15 @@ Run the executable found within the shadowcoin folder with :
 ```
 >./shadow
 
+
 * Advanced users only.
 If you wish to you can also compile directly from source, follow these instructions to compile latest Shadow QT GUI Wallet based on Debian/Ubuntu. Please also refer to the build instructions for more detailed information.*
+
+```
+Update shadow QT
+```
+>git pull
+
 
 
 # ShadowSend v2.0
@@ -658,7 +672,9 @@ Each ShadowToken consist of a unique private key and public key, so what happens
 
 ## White Paper
 
-Our white paper on ShadowSend v2 can be found [here](http://shadow.cash/downloads/shadowcash-anon.pdf).
+
+Our white paper on ShadowSend 2 can be found [here](https://github.com/shadowproject/whitepapers/blob/master/shadowcash_anon.pdf).
+
 
 
 # Encrypted Messaging
@@ -741,7 +757,8 @@ Address and compact signature are not included when message is sent anonymously 
 
 ## White Paper
 
-Our white paper on ShadowChat can be found [here](http://www.shadow.cash/downloads/shadowcoin-p2p-em.pdf)
+White paper: [View on github](https://github.com/shadowproject/whitepapers/blob/master/shadowcash_em.pdf)
+
 
 
 # ShadowMarket
