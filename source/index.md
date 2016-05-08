@@ -1,5 +1,5 @@
 ---
-title: ShadowCore API
+title: 	Shadow Documentation
 
 language_tabs:
   - cpp
@@ -9,14 +9,19 @@ language_tabs:
 
 toc_footers:
   - <a href='https://shadowproject.io/'>Shadow Website</a>
+  - <a href='https://shadowproject.io/en/gettingstarted'>Download</a>
+  - <a href='https://blog.shadowproject.io/'>Blog</a>
+  - <a href='https://slack.shadowproject.io/'>Invite Slack</a>
+  - <a href='https://shadowproject.slack.com/'>Slack</a>
+  - <a href='https://talk.shadowproject.io/'>Forum</a>
+  - <a href='http://explorer.shadow.cash/'>Block explorer</a>
+  - <a href='https://github.com/shadowproject'>Github</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 search: true
 ---
 
 # About Shadow
-<div class="video-container"><iframe width="720" height="480" src="https://www.youtube.com/embed/i-xnh7NFCA8" frameborder="0" allowfullscreen></iframe></div>
-
 ## History
 ### Bitcoin
 
